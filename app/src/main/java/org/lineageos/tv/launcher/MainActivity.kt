@@ -226,6 +226,21 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         super.onResume()
     }
 
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        if (Intent.ACTION_MAIN == intent.action) {
+            val alreadyOnHome =
+                ((intent.flags and Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)
+                        != Intent.FLAG_ACTIVITY_BROUGHT_TO_FRONT)
+            if (alreadyOnHome) {
+                mainVerticalGridView.post {
+                    val viewHolder = mainVerticalGridView.findViewHolderForAdapterPosition(0)
+                    viewHolder?.itemView?.requestFocus()
+                }
+            }
+        }
+    }
+
     override fun onDestroy() {
         super.onDestroy()
 
