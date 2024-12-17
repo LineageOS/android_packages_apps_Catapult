@@ -41,7 +41,10 @@ android_app {
         "com.google.android.material_material",
         "Catapult_io.coil-kt_coil",
         "kotlin-stdlib",
-    ] + ["SettingsLib"],
+    ] + [
+        "SettingsLib",
+        "org.lineageos.platform.internal",
+    ],
 }
 
 prebuilt_etc {

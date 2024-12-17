@@ -45,4 +45,8 @@
     <string name="connected">Connected</string>
     <string name="mic_assistant">Search using microphone</string>
     <string name="keyboard_assistant">Search using keyboard</string>
+
+    <!-- ADB -->
+    <string name="enable_adb_network">Enable ADB over network</string>
+    <string name="disable_adb_network">Disable ADB over network</string>
 </resources>

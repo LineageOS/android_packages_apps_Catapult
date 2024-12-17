@@ -8,5 +8,6 @@
         <permission name="android.permission.DEVICE_POWER" />
         <permission name="android.permission.INTERNAL_SYSTEM_WINDOW" />
         <permission name="android.permission.WRITE_SECURE_SETTINGS" />
+        <permission name="android.permission.INTERACT_ACROSS_USERS" />
     </privapp-permissions>
 </permissions>

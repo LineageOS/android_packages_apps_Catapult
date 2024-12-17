@@ -33,6 +33,7 @@
 
     <!-- System permissions -->
     <uses-permission android:name="android.permission.DEVICE_POWER" />
+    <uses-permission android:name="android.permission.INTERACT_ACROSS_USERS" />
     <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
 
