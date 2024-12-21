@@ -12,7 +12,7 @@
 
     <item
         android:id="@+id/menu_move"
-        android:icon="@drawable/ic_pan"
+        android:icon="@drawable/ic_drag_indicator"
         android:iconTint="@android:color/white"
         android:title="@string/move" />
 
