@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.lineageos.tv.launcher.ext.pixelsEqualTo
-import org.lineageos.tv.launcher.model.AppInfo
+import org.lineageos.tv.launcher.model.LeanbackAppInfo
 import org.lineageos.tv.launcher.view.AddFavoriteCard
 
 class AllAppsFavoritesAdapter :
-    ListAdapter<Pair<AppInfo, Boolean>, AllAppsFavoritesAdapter.ViewHolder>(diffCallback) {
+    ListAdapter<Pair<LeanbackAppInfo, Boolean>, AllAppsFavoritesAdapter.ViewHolder>(diffCallback) {
     var onFavoriteChanged: (packageName: String, favorite: Boolean) -> Unit = { _, _ -> }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
@@ -45,22 +45,23 @@ class AllAppsFavoritesAdapter :
             }
         }
 
-        fun bind(item: Pair<AppInfo, Boolean>) {
+        fun bind(item: Pair<LeanbackAppInfo, Boolean>) {
             card.setCardInfo(item.first)
             card.setActionToggle(item.second)
         }
     }
 
     companion object {
-        private val diffCallback = object : DiffUtil.ItemCallback<Pair<AppInfo, Boolean>>() {
+        private val diffCallback =
+            object : DiffUtil.ItemCallback<Pair<LeanbackAppInfo, Boolean>>() {
             override fun areItemsTheSame(
-                oldItem: Pair<AppInfo, Boolean>,
-                newItem: Pair<AppInfo, Boolean>
+                oldItem: Pair<LeanbackAppInfo, Boolean>,
+                newItem: Pair<LeanbackAppInfo, Boolean>
             ) = oldItem.first.packageName == newItem.first.packageName
 
             override fun areContentsTheSame(
-                oldItem: Pair<AppInfo, Boolean>,
-                newItem: Pair<AppInfo, Boolean>
+                oldItem: Pair<LeanbackAppInfo, Boolean>,
+                newItem: Pair<LeanbackAppInfo, Boolean>
             ) = compareValuesBy(
                 oldItem, newItem,
                 { it.first.label },

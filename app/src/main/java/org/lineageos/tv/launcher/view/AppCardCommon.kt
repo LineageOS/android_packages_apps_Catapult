@@ -16,7 +16,7 @@ import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
 import org.lineageos.tv.launcher.R
-import org.lineageos.tv.launcher.model.AppInfo
+import org.lineageos.tv.launcher.model.LeanbackAppInfo
 import org.lineageos.tv.launcher.model.Launchable
 import org.lineageos.tv.launcher.utils.AppManager
 import kotlin.reflect.safeCast
@@ -41,7 +41,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
         nameView.text = appInfo.label
         iconView.setImageDrawable(appInfo.icon)
 
-        if (appInfo is AppInfo) {
+        if (appInfo is LeanbackAppInfo) {
             uninstallable = appInfo.isUninstallable()
 
             if (appInfo.banner != null) {
