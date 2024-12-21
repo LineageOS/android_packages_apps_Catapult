@@ -13,7 +13,6 @@ import android.widget.TextView
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.tvprovider.media.tv.BasePreviewProgram
-import androidx.tvprovider.media.tv.TvContractCompat
 import coil.load
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import org.lineageos.tv.launcher.R
@@ -24,8 +23,8 @@ class WatchNextCard @JvmOverloads constructor(
 ) : Card(context, attrs, defStyleAttr) {
     // Views
     private val bannerView: ImageView by lazy { findViewById(R.id.app_banner)!! }
-    private var title: TextView? = null
-    private val progressView by lazy { findViewById<LinearProgressIndicator>(R.id.watch_progress)!! }
+    private val title: TextView by lazy { findViewById(R.id.title)!! }
+    private val progressView: LinearProgressIndicator by lazy { findViewById(R.id.watch_progress)!! }
 
     init {
         inflate(context, R.layout.watch_next_card, this)
@@ -34,41 +33,22 @@ class WatchNextCard @JvmOverloads constructor(
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
 
         setOnFocusChangeListener { _, hasFocus ->
-            title?.isInvisible = !hasFocus
+            title.isInvisible = !hasFocus
             if (hasFocus) {
-                title?.postDelayed({ title?.isSelected = true }, 2000)
+                title.postDelayed({ title.isSelected = true }, 2000)
             } else {
-                title?.isSelected = false
+                title.isSelected = false
             }
         }
     }
 
     @Suppress("RestrictedApi")
     fun setInfo(info: BasePreviewProgram) {
-        // Choose correct size title for the preview
-        title = when (info.posterArtAspectRatio) {
-            TvContractCompat.PreviewProgramColumns.ASPECT_RATIO_16_9 -> {
-                findViewById(R.id.title_16_9)
-            }
-
-            TvContractCompat.PreviewProgramColumns.ASPECT_RATIO_4_3 -> {
-                findViewById(R.id.title_16_9)
-            }
-
-            TvContractCompat.PreviewProgramColumns.ASPECT_RATIO_3_2 -> {
-                findViewById(R.id.title_3_2)
-            }
-
-            else -> {
-                findViewById(R.id.title_4_3)
-            }
-        }
-        title?.isInvisible = true
-
+        title.isInvisible = true
         label = info.title
         bannerView.isVisible = true
         launchIntent = info.intent
-        title?.text = info.title
+        title.text = info.title
 
         if (info.lastPlaybackPositionMillis != -1 && info.durationMillis != -1) {
             val percentWatched =

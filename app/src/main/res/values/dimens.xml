@@ -7,9 +7,11 @@
     <dimen name="app_card_height">71dp</dimen>
     <dimen name="app_card_width">127dp</dimen>
     <dimen name="card_height">92dp</dimen>
+    <dimen name="watch_next_card_height">138dp</dimen>
+    <dimen name="favorite_card_height">52dp</dimen>
     <dimen name="card_width">164dp</dimen>
-    <dimen name="card_width_4_3">112dp</dimen>
-    <dimen name="card_width_3_2">126dp</dimen>
+    <dimen name="watch_next_card_width">246dp</dimen>
+    <dimen name="favorite_card_width">98dp</dimen>
     <dimen name="main_row_height">164dp</dimen>
     <dimen name="main_app_row_height">130dp</dimen>
     <dimen name="modal_margin">8dp</dimen>
