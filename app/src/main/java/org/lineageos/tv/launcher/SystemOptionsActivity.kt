@@ -14,6 +14,7 @@ import android.icu.text.DateFormat
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import android.net.NetworkRequest
+import android.net.TransportInfo
 import android.net.wifi.WifiInfo
 import android.net.wifi.WifiManager
 import android.os.Build
@@ -150,11 +151,15 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
 
                     is NetworkState.CapabilitiesChanged ->
                         setNetworkButton(
-                            wifiInfo = it.networkCapabilities.transportInfo as WifiInfo,
+                            transportInfo = it.networkCapabilities.transportInfo,
                             capabilities = it.networkCapabilities
                         )
                 }
             }
+        }
+
+        networkMaterialButton.setOnClickListener {
+            startActivity(WIFI_SETTINGS)
         }
 
         lifecycleScope.launch {
@@ -230,44 +235,42 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
     }
 
     private fun setNetworkButton(
-        wifiInfo: WifiInfo? = null,
+        transportInfo: TransportInfo? = null,
         capabilities: NetworkCapabilities? = connectivityManager.getNetworkCapabilities(
             connectivityManager.activeNetwork
         )
     ) {
-        var networkString = resources.getString(R.string.unknown)
-
-        if (capabilities == null
-            || !capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET)
-            || !capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
+        val networkString: String
+        val networkIcon: Int
+        if (capabilities == null ||
+            !capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_INTERNET) ||
+            !capabilities.hasCapability(NetworkCapabilities.NET_CAPABILITY_VALIDATED)
         ) {
             // No internet connection
-            networkMaterialButton.icon =
-                AppCompatResources.getDrawable(this, R.drawable.ic_wifi_not_connected)
             networkString = resources.getString(R.string.not_connected)
-        } else {
-            if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
-                // Ethernet connection
-                networkMaterialButton.icon =
-                    AppCompatResources.getDrawable(this, R.drawable.ic_ethernet)
-            }
-
-            if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-                // WIFI connection
+            networkIcon = R.drawable.ic_wifi_not_connected
+        } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_ETHERNET)) {
+            // Ethernet connection
+            networkString = resources.getString(R.string.connected)
+            networkIcon = R.drawable.ic_ethernet
+        } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
+            // WIFI connection
+            if (transportInfo is WifiInfo) {
+                val wifiManager = getSystemService(WifiManager::class.java)!!
+                val wifiStrength = wifiManager.calculateSignalLevel(transportInfo.rssi)
                 networkString = resources.getString(R.string.connected)
-                if (wifiInfo != null) {
-                    val wifiManager = getSystemService(WifiManager::class.java)!!
-                    val wifiStrength = (wifiManager.calculateSignalLevel(wifiInfo.rssi)
-                        .toFloat() / wifiManager.maxSignalLevel * wifiManager.maxSignalLevel).toInt()
-                    networkMaterialButton.icon =
-                        AppCompatResources.getDrawable(this, wifiIcons[wifiStrength])
-                } else {
-                    networkMaterialButton.icon =
-                        AppCompatResources.getDrawable(this, R.drawable.ic_wifi_not_connected)
-                    networkString = resources.getString(R.string.not_connected)
-                }
+                networkIcon = wifiIcons[wifiStrength.coerceIn(0, wifiIcons.size - 1)]
+            } else {
+                networkString = resources.getString(R.string.not_connected)
+                networkIcon = R.drawable.ic_wifi_not_connected
             }
+        } else {
+            // Unknown transport type
+            networkString = resources.getString(R.string.unknown)
+            networkIcon = R.drawable.ic_wifi_not_connected
         }
+
+        networkMaterialButton.icon = AppCompatResources.getDrawable(this, networkIcon)
 
         val networkSpan =
             SpannableString(resources.getString(R.string.network_status, networkString))
@@ -275,10 +278,6 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
 
         networkMaterialButton.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
             networkMaterialButton.text = updateButton(networkSpan, hasFocus)
-        }
-
-        networkMaterialButton.setOnClickListener {
-            startActivity(WIFI_SETTINGS)
         }
     }
 
