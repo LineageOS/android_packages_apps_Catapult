@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "735d5e6c_b2907cac",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2024-12-21T19:49:46Z",
+      "side": 1,
+      "message": "System apps no longer show the uninstall context menu entry, while user installed apps still do.",
+      "revId": "93456d259e7db13c9ada4821d29de75ae2e19130",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
