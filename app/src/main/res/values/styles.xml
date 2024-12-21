@@ -62,4 +62,6 @@
         <item name="android:stateListAnimator">@animator/app_card_state_animator</item>
         <item name="tint">@color/settings_color</item>
     </style>
+
+    <style name="PopupMenu" parent="Widget.Material3.PopupMenu" />
 </resources>
