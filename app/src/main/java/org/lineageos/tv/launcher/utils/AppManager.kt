@@ -7,10 +7,13 @@ package org.lineageos.tv.launcher.utils
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.net.Uri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.model.AppInfo
+
+import com.android.settingslib.Utils as SettingsLibUtils
 
 object AppManager {
     fun updateFavoriteApps(context: Context, installedApps: List<AppInfo>) {
@@ -54,5 +57,13 @@ object AppManager {
         val packageUri = Uri.parse("package:$packageName")
         val uninstallIntent = Intent(Intent.ACTION_DELETE, packageUri)
         context.startActivity(uninstallIntent, null)
+    }
+
+    fun uninstallable(app: ApplicationInfo, context: Context): Boolean {
+        return app.flags and ApplicationInfo.FLAG_SYSTEM == 0 && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
+            context.resources,
+            context.packageManager,
+            app.packageName
+        )
     }
 }

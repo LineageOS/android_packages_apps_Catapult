@@ -7,6 +7,7 @@ package org.lineageos.tv.launcher.view
 
 import android.content.Context
 import android.content.Intent
+import android.content.pm.ApplicationInfo
 import android.util.AttributeSet
 import android.widget.LinearLayout
 import org.lineageos.tv.launcher.model.Launchable
