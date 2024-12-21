@@ -11,11 +11,15 @@ import android.content.IntentFilter
 import kotlinx.coroutines.flow.mapNotNull
 import org.lineageos.tv.launcher.ext.broadcastFlow
 import org.lineageos.tv.launcher.model.AppInfo
+import org.lineageos.tv.launcher.model.LeanbackAppInfo
 
 class InstalledAppsFlow(private val context: Context) {
     private val packageManager = context.packageManager
-    private val launcherIntent = Intent(Intent.ACTION_MAIN).apply {
+    private val leanbackLauncherIntent = Intent(Intent.ACTION_MAIN).apply {
         addCategory(Intent.CATEGORY_LEANBACK_LAUNCHER)
+    }
+    private val launcherIntent = Intent(Intent.ACTION_MAIN).apply {
+        addCategory(Intent.CATEGORY_LAUNCHER)
     }
 
     fun flow() = IntentFilter().apply {
@@ -37,8 +41,21 @@ class InstalledAppsFlow(private val context: Context) {
             }
         }
 
-        packageManager.queryIntentActivities(launcherIntent, 0).mapNotNull { resolveInfo ->
-            AppInfo(resolveInfo, context)
+        val leanbackLauncherActivities =
+            packageManager.queryIntentActivities(leanbackLauncherIntent, 0)
+                .mapNotNull { resolveInfo ->
+                    LeanbackAppInfo(resolveInfo, context)
+                }
+        val launcherActivities =
+            packageManager.queryIntentActivities(launcherIntent, 0).mapNotNull { resolveInfo ->
+                AppInfo(resolveInfo, context)
+            }
+
+        (leanbackLauncherActivities + launcherActivities).distinctBy {
+            it.launchIntent?.resolveActivityInfo(
+                packageManager,
+                0
+            )?.name
         }
     }
 

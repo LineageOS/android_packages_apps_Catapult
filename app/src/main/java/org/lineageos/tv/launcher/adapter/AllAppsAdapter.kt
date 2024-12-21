@@ -6,10 +6,10 @@
 package org.lineageos.tv.launcher.adapter
 
 import android.view.ViewGroup
-import org.lineageos.tv.launcher.model.AppInfo
+import org.lineageos.tv.launcher.model.LeanbackAppInfo
 import org.lineageos.tv.launcher.view.AppCard
 
-class AllAppsAdapter : TvAdapter<AppInfo, AppCard>() {
+class AllAppsAdapter : TvAdapter<LeanbackAppInfo, AppCard>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
         AppCard(parent.context).apply {
             layoutParams = ViewGroup.LayoutParams(

@@ -11,12 +11,12 @@ import android.content.pm.ApplicationInfo
 import android.net.Uri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
-import org.lineageos.tv.launcher.model.AppInfo
+import org.lineageos.tv.launcher.model.LeanbackAppInfo
 
 import com.android.settingslib.Utils as SettingsLibUtils
 
 object AppManager {
-    fun updateFavoriteApps(context: Context, installedApps: List<AppInfo>) {
+    fun updateFavoriteApps(context: Context, installedApps: List<LeanbackAppInfo>) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val favoriteApps = sharedPreferences.favoriteApps.toMutableList()
 
