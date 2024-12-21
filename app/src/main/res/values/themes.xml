@@ -10,13 +10,13 @@
              adds on top of Theme.AppCompat.NoActionBar
 
              Changes made:
+             - viewInflaterClass: Removed
              - ?android:attr/colorAccent -> ?attr/colorAccent
              - ?android:attr/colorPrimary -> ?attr/colorPrimary
              - ?android:attr/colorPrimaryDark -> ?attr/colorPrimaryDark
              - @color/lb_default_brand_color -> ?attr/colorPrimary
              - @color/lb_default_brand_color_dark -> ?attr/colorPrimaryDark
         -->
-        <item name="viewInflaterClass">androidx.leanback.widget.LeanbackAppCompatViewInflater</item>
         <item name="playbackProgressPrimaryColor">?attr/colorAccent</item>
         <item name="playbackControlsIconHighlightColor">?attr/colorAccent</item>
         <item name="defaultBrandColor">?attr/colorPrimary</item>
