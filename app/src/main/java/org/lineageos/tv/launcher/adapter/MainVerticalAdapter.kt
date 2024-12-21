@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -24,7 +24,9 @@ class MainVerticalAdapter :
             mainRowItemView.updateLayoutParams {
                 width = ViewGroup.LayoutParams.MATCH_PARENT
                 height = mainRowItemView.resources.getDimension(
-                    if (item.second.adapter is TvAdapter<*, *>) {
+                    if (item.second.adapter is AllAppsAdapter) {
+                        R.dimen.main_all_apps_row_height
+                    } else if (item.second.adapter is TvAdapter<*, *>) {
                         R.dimen.main_app_row_height
                     } else {
                         R.dimen.main_row_height

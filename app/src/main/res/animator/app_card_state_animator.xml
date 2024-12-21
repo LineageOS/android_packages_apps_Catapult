@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
@@ -24,16 +24,16 @@
     <item android:state_focused="true">
         <set>
             <objectAnimator
-                android:duration="300"
+                android:duration="@android:integer/config_shortAnimTime"
                 android:interpolator="@anim/control_state"
                 android:propertyName="scaleX"
-                android:valueTo="1.11"
+                android:valueTo="1.1"
                 android:valueType="floatType" />
             <objectAnimator
-                android:duration="300"
+                android:duration="@android:integer/config_shortAnimTime"
                 android:interpolator="@anim/control_state"
                 android:propertyName="scaleY"
-                android:valueTo="1.11"
+                android:valueTo="1.1"
                 android:valueType="floatType" />
         </set>
     </item>
