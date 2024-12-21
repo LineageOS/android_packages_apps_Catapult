@@ -23,6 +23,7 @@
         android:paddingTop="24dp"
         android:paddingRight="48dp"
         android:paddingBottom="100dp"
+        android:verticalSpacing="25dp"
         app:focusOutEnd="true"
         app:focusOutFront="true" />
 

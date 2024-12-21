@@ -20,7 +20,6 @@ import androidx.activity.OnBackPressedCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.leanback.widget.VerticalGridView
@@ -48,6 +47,7 @@ import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
 import org.lineageos.tv.launcher.viewmodels.LauncherViewModel
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
+import java.util.Locale
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // View models
@@ -60,7 +60,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val keyboardAssistantButton by lazy { findViewById<ImageButton>(R.id.keyboard_assistant)!! }
     private val mainVerticalGridView by lazy { findViewById<VerticalGridView>(R.id.main_vertical_grid)!! }
     private val settingButton by lazy { findViewById<ImageButton>(R.id.settingsMaterialButton)!! }
-    private val systemModalButton by lazy { findViewById<ImageButton>(R.id.system_modal_button)!! }
+    private val notificationCountTextView by lazy { findViewById<TextView>(R.id.notificationCountTextView)!! }
     private val topBarContainer by lazy { findViewById<LinearLayout>(R.id.top_bar)!! }
     private val voiceAssistantButton by lazy { findViewById<ImageButton>(R.id.voice_assistant)!! }
 
@@ -163,7 +163,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             startActivity(Intent(android.provider.Settings.ACTION_SETTINGS))
         }
 
-        systemModalButton.setOnClickListener {
+        notificationCountTextView.setOnClickListener {
             startActivity(Intent(this@MainActivity, SystemOptionsActivity::class.java))
         }
 
@@ -196,28 +196,17 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     when (state) {
                         ServiceConnectionState.Connected -> {}
                         ServiceConnectionState.Disconnected -> {
-                            systemModalButton.setImageDrawable(
-                                AppCompatResources.getDrawable(
-                                    this@MainActivity,
-                                    R.drawable.ic_bell
-                                )
-                            )
+                            notificationCountTextView.text = ""
                         }
                         is ServiceConnectionState.Notifications -> {
                             if (state.notifications.isNotEmpty()) {
-                                systemModalButton.setImageDrawable(
-                                    AppCompatResources.getDrawable(
-                                        this@MainActivity,
-                                        R.drawable.ic_bell_active
-                                    )
+                                notificationCountTextView.text = String.format(
+                                    Locale.getDefault(),
+                                    "%d",
+                                    state.notifications.count().toString()
                                 )
                             } else {
-                                systemModalButton.setImageDrawable(
-                                    AppCompatResources.getDrawable(
-                                        this@MainActivity,
-                                        R.drawable.ic_bell
-                                    )
-                                )
+                                notificationCountTextView.text = ""
                             }
                         }
                     }

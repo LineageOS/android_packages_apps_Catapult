@@ -8,18 +8,18 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!-- Favorites Row -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textAppearance="?attr/textAppearanceTitleSmall" />
+        android:textAppearance="?attr/textAppearanceTitleMedium"
+        android:paddingStart="8dp" />
 
     <androidx.leanback.widget.HorizontalGridView
         android:id="@+id/horizontal_grid"
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="@dimen/main_all_apps_row_height"
         android:layout_marginTop="8dp"
         android:clipChildren="false"
         android:clipToPadding="false"
