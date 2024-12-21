@@ -7,7 +7,7 @@
     <string name="app_name">Catapult</string>
     <string name="settings">Settings</string>
     <string name="favorites">Favorites</string>
-    <string name="other_apps">Other Apps</string>
+    <string name="all_apps">All Apps</string>
     <string name="uninstall">Uninstall</string>
     <string name="mark_as_favorite">Mark as Favorite</string>
     <string name="modify_favorites_short">Modify favorites</string>
