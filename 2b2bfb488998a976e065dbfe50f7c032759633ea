@@ -16,6 +16,23 @@
       "message": "Tagging nolen as he might be opposed to the concept.",
       "revId": "2b2bfb488998a976e065dbfe50f7c032759633ea",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "792fcdc6_05ba15ee",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2024-12-21T20:31:15Z",
+      "side": 1,
+      "message": "it deviates from how stock handles it at least... let me stew on this one",
+      "revId": "2b2bfb488998a976e065dbfe50f7c032759633ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
