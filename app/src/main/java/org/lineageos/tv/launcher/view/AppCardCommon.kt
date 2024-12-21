@@ -7,6 +7,7 @@ package org.lineageos.tv.launcher.view
 
 import android.content.Context
 import android.util.AttributeSet
+import android.view.Gravity
 import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
@@ -58,7 +59,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
     }
 
     fun showPopupMenu() {
-        val popupMenu = PopupMenu(context, this)
+        val popupMenu = PopupMenu(context, this, Gravity.START, 0, R.style.PopupMenu)
         popupMenu.menuInflater.inflate(menuResId, popupMenu.menu)
         popupMenu.setForceShowIcon(true)
 
