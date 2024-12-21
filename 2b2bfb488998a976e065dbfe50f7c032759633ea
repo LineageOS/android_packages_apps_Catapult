@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "16b887d4_57657b86",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2024-12-21T19:42:12Z",
+      "side": 1,
+      "message": "Tagging nolen as he might be opposed to the concept.",
+      "revId": "2b2bfb488998a976e065dbfe50f7c032759633ea",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
