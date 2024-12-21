@@ -10,10 +10,12 @@ import android.content.pm.ApplicationInfo
 import android.content.pm.PackageManager
 import android.content.pm.ResolveInfo
 import android.graphics.drawable.Drawable
+import org.lineageos.tv.launcher.utils.AppManager.uninstallable
 
 class AppInfo : Launchable {
     var banner: Drawable?
     private val packageManager: PackageManager = context.packageManager
+    private val applicationInfo: ApplicationInfo
 
     constructor(resolveInfo: ResolveInfo, context: Context) : super(
         resolveInfo.loadLabel(context.packageManager).toString(),
@@ -21,6 +23,7 @@ class AppInfo : Launchable {
         resolveInfo.loadIcon(context.packageManager),
         context
     ) {
+        applicationInfo = resolveInfo.activityInfo.applicationInfo
         banner = resolveInfo.activityInfo.loadBanner(packageManager)
         if (banner == null) {
             banner = resolveInfo.activityInfo.applicationInfo.loadBanner(packageManager)
@@ -33,8 +36,13 @@ class AppInfo : Launchable {
         app.loadIcon(context.packageManager),
         context
     ) {
+        applicationInfo = app
         banner = app.loadBanner(packageManager)
     }
 
     override fun setIntent() = packageManager.getLeanbackLaunchIntentForPackage(packageName)
+
+    fun isUninstallable(): Boolean {
+        return uninstallable(applicationInfo, context)
+    }
 }

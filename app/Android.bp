@@ -7,8 +7,14 @@ package {
     default_applicable_licenses: ["Android-Apache-2.0"],
 }
 
+java_defaults {
+    name: "catapult_defaults",
+    static_libs: ["SettingsLib"],
+}
+
 android_app {
     name: "Catapult",
+    defaults: ["catapult_defaults"],
 
     srcs: ["src/main/java/**/*.kt"],
     resource_dirs: ["src/main/res"],

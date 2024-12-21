@@ -32,19 +32,25 @@ abstract class AppCardCommon @JvmOverloads constructor(
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
     private val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
+    private var uninstallable: Boolean = true
+
     override fun setCardInfo(appInfo: Launchable) {
         super.setCardInfo(appInfo)
 
         nameView.text = appInfo.label
         iconView.setImageDrawable(appInfo.icon)
 
-        if (appInfo is AppInfo && appInfo.banner != null) {
-            // App with a banner
-            bannerView.setImageDrawable(appInfo.banner)
-            bannerView.visibility = View.VISIBLE
-            iconContainer.visibility = View.GONE
-            cardContainer.background =
-                AppCompatResources.getDrawable(context, R.drawable.card_border_only)
+        if (appInfo is AppInfo) {
+            uninstallable = appInfo.isUninstallable()
+
+            if (appInfo.banner != null) {
+                // App with a banner
+                bannerView.setImageDrawable(appInfo.banner)
+                bannerView.visibility = View.VISIBLE
+                iconContainer.visibility = View.GONE
+                cardContainer.background =
+                    AppCompatResources.getDrawable(context, R.drawable.card_border_only)
+            }
         } else {
             // App with an icon
             iconView.setImageDrawable(appInfo.icon)
@@ -61,6 +67,11 @@ abstract class AppCardCommon @JvmOverloads constructor(
             popupMenu.menu.removeItem(R.id.menu_mark_as_favorite)
         } else {
             popupMenu.menu.removeItem(R.id.menu_remove_favorite)
+        }
+
+        // Disable uninstall on certain packages
+        if (!uninstallable) {
+            popupMenu.menu.removeItem(R.id.menu_uninstall)
         }
 
         popupMenu.setOnMenuItemClickListener { menuItem ->
