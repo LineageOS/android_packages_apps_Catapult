@@ -41,6 +41,7 @@ class AppInfo : Launchable {
     }
 
     override fun setIntent() = packageManager.getLeanbackLaunchIntentForPackage(packageName)
+        ?: packageManager.getLaunchIntentForPackage(packageName)
 
     fun isUninstallable(): Boolean {
         return uninstallable(applicationInfo, context)
