@@ -9,12 +9,12 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
 import android.view.View
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.Launchable
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
@@ -28,12 +28,27 @@ abstract class AppCardCommon @JvmOverloads constructor(
 
     // Views
     private val bannerView by lazy { findViewById<ImageView>(R.id.app_banner)!! }
-    private val cardContainer by lazy { findViewById<FrameLayout>(R.id.card_container)!! }
+    private val cardContainer by lazy { findViewById<LinearLayout>(R.id.card_container)!! }
     private val iconContainer by lazy { findViewById<LinearLayout>(R.id.app_with_icon)!! }
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
-    private val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
+    protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
     private var uninstallable: Boolean = true
+
+    init {
+        setupNameMarquee()
+    }
+
+    private fun setupNameMarquee() {
+        setOnFocusChangeListener { _, hasFocus ->
+            nameView.isInvisible = !hasFocus
+            if (hasFocus) {
+                nameView.postDelayed({ nameView.isSelected = true }, 2000)
+            } else {
+                nameView.isSelected = false
+            }
+        }
+    }
 
     override fun setCardInfo(appInfo: Launchable) {
         super.setCardInfo(appInfo)

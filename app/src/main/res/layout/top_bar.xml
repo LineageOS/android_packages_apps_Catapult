@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -59,11 +59,14 @@
             android:layout_marginEnd="32dp"
             android:textAppearance="?attr/textAppearanceTitleMedium" />
 
-        <ImageButton
-            android:id="@+id/system_modal_button"
-            android:contentDescription="@string/system_modal"
-            android:src="@drawable/ic_bell"
-            style="@style/TopBarImageButton" />
+        <TextView
+            android:id="@+id/notificationCountTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
+            style="@style/TopBarImageButton"
+            app:drawableLeftCompat="@drawable/ic_bell" />
 
         <ImageButton
             android:id="@+id/settingsMaterialButton"
