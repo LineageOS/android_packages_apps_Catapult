@@ -8,16 +8,12 @@ package org.lineageos.tv.launcher.view
 import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
-import android.widget.TextView
 import org.lineageos.tv.launcher.R
 
 class AppCard @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCardCommon(context, attrs, defStyleAttr) {
     override val menuResId = R.menu.app_long_press
-
-    // Views
-    private val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
     private var hasFocus: Boolean = false
 

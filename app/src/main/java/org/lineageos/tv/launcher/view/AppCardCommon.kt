@@ -31,7 +31,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
     private val cardContainer by lazy { findViewById<FrameLayout>(R.id.card_container)!! }
     private val iconContainer by lazy { findViewById<LinearLayout>(R.id.app_with_icon)!! }
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
-    private val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
+    protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
     private var uninstallable: Boolean = true
 
