@@ -4,14 +4,15 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <style name="WatchNextCardTitle" parent="TextAppearance.Material3.TitleSmall">
+    <style name="WatchNextCardTitle" parent="TextAppearance.Material3.BodySmall">
         <item name="android:textAlignment">center</item>
         <item name="android:maxLines">1</item>
         <item name="android:textColor">@android:color/white</item>
-        <item name="android:visibility">gone</item>
+        <item name="android:visibility">invisible</item>
         <item name="android:ellipsize">marquee</item>
         <item name="android:marqueeRepeatLimit">marquee_forever</item>
         <item name="android:singleLine">true</item>
+        <item name="android:layout_marginTop">4dp</item>
     </style>
 
     <style name="SideActivityHeaderStyle" parent="TextAppearance.Material3.HeadlineMedium">

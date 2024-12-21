@@ -9,6 +9,7 @@ import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
 import android.widget.ImageView
+import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import org.lineageos.tv.launcher.R
 
@@ -27,6 +28,15 @@ class FavoriteCard @JvmOverloads constructor(
 
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
+
+        setOnFocusChangeListener { _, hasFocus ->
+            nameView.isInvisible = !hasFocus
+            if (hasFocus) {
+                nameView.postDelayed({ nameView.isSelected = true }, 2000)
+            } else {
+                nameView.isSelected = false
+            }
+        }
     }
 
     fun setMoving() {
