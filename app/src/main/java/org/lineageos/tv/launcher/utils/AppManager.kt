@@ -16,7 +16,13 @@ import org.lineageos.tv.launcher.model.AppInfo
 import com.android.settingslib.Utils as SettingsLibUtils
 
 object AppManager {
+<<<<<<< PATCH SET (701eeb Catapult: Exclude settings from all apps list)
+    val allAppsExcludedPackages = arrayOf("com.android.tv.settings")
+
+    fun updateFavoriteApps(context: Context, installedApps: List<LeanbackAppInfo>) {
+=======
     fun updateFavoriteApps(context: Context, installedApps: List<AppInfo>) {
+>>>>>>> BASE      (cae943 Catapult: Add CI for gradle-generatebp)
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val favoriteApps = sharedPreferences.favoriteApps.toMutableList()
 
