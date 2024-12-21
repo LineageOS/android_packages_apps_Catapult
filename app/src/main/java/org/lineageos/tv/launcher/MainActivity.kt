@@ -116,7 +116,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 model.installedApps.collectLatest {
-                    allAppsAdapter.submitList(it)
+                    val allAppsFiltered = it.filter { app ->
+                        !AppManager.allAppsExcludedPackages.contains(app.packageName)
+                    }
+                    allAppsAdapter.submitList(allAppsFiltered)
 
                     if (it.isNotEmpty()) {
                         AppManager.updateFavoriteApps(this@MainActivity, it)

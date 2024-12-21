@@ -16,6 +16,8 @@ import org.lineageos.tv.launcher.model.LeanbackAppInfo
 import com.android.settingslib.Utils as SettingsLibUtils
 
 object AppManager {
+    val allAppsExcludedPackages = arrayOf("com.android.tv.settings")
+
     fun updateFavoriteApps(context: Context, installedApps: List<LeanbackAppInfo>) {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
         val favoriteApps = sharedPreferences.favoriteApps.toMutableList()
