@@ -8,7 +8,6 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <!-- Favorites Row -->
     <TextView
         android:id="@+id/title"
         android:layout_width="wrap_content"
