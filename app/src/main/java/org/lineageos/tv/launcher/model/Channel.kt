@@ -22,7 +22,7 @@ class Channel(
 
         fun getAllAppsChannel(context: Context) = Channel(
             InternalChannel.ALL_APPS.id,
-            context.getString(R.string.other_apps)
+            context.getString(R.string.all_apps)
         )
 
         fun getWatchNextChannel(context: Context) = Channel(
