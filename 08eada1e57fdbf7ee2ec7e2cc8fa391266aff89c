@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "49c9896a_aae181fd",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2024-12-21T19:42:52Z",
+      "side": 1,
+      "message": "Button goes to accessories page now instead of crashing the app.",
+      "revId": "08eada1e57fdbf7ee2ec7e2cc8fa391266aff89c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
