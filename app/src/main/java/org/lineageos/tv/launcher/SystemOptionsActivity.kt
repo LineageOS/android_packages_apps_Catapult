@@ -401,7 +401,13 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
     companion object {
         val SETTINGS: Intent = Intent(Settings.ACTION_SETTINGS)
         val WIFI_SETTINGS: Intent = Intent(Settings.ACTION_WIFI_SETTINGS)
-        val BLUETOOTH_SETTINGS: Intent = Intent(Settings.ACTION_BLUETOOTH_SETTINGS)
+        val BLUETOOTH_SETTINGS: Intent = Intent().apply {
+            setClassName("com.android.tv.settings", "com.android.tv.settings.slice.SliceActivity")
+            putExtra(
+                "slice_uri",
+                "content://com.android.tv.settings.accessories.sliceprovider/general"
+            )
+        }
         val NOTIFICATION_SETTINGS: Intent = Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)
 
         val wifiIcons = intArrayOf(
