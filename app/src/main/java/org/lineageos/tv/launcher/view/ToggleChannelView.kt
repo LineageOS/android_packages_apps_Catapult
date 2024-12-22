@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -44,10 +44,14 @@ class ToggleChannelView @JvmOverloads constructor(
     }
 
     fun setMoving() {
+        if (moving) return
         moving = true
+        isSelected = true
     }
 
     fun setMoveDone() {
+        if (!moving) return
         moving = false
+        isSelected = false
     }
 }
