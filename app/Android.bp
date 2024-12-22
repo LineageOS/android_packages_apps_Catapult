@@ -22,7 +22,6 @@ android_app {
     overrides: [
         "TvLauncherNoGMS",
         "TvSampleLeanbackLauncher",
-        "TVLauncher",
     ],
 
     required: [
