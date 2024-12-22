@@ -34,6 +34,24 @@
       "parentUuid": "b85a7cf0_7a00fb76",
       "revId": "abc6658a511e5bcc59a0016a9bd630cde07a2aaa",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c64c81dc_324b6a47",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2024-12-22T13:15:03Z",
+      "side": 1,
+      "message": "Yes, it\u0027s used when an XML layout contains a generic view type (like `TextView` and not the full qualified class name), should we instead implement a custom one that returns a mix of both?",
+      "parentUuid": "0a435494_0b31f57a",
+      "revId": "abc6658a511e5bcc59a0016a9bd630cde07a2aaa",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
