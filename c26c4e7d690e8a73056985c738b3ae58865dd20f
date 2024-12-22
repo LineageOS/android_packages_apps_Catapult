@@ -16,6 +16,29 @@
       "message": "All apps now shows the tv remote license entry, which is a non-leanback app.",
       "revId": "c26c4e7d690e8a73056985c738b3ae58865dd20f",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "06e480b3_a6585f46",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/model/AppInfo.kt",
+        "patchSetId": 4
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2024-12-22T07:56:49Z",
+      "side": 1,
+      "message": "It will probably need a new type of card to do this nicely.",
+      "range": {
+        "startLine": 43,
+        "startChar": 0,
+        "endLine": 45,
+        "endChar": 0
+      },
+      "revId": "c26c4e7d690e8a73056985c738b3ae58865dd20f",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
