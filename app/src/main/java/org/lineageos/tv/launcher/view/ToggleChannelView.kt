@@ -44,10 +44,14 @@ class ToggleChannelView @JvmOverloads constructor(
     }
 
     fun setMoving() {
+        if (moving) return
         moving = true
+        isSelected = true
     }
 
     fun setMoveDone() {
+        if (!moving) return
         moving = false
+        isSelected = false
     }
 }
