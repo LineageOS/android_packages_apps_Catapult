@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "79efef5f_cc62cb10",
+        "filename": "app/Android.bp",
+        "patchSetId": 1
+      },
+      "lineNbr": 23,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2024-12-22T01:56:41Z",
+      "side": 0,
+      "message": "This needs to go too, since we\u0027re removing it. Though whether it should be a separate commit is up for debate.",
+      "revId": "88938ca37608cc23845ee8648653d9562548cffc",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
