@@ -5,7 +5,9 @@
 
 package org.lineageos.tv.launcher.adapter
 
+import android.graphics.Rect
 import android.view.KeyEvent
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
