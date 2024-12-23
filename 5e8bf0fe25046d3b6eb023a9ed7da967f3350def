@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "514ce60a_5f905199",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 6
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2024-12-23T09:35:12Z",
+      "side": 1,
+      "message": "Thoughts on this? Or a better idea? I guess it could also just have setIntent/setLeanbackIntent.",
+      "revId": "5e8bf0fe25046d3b6eb023a9ed7da967f3350def",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
