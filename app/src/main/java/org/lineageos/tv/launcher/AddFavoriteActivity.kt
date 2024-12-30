@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -13,7 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
-import org.lineageos.tv.launcher.adapter.AllAppsFavoritesAdapter
+import org.lineageos.tv.launcher.adapter.ModifyFavoritesAdapter
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
 import org.lineageos.tv.launcher.viewmodels.AddFavoriteViewModel
@@ -26,7 +26,7 @@ class AddFavoriteActivity : ModalActivity(R.layout.activity_add_favorite) {
     private val allAppsGridView by lazy { findViewById<VerticalGridView>(R.id.all_apps_add_grid)!! }
 
     // Adapters
-    private val allAppsAdapter by lazy { AllAppsFavoritesAdapter() }
+    private val allAppsAdapter by lazy { ModifyFavoritesAdapter() }
 
     private val permissionsGatedCallback = PermissionsGatedCallback(this) {
         lifecycleScope.launch {
