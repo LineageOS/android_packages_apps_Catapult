@@ -31,15 +31,6 @@ class WatchNextCard @JvmOverloads constructor(
 
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
-
-        setOnFocusChangeListener { _, hasFocus ->
-            title.isInvisible = !hasFocus
-            if (hasFocus) {
-                title.postDelayed({ title.isSelected = true }, 2000)
-            } else {
-                title.isSelected = false
-            }
-        }
     }
 
     @Suppress("RestrictedApi")

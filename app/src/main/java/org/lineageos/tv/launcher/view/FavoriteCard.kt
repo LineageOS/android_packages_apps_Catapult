@@ -28,15 +28,6 @@ class FavoriteCard @JvmOverloads constructor(
 
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
-
-        setOnFocusChangeListener { _, hasFocus ->
-            nameView.isInvisible = !hasFocus
-            if (hasFocus) {
-                nameView.postDelayed({ nameView.isSelected = true }, 2000)
-            } else {
-                nameView.isSelected = false
-            }
-        }
     }
 
     fun setMoving() {

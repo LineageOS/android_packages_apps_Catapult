@@ -8,8 +8,6 @@ package org.lineageos.tv.launcher.view
 import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
-import android.view.View
-import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 
 class AppCard @JvmOverloads constructor(
