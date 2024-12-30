@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
@@ -43,4 +43,6 @@
     <string name="allow_notification_access">Allow notification access</string>
     <string name="dismiss">Dismiss</string>
     <string name="connected">Connected</string>
+    <string name="mic_assistant">Search using microphone</string>
+    <string name="keyboard_assistant">Search using keyboard</string>
 </resources>
