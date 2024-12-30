@@ -23,9 +23,7 @@ import android.os.PowerManager
 import android.os.SystemClock
 import android.provider.Settings
 import android.service.notification.StatusBarNotification
-import android.text.Spannable
 import android.text.SpannableString
-import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.KeyEvent
 import android.view.View
@@ -34,7 +32,6 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.viewModels
 import androidx.appcompat.content.res.AppCompatResources
-import androidx.core.content.ContextCompat
 import androidx.leanback.widget.VerticalGridView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
@@ -47,6 +44,7 @@ import org.lineageos.tv.launcher.notification.NotificationAdapter
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.view.NotificationItemView
+import org.lineageos.tv.launcher.view.TwoLineButton
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
 import java.util.Calendar
 
@@ -57,22 +55,15 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
 
     // Views
     private val allowNotificationAccessMaterialButton by lazy { findViewById<MaterialButton>(R.id.allowNotificationAccessMaterialButton)!! }
-    private val bluetoothMaterialButton by lazy { findViewById<MaterialButton>(R.id.bluetoothMaterialButton)!! }
+    private val bluetoothTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.bluetoothTwoLineButton)!! }
     private val dateTextView by lazy { findViewById<TextView>(R.id.dateTextView)!! }
-    private val networkMaterialButton by lazy { findViewById<MaterialButton>(R.id.networkMaterialButton)!! }
+    private val networkTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.networkTwoLineButton)!! }
     private val noNotificationAccessLinearLayout by lazy { findViewById<LinearLayout>(R.id.noNotificationAccessLinearLayout)!! }
     private val noNotificationsTextView by lazy { findViewById<TextView>(R.id.noNotificationsTextView)!! }
     private val notificationsVerticalGridView by lazy { findViewById<VerticalGridView>(R.id.notificationsVerticalGridView)!! }
     private val powerMaterialButton by lazy { findViewById<MaterialButton>(R.id.powerMaterialButton)!! }
     private val settingsButton by lazy { findViewById<MaterialButton>(R.id.settingsMaterialButton)!! }
     private val sleepMaterialButton by lazy { findViewById<MaterialButton>(R.id.sleepMaterialButton)!! }
-
-    private val colorStateList by lazy {
-        ContextCompat.getColorStateList(
-            this,
-            R.color.system_options_button_content_secondary_tint
-        )
-    }
 
     private val notificationAdapter: NotificationAdapter by lazy { NotificationAdapter(this, this) }
 
@@ -158,7 +149,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             }
         }
 
-        networkMaterialButton.setOnClickListener {
+        networkTwoLineButton.setOnClickListener {
             startActivity(WIFI_SETTINGS)
         }
 
@@ -270,15 +261,11 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             networkIcon = R.drawable.ic_wifi_not_connected
         }
 
-        networkMaterialButton.icon = AppCompatResources.getDrawable(this, networkIcon)
+        networkTwoLineButton.icon = AppCompatResources.getDrawable(this, networkIcon)
 
         val networkSpan =
             SpannableString(resources.getString(R.string.network_status, networkString))
-        networkMaterialButton.text = updateButton(networkSpan, false)
-
-        networkMaterialButton.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
-            networkMaterialButton.text = updateButton(networkSpan, hasFocus)
-        }
+        networkTwoLineButton.setSpan(networkSpan)
     }
 
     private fun setBluetoothButton() {
@@ -289,31 +276,11 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
         }
 
         val btSpan = SpannableString(resources.getString(R.string.bluetooth_status, btString))
-        bluetoothMaterialButton.text = updateButton(btSpan, false)
+        bluetoothTwoLineButton.setSpan(btSpan)
 
-        bluetoothMaterialButton.onFocusChangeListener = View.OnFocusChangeListener { _, hasFocus ->
-            bluetoothMaterialButton.text = updateButton(btSpan, hasFocus)
-        }
-
-        bluetoothMaterialButton.setOnClickListener {
+        bluetoothTwoLineButton.setOnClickListener {
             startActivity(BLUETOOTH_SETTINGS)
         }
-    }
-
-    private fun updateButton(content: SpannableString, hasFocus: Boolean): SpannableString {
-        val color = colorStateList?.getColorForState(
-            if (hasFocus) intArrayOf(android.R.attr.state_focused) else intArrayOf(),
-            colorStateList!!.defaultColor
-        ) ?: colorStateList?.defaultColor ?: ContextCompat.getColor(this, R.color.white_disabled)
-
-        content.setSpan(
-            ForegroundColorSpan(color),
-            content.indexOf("\n"),
-            content.length,
-            Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
-        )
-
-        return content
     }
 
     override fun onItemClick(view: NotificationItemView) {
