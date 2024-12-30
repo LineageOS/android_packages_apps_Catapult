@@ -11,14 +11,14 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.lineageos.tv.launcher.ext.pixelsEqualTo
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
-import org.lineageos.tv.launcher.view.AddFavoriteCard
+import org.lineageos.tv.launcher.view.AddFavoriteItemView
 
-class AllAppsFavoritesAdapter :
-    ListAdapter<Pair<LeanbackAppInfo, Boolean>, AllAppsFavoritesAdapter.ViewHolder>(diffCallback) {
+class ModifyFavoritesAdapter :
+    ListAdapter<Pair<LeanbackAppInfo, Boolean>, ModifyFavoritesAdapter.ViewHolder>(diffCallback) {
     var onFavoriteChanged: (packageName: String, favorite: Boolean) -> Unit = { _, _ -> }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        AddFavoriteCard(parent.context).apply {
+        AddFavoriteItemView(parent.context).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
@@ -30,7 +30,7 @@ class AllAppsFavoritesAdapter :
         holder.bind(getItem(position))
     }
 
-    inner class ViewHolder(private val card: AddFavoriteCard) : RecyclerView.ViewHolder(card) {
+    inner class ViewHolder(private val card: AddFavoriteItemView) : RecyclerView.ViewHolder(card) {
         init {
             card.apply {
                 setOnClickListener {
