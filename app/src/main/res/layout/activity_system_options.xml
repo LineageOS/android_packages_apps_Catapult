@@ -93,8 +93,8 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/networkMaterialButton"
+                <org.lineageos.tv.launcher.view.TwoLineButton
+                    android:id="@+id/networkTwoLineButton"
                     style="@style/TwoLineSystemOptionsButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -103,8 +103,8 @@
                     android:text="@string/network_status"
                     app:icon="@drawable/ic_wifi_signal_3" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/bluetoothMaterialButton"
+                <org.lineageos.tv.launcher.view.TwoLineButton
+                    android:id="@+id/bluetoothTwoLineButton"
                     style="@style/TwoLineSystemOptionsButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
