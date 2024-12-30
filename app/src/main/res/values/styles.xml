@@ -64,5 +64,15 @@
         <item name="tint">@color/settings_color</item>
     </style>
 
+    <style name="TopBarSearchButton" parent="TopBarImageButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:background">@drawable/search_button_background</item>
+        <item name="android:backgroundTint">@null</item>
+        <item name="android:stateListAnimator">@animator/search_button_state_animator</item>
+        <item name="tint">@color/search_button_icon_color</item>
+    </style>
+
     <style name="PopupMenu" parent="Widget.Material3.PopupMenu" />
 </resources>
