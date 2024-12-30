@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -93,8 +93,8 @@
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/networkMaterialButton"
+                <org.lineageos.tv.launcher.view.TwoLineButton
+                    android:id="@+id/networkTwoLineButton"
                     style="@style/TwoLineSystemOptionsButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
@@ -103,8 +103,8 @@
                     android:text="@string/network_status"
                     app:icon="@drawable/ic_wifi_signal_3" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/bluetoothMaterialButton"
+                <org.lineageos.tv.launcher.view.TwoLineButton
+                    android:id="@+id/bluetoothTwoLineButton"
                     style="@style/TwoLineSystemOptionsButtonStyle"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
