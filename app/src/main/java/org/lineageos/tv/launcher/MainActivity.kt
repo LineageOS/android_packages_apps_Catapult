@@ -14,6 +14,7 @@ import android.transition.TransitionManager
 import android.view.Gravity
 import android.view.View
 import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.activity.OnBackPressedCallback
@@ -56,7 +57,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     // Views
     private val assistantButtonsContainer by lazy { findViewById<LinearLayout>(R.id.assistant_buttons)!! }
-    private val assistantShowButton by lazy { findViewById<TextView>(R.id.assistant_title)!! }
+    private val assistantHintImageView by lazy { findViewById<ImageView>(R.id.assistantHintImageView)!! }
     private val keyboardAssistantButton by lazy { findViewById<ImageButton>(R.id.keyboard_assistant)!! }
     private val mainVerticalGridView by lazy { findViewById<VerticalGridView>(R.id.main_vertical_grid)!! }
     private val settingButton by lazy { findViewById<ImageButton>(R.id.settingsMaterialButton)!! }
@@ -174,7 +175,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         assistIntent.resolveActivity(packageManager)?.also {
             setupAssistantButtons(assistIntent)
         } ?: run {
-            assistantShowButton.isInvisible = true
+            assistantHintImageView.isInvisible = true
             assistantButtonsContainer.isInvisible = true
         }
 
@@ -253,12 +254,12 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             slideEdge = Gravity.START
             duration = 400
         }
-        assistantShowButton.setOnFocusChangeListener { _, hasFocus ->
+        assistantHintImageView.setOnFocusChangeListener { _, hasFocus ->
             if (hasFocus) {
-                transition.removeTarget(assistantShowButton)
+                transition.removeTarget(assistantHintImageView)
                 transition.addTarget(assistantButtonsContainer)
                 TransitionManager.beginDelayedTransition(topBarContainer, transition)
-                assistantShowButton.isVisible = false
+                assistantHintImageView.isVisible = false
                 assistantButtonsContainer.isVisible = true
             }
         }
@@ -267,10 +268,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
             if (!hasFocus) {
                 if (!keyboardAssistantButton.hasFocus() && !voiceAssistantButton.hasFocus()) {
                     transition.removeTarget(assistantButtonsContainer)
-                    transition.addTarget(assistantShowButton)
+                    transition.addTarget(assistantHintImageView)
                     TransitionManager.beginDelayedTransition(topBarContainer, transition)
                     assistantButtonsContainer.isVisible = false
-                    assistantShowButton.isVisible = true
+                    assistantHintImageView.isVisible = true
                 }
             }
         }

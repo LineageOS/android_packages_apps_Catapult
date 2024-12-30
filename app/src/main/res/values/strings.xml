@@ -43,4 +43,6 @@
     <string name="allow_notification_access">Allow notification access</string>
     <string name="dismiss">Dismiss</string>
     <string name="connected">Connected</string>
+    <string name="mic_assistant">Search using microphone</string>
+    <string name="keyboard_assistant">Search using keyboard</string>
 </resources>
