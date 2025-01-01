@@ -9,7 +9,7 @@ java_import {
     name: "Catapult_com.squareup.okhttp3_okhttp-nodeps",
     jars: ["com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar"],
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -19,7 +19,7 @@ java_import {
 java_library_static {
     name: "Catapult_com.squareup.okhttp3_okhttp",
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -29,13 +29,12 @@ java_library_static {
         "Catapult_com.squareup.okio_okio",
         "kotlin-stdlib-jdk8",
     ],
-    java_version: "1.7",
 }
 
 java_library_static {
     name: "Catapult_com.squareup.okio_okio",
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -43,14 +42,13 @@ java_library_static {
     static_libs: [
         "Catapult_com.squareup.okio_okio-jvm",
     ],
-    java_version: "1.7",
 }
 
 java_import {
     name: "Catapult_com.squareup.okio_okio-jvm-nodeps",
     jars: ["com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.jar"],
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -60,7 +58,7 @@ java_import {
 java_library_static {
     name: "Catapult_com.squareup.okio_okio-jvm",
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -69,14 +67,13 @@ java_library_static {
         "Catapult_com.squareup.okio_okio-jvm-nodeps",
         "kotlin-stdlib",
     ],
-    java_version: "1.7",
 }
 
 android_library_import {
     name: "Catapult_io.coil-kt_coil-nodeps",
     aars: ["io/coil-kt/coil/2.6.0/coil-2.6.0.aar"],
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -90,7 +87,7 @@ android_library_import {
 android_library {
     name: "Catapult_io.coil-kt_coil",
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -101,14 +98,13 @@ android_library {
         "Catapult_io.coil-kt_coil-base",
         "kotlin-stdlib",
     ],
-    java_version: "1.7",
 }
 
 android_library_import {
     name: "Catapult_io.coil-kt_coil-base-nodeps",
     aars: ["io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.aar"],
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -131,7 +127,7 @@ android_library_import {
 android_library {
     name: "Catapult_io.coil-kt_coil-base",
     sdk_version: "35",
-    min_sdk_version: "14",
+    min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
         "//apex_available:anyapex",
@@ -151,5 +147,4 @@ android_library {
         "kotlin-stdlib",
         "kotlinx-coroutines-android",
     ],
-    java_version: "1.7",
 }
