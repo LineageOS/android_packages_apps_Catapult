@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d4ec883a_6b8adb02",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 11
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-01-08T17:35:03Z",
+      "side": 1,
+      "message": "code is fine, didn\u0027t check layout at all",
+      "revId": "49be4d7ce431f28350b0b05e599ffe1b9c7a09e7",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
