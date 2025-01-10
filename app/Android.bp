@@ -40,7 +40,7 @@ android_app {
         "androidx.tvprovider_tvprovider",
         "com.google.android.material_material",
         "Catapult_io.coil-kt_coil",
-        "kotlin-stdlib-jdk8",
+        "kotlin-stdlib",
     ] + ["SettingsLib"],
 }
 

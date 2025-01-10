@@ -59,9 +59,6 @@ android {
 dependencies {
     compileOnly(fileTree(mapOf("dir" to "../libs", "include" to listOf("*.jar"))))
 
-    // Align versions of all Kotlin components
-    implementation(platform("org.jetbrains.kotlin:kotlin-bom:1.8.10"))
-
     implementation("androidx.core:core-ktx:1.12.0")
     implementation("androidx.activity:activity-ktx:1.7.2")
     implementation("androidx.appcompat:appcompat:1.6.1")
