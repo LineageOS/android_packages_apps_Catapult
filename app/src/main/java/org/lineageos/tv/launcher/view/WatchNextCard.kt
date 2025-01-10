@@ -13,7 +13,9 @@ import android.widget.TextView
 import androidx.core.view.isInvisible
 import androidx.core.view.isVisible
 import androidx.tvprovider.media.tv.BasePreviewProgram
-import coil.load
+import coil3.load
+import coil3.request.crossfade
+import coil3.request.placeholder
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.ext.getAttributeResourceId
