@@ -46,7 +46,7 @@ android_app {
         "Catapult_io.coil-kt.coil3_coil-core-android",
         "Catapult_io.coil-kt.coil3_coil-network-core-android",
         "Catapult_io.coil-kt.coil3_coil-network-okhttp",
-        "kotlin-stdlib-jdk8",
+        "kotlin-stdlib",
     ] + ["SettingsLib"],
 }
 
