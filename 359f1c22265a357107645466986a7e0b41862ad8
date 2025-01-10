@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "04044ba1_db279a3c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-01-10T10:41:06Z",
+      "side": 1,
+      "message": "Be sure to merge only if 100% sure getPosterArtUri() only returns local URIs and not network URIs",
+      "revId": "359f1c22265a357107645466986a7e0b41862ad8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
