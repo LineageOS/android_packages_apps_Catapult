@@ -16,4 +16,23 @@ class AppInfo : LeanbackAppInfo {
     constructor(app: ApplicationInfo, context: Context) : super(app, context)
 
     override fun setIntent() = packageManager.getLaunchIntentForPackage(packageName)
+
+    companion object {
+        fun create(context: Context, appId: String, flags: Int): LeanbackAppInfo {
+            val leanbackAppInfo = LeanbackAppInfo(
+                context.packageManager.getApplicationInfo(appId, 0),
+                context
+            )
+
+            return if (leanbackAppInfo.launchIntent == null) {
+                // Fall back to AppInfo if leanback intent is unavailable
+                AppInfo(
+                    context.packageManager.getApplicationInfo(appId, 0),
+                    context
+                )
+            } else {
+                leanbackAppInfo
+            }
+        }
+    }
 }
