@@ -30,6 +30,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import org.lineageos.tv.launcher.adapter.AllAppsAdapter
 import org.lineageos.tv.launcher.adapter.FavoritesAdapter
@@ -89,9 +90,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     private val permissionsGatedCallback = PermissionsGatedCallback(this) {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                model.channelsToPrograms.collectLatest {
-                    mainVerticalAdapter.submitList(
-                        it.map { channel ->
+                combine(
+                    model.watchNextPrograms,
+                    model.channelsToPrograms
+                ) { watchNextPrograms, channels ->
+                    channels.mapNotNull { channel ->
+                        // Check if "Watch Next" should be skipped
+                        if (channel.first.id == InternalChannel.WATCH_NEXT.id && watchNextPrograms.isEmpty()) {
+                            null
+                        } else {
                             channel.first.id to MainRowItem(
                                 channel.first.title,
                                 when (channel.first.id) {
@@ -108,7 +115,10 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                                 }
                             )
                         }
-                    )
+                    } to watchNextPrograms
+                }.collectLatest { (updatedList, watchNextPrograms) ->
+                    mainVerticalAdapter.submitList(updatedList)
+                    watchNextAdapter.submitList(watchNextPrograms)
                 }
             }
         }
@@ -121,14 +131,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     if (it.isNotEmpty()) {
                         AppManager.updateFavoriteApps(this@MainActivity, it)
                     }
-                }
-            }
-        }
-
-        lifecycleScope.launch {
-            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                model.watchNextPrograms.collectLatest {
-                    watchNextAdapter.submitList(it)
                 }
             }
         }
