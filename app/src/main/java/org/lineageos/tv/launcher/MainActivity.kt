@@ -40,8 +40,8 @@ import org.lineageos.tv.launcher.adapter.WatchNextAdapter
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.ext.homeRoleRequestDialogDismissed
 import org.lineageos.tv.launcher.ext.roleCanBeRequested
+import org.lineageos.tv.launcher.model.AppInfo
 import org.lineageos.tv.launcher.model.InternalChannel
-import org.lineageos.tv.launcher.model.LeanbackAppInfo
 import org.lineageos.tv.launcher.model.MainRowItem
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
@@ -143,10 +143,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     favoritesAdapter.submitList(
                         it.mapNotNull {
                             runCatching {
-                                LeanbackAppInfo(
-                                    packageManager.getApplicationInfo(it, 0),
-                                    this@MainActivity
-                                )
+                                AppInfo.create(this@MainActivity, it)
                             }.getOrNull()
                         } + listOf(
                             FavoritesAdapter.createAddFavoriteEntry(this@MainActivity),
