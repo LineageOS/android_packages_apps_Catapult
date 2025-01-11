@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "37c68265_9ad01438",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 2
+      },
+      "lineNbr": 122,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-01-11T12:00:33Z",
+      "side": 1,
+      "message": "maybe pass `watchNextPrograms` here?\n\nmapNotNull {...} to watchNextPrograms\n\nand submit right under it? It should be equivalent",
+      "range": {
+        "startLine": 122,
+        "startChar": 0,
+        "endLine": 122,
+        "endChar": 21
+      },
+      "revId": "ddf56b42ced560c836051d57dfdf481a18786b42",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
