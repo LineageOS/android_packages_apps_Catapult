@@ -9,7 +9,6 @@ import android.app.ActivityOptions
 import android.app.PendingIntent
 import android.bluetooth.BluetoothManager
 import android.content.Intent
-import android.content.pm.ApplicationInfo.FLAG_SYSTEM
 import android.icu.text.DateFormat
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -43,6 +42,7 @@ import org.lineageos.tv.launcher.ext.networkCallbackFlow
 import org.lineageos.tv.launcher.notification.NotificationAdapter
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
+import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.view.NotificationItemView
 import org.lineageos.tv.launcher.view.TwoLineButton
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
@@ -105,7 +105,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
 
         notificationsVerticalGridView.adapter = notificationAdapter
 
-        if (isSystemApp()) {
+        if (AppManager.isSystemApp(this)) {
             sleepMaterialButton.setOnClickListener {
                 val pm: PowerManager = getSystemService(PowerManager::class.java) as PowerManager
                 pm.goToSleep(
@@ -359,10 +359,6 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
         if (NotificationUtils.shouldAutoCancel(sbn.notification)) {
             notificationViewModel.cancelNotification(sbn.key)
         }
-    }
-
-    private fun isSystemApp(): Boolean {
-        return applicationInfo.flags and FLAG_SYSTEM != 0
     }
 
     companion object {
