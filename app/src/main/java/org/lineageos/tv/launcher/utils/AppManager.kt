@@ -8,6 +8,7 @@ package org.lineageos.tv.launcher.utils
 import android.content.Context
 import android.content.Intent
 import android.content.pm.ApplicationInfo
+import android.content.pm.ApplicationInfo.FLAG_SYSTEM
 import android.net.Uri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
@@ -60,10 +61,14 @@ object AppManager {
     }
 
     fun uninstallable(app: ApplicationInfo, context: Context): Boolean {
-        return app.flags and ApplicationInfo.FLAG_SYSTEM == 0 && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
+        return !isSystemApp(context) && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
             context.resources,
             context.packageManager,
             app.packageName
         )
+    }
+
+    fun isSystemApp(context: Context): Boolean {
+        return context.applicationInfo.flags and FLAG_SYSTEM != 0
     }
 }

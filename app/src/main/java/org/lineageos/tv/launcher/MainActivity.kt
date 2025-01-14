@@ -277,7 +277,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     }
 
     private fun askForHomeRoleIfNeeded() {
-        if (roleManager.roleCanBeRequested(RoleManager.ROLE_HOME)
+        if (!AppManager.isSystemApp(this) && roleManager.roleCanBeRequested(RoleManager.ROLE_HOME)
             && !sharedPreferences.homeRoleRequestDialogDismissed
         ) {
             MaterialAlertDialogBuilder(this)
