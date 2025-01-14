@@ -298,7 +298,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
                 }
             }
 
-            view.statusBarNotification?.let { cancelNotification(it) }
+            view.statusBarNotification?.let { notificationViewModel.cancelNotification(it.key) }
         } catch (e: PendingIntent.CanceledException) {
             Log.d(
                 "SystemOptionsActivity",
@@ -312,7 +312,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             return false
         }
 
-        if (view.statusBarNotification?.isOngoing == true) {
+        if (view.statusBarNotification?.isClearable == false) {
             return false
         }
 
@@ -320,7 +320,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             KeyEvent.KEYCODE_DPAD_LEFT -> {
                 if (view.swipeStatus == NotificationItemView.SwipeStatus.LEFT) {
                     view.resetState()
-                    view.statusBarNotification?.let { cancelNotification(it) }
+                    view.statusBarNotification?.let { notificationViewModel.cancelNotification(it.key) }
                 } else {
                     view.animateDismissLeft()
                 }
@@ -330,7 +330,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             KeyEvent.KEYCODE_DPAD_RIGHT -> {
                 if (view.swipeStatus == NotificationItemView.SwipeStatus.RIGHT) {
                     view.resetState()
-                    view.statusBarNotification?.let { cancelNotification(it) }
+                    view.statusBarNotification?.let { notificationViewModel.cancelNotification(it.key) }
                 } else {
                     view.animateDismissRight()
                 }
@@ -340,7 +340,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             KeyEvent.KEYCODE_DPAD_CENTER -> {
                 if (view.swipeStatus != NotificationItemView.SwipeStatus.NONE) {
                     view.resetState()
-                    view.statusBarNotification?.let { cancelNotification(it) }
+                    view.statusBarNotification?.let { notificationViewModel.cancelNotification(it.key) }
                     return true
                 }
                 return false
@@ -352,12 +352,6 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
                 }
                 return false
             }
-        }
-    }
-
-    private fun cancelNotification(sbn: StatusBarNotification) {
-        if (NotificationUtils.shouldAutoCancel(sbn.notification)) {
-            notificationViewModel.cancelNotification(sbn.key)
         }
     }
 
