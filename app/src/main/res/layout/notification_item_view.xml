@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-     SPDX-FileCopyrightText: 2024 The LineageOS Project
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -24,7 +24,7 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/dismiss_end"
         style="@style/NotificationDismissButton"
-        android:layout_gravity="end"
+        android:layout_gravity="center_vertical|end"
         app:iconPadding="0dp" />
 
     <LinearLayout
