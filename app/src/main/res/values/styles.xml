@@ -39,7 +39,7 @@
 
     <style name="NotificationDismissButton" parent="Widget.AppCompat.Button.Borderless">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:minHeight">0dp</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:text">@string/dismiss</item>
@@ -51,6 +51,7 @@
         <item name="android:drawableTop">@drawable/ic_close</item>
         <item name="android:textAllCaps">false</item>
         <item name="android:focusable">false</item>
+        <item name="android:layout_gravity">center_vertical</item>
     </style>
 
     <style name="TopBarImageButton" parent="Widget.AppCompat.ImageButton">
