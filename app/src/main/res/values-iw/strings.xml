@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">קטפולטה</string>
+    <string name="settings">הגדרות</string>
+    <string name="favorites">מועדפים</string>
+    <string name="all_apps">כל האפליקציות</string>
+    <string name="uninstall">הסר התקנה</string>
+    <string name="mark_as_favorite">סמן כמועדף</string>
+    <string name="modify_favorites_short">שנוי המועדפים</string>
+    <string name="move">העבר</string>
+    <string name="remove_favorite">הסר מועדף</string>
+    <string name="watch_next">צפה בבא</string>
+    <string name="modify_channels">שינוי ערוצים</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">לסידור ערוצים, לחיצה ארוכה על ערוץ רצוי והזזה למקום רצוי</string>
+    <string name="search">חיפוש</string>
+    <string name="modify_favorites">שינוי אפליקציות מועדפות</string>
+    <string name="system_modal">הגדרות המערכת</string>
+    <string name="sleep">שינה</string>
+    <string name="no_notifications">אין התראות</string>
+    <string name="network_status">רשת\n%1$s</string>
+    <string name="bluetooth_status">עזרים\n%1$s</string>
+    <string name="not_connected">מנותק</string>
+    <string name="enabled">מופעל</string>
+    <string name="disabled">מושבת</string>
+    <string name="app_permissions_toast">אין הרשאה מהמשתמש</string>
+    <string name="home_role_request_dialog_title">הגדר כמשגר אפליקציות</string>
+    <string name="home_role_request_dialog_message">אפלקציה זו יכולה להיות אפליקציית ברירת המחדל, התרצה לפתוח הגדרות אפליקציה לשינוי אפליקציית השיגור?</string>
+    <string name="home_role_request_dialog_neutral">מאוחר יותר</string>
+    <string name="home_role_request_dialog_negative">אל תשאל שוב</string>
+    <string name="unknown">לא ידוע</string>
+    <string name="no_notification_access">אין גישה להתראות</string>
+    <string name="allow_notification_access">אפשרו גישה להתראות</string>
+    <string name="dismiss">התעלם</string>
+    <string name="connected">מחובר</string>
+    <string name="mic_assistant">השתמש במיקרופון לחיפוש</string>
+    <string name="keyboard_assistant">השתמש במקלדת לחיפוש</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Ayarlar</string>
+    <string name="favorites">Sevimlilər</string>
+    <string name="all_apps">Bütün tətbiqlər</string>
+    <string name="uninstall">Sil</string>
+    <string name="mark_as_favorite">Sevimli olaraq işarələ</string>
+    <string name="modify_favorites_short">Sevimliləri dəyişdir</string>
+    <string name="move">Daşı</string>
+    <string name="remove_favorite">Sevimlini sil</string>
+    <string name="watch_next">Növbətiyə bax</string>
+    <string name="modify_channels">Kanalları dəyişdir</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Kanalları sıralamaq üçün istədiyiniz bir kanala uzun basın və istədiyiniz mövqeyə gətirin.</string>
+    <string name="search">Axtar</string>
+    <string name="modify_favorites">Sevimli tətbiqlərinizi dəyişdirin</string>
+    <string name="system_modal">Sistem seçimləri</string>
+    <string name="sleep">Yuxu</string>
+    <string name="no_notifications">Bildiriş yoxdur</string>
+    <string name="network_status">Şəbəkə\n%1$s</string>
+    <string name="bluetooth_status">Aksesuarlar\n%1$s</string>
+    <string name="not_connected">Bağlantılı deyil</string>
+    <string name="enabled">Fəaldır</string>
+    <string name="disabled">Sıradan çıxarılıb</string>
+    <string name="app_permissions_toast">İstifadəçi tərəfindən verilməyən icazələr.</string>
+    <string name="home_role_request_dialog_title">Başladıcı kimi təyin et</string>
+    <string name="home_role_request_dialog_message">Bu tətbiq, ilkin əsas tətbiq olaraq istifadə edilə bilər, başladıcı tətbiqini dəyişdirmək üçün ayarları açmaq istəyirsiniz?</string>
+    <string name="home_role_request_dialog_neutral">Daha sonra</string>
+    <string name="home_role_request_dialog_negative">Təkrar soruşma</string>
+    <string name="unknown">Bilinmir</string>
+    <string name="no_notification_access">Bildiriş müraciət yoxdur</string>
+    <string name="allow_notification_access">Bildiriş müraciətinə icazə ver</string>
+    <string name="dismiss">Rədd et</string>
+    <string name="connected">Bağlantılıdır</string>
+    <string name="mic_assistant">Mikrofon istifadə edərək axtar</string>
+    <string name="keyboard_assistant">Klaviatura istifadə edərək axtar</string>
+</resources>

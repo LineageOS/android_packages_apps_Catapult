@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Katapult</string>
+    <string name="settings">Beállítások</string>
+    <string name="favorites">Kedvencek</string>
+    <string name="all_apps">Az összes alkalmazás</string>
+    <string name="uninstall">Eltávolítás</string>
+    <string name="mark_as_favorite">Megjelölés kedvencként</string>
+    <string name="modify_favorites_short">Kedvenceim módosítása</string>
+    <string name="move">Mozgatás</string>
+    <string name="remove_favorite">Eltávolítás a kedvencekből</string>
+    <string name="watch_next">A következő megtekintése</string>
+    <string name="modify_channels">A csatornák módosítása</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Csatornák átrendezéséhez nyomja meg hosszan a kívánt csatornát, és mozgassa a kívánt pozícióba.</string>
+    <string name="search">Keresés</string>
+    <string name="modify_favorites">Módosíthatja a kedvenceit</string>
+    <string name="system_modal">Rendszerbeállítások</string>
+    <string name="sleep">Alvó mód</string>
+    <string name="no_notifications">Nincsenek értesítések</string>
+    <string name="network_status">%1$s\nHálózat</string>
+    <string name="bluetooth_status">%1$s\nKiegészítő</string>
+    <string name="not_connected">Nincs csatlakoztatva</string>
+    <string name="enabled">Engedélyezve</string>
+    <string name="disabled">Letiltva</string>
+    <string name="app_permissions_toast">A felhasználó nem adta meg a jogosultságot.</string>
+    <string name="home_role_request_dialog_title">Beállítás Launcher-ként</string>
+    <string name="home_role_request_dialog_message">Ez az alkalmazás működhet alapértelmezett Launcher alkalmazásként. Szeretné megnyitni a Beállításokat a Launcher módosításához?</string>
+    <string name="home_role_request_dialog_neutral">Később</string>
+    <string name="home_role_request_dialog_negative">Ne kérdezze újra</string>
+    <string name="unknown">Ismeretlen</string>
+    <string name="no_notification_access">Nincs jogosultság az értesítésekhez</string>
+    <string name="allow_notification_access">Értesítés-jogosultság engedélyezése</string>
+    <string name="dismiss">Elvetés</string>
+    <string name="connected">Csatlakozva</string>
+    <string name="mic_assistant">Keresés (a mikrofonnal)</string>
+    <string name="keyboard_assistant">Keresés (a billentyűzettel)</string>
+</resources>

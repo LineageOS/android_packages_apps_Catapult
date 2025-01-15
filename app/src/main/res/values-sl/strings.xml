@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Nastavitve</string>
+    <string name="favorites">Priljubljene</string>
+    <string name="all_apps">Vse aplikacije</string>
+    <string name="uninstall">Odmesti</string>
+    <string name="mark_as_favorite">Označi kot Priljubljeno</string>
+    <string name="modify_favorites_short">Spremeni priljubljene</string>
+    <string name="move">Premakni</string>
+    <string name="remove_favorite">Odstrani priljubljeno</string>
+    <string name="watch_next">Glej naslednje</string>
+    <string name="modify_channels">Spremeni kanale</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Za premik kanalov, pridržite želeni kanal in ga premaknite na želeni položaj.</string>
+    <string name="search">Išči</string>
+    <string name="modify_favorites">Spremenite vaše priljubljene aplikacije</string>
+    <string name="system_modal">Sistemske možnosti</string>
+    <string name="sleep">Spanje</string>
+    <string name="no_notifications">Ni obvestil</string>
+    <string name="network_status">Omrežje\n%1$s</string>
+    <string name="bluetooth_status">Dodatki\n%1$s</string>
+    <string name="not_connected">Ni povezano</string>
+    <string name="enabled">Omogočeno</string>
+    <string name="disabled">Onemogočeno</string>
+    <string name="app_permissions_toast">Dovoljenja niso odobrena od uporabnika</string>
+    <string name="home_role_request_dialog_title">Nastavi ko zaganjalnik</string>
+    <string name="home_role_request_dialog_message">Ta aplikacija lahko deluje kot privzeta domača aplikacija, ali želite odpreti aplikacijo nastavitve za spremembo aplikacije zaganjalnika?</string>
+    <string name="home_role_request_dialog_neutral">Kasneje</string>
+    <string name="home_role_request_dialog_negative">Ne sprašuj več</string>
+    <string name="unknown">Neznano</string>
+    <string name="no_notification_access">Ni dostopa do obvestil</string>
+    <string name="allow_notification_access">Dovoli dostop do obvestil</string>
+    <string name="dismiss">Opusti</string>
+    <string name="connected">Povezano</string>
+    <string name="mic_assistant">Išči z uporabo mikrofona</string>
+    <string name="keyboard_assistant">Išči z uporabo tipkovnice</string>
+</resources>

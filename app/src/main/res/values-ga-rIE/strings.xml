@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapalt</string>
+    <string name="settings">Socruithe</string>
+    <string name="favorites">Ceanáin</string>
+    <string name="all_apps">Gach Aipeanna</string>
+    <string name="uninstall">Díshuiteáil</string>
+    <string name="mark_as_favorite">Marcáil mar is fearr leat</string>
+    <string name="modify_favorites_short">Athraigh ceanáin</string>
+    <string name="move">Bog</string>
+    <string name="remove_favorite">Bain is fearr leat</string>
+    <string name="watch_next">Féach ar seo chugainn</string>
+    <string name="modify_channels">Cainéil a mhodhnú</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Chun cainéil a ordú, brúigh fada ar chainéal atá uait agus bog é go dtí an suíomh inmhianaithe.</string>
+    <string name="search">Cuardach</string>
+    <string name="modify_favorites">Athraigh na haipeanna is fearr leat</string>
+    <string name="system_modal">Roghanna córais</string>
+    <string name="sleep">Codladh</string>
+    <string name="no_notifications">Gan fógraí</string>
+    <string name="network_status">Líonra\n%1$s</string>
+    <string name="bluetooth_status">Gabhálais\n%1$s</string>
+    <string name="not_connected">Gan ceangal</string>
+    <string name="enabled">Cumasaithe</string>
+    <string name="disabled">Díchumasaithe</string>
+    <string name="app_permissions_toast">Ceadanna nár bhronn an t-úsáideoir.</string>
+    <string name="home_role_request_dialog_title">Socraigh mar tosaitheoir</string>
+    <string name="home_role_request_dialog_message">Is féidir leis an aip seo feidhmiú mar an feidhmchlár baile réamhshocraithe, ar mhaith leat an aip socruithe a oscailt chun an app tosaitheoir a athrú?</string>
+    <string name="home_role_request_dialog_neutral">Níos déanaí</string>
+    <string name="home_role_request_dialog_negative">Ná fiafraigh arís</string>
+    <string name="unknown">Anaithnid</string>
+    <string name="no_notification_access">Gan rochtain fógra</string>
+    <string name="allow_notification_access">Ceadaigh rochtain fógraí</string>
+    <string name="dismiss">Díbhe</string>
+    <string name="connected">Ceangailte</string>
+    <string name="mic_assistant">Cuardaigh le micreafón</string>
+    <string name="keyboard_assistant">Cuardaigh ag baint úsáide as méarchlár</string>
+</resources>

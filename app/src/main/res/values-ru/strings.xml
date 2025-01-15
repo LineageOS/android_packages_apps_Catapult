@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Настройки</string>
+    <string name="all_apps">Все приложения</string>
+    <string name="uninstall">Удалить</string>
+    <string name="move">Переместить</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="search">Поиск</string>
+    <string name="network_status">Сеть\n%1$s</string>
+    <string name="app_permissions_toast">Пользователь не предоставил разрешения.</string>
+</resources>

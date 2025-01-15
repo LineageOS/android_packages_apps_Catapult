@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Ajustes</string>
+    <string name="favorites">Favoritos</string>
+    <string name="all_apps">Todas las aplicaciones</string>
+    <string name="uninstall">Desinstalar</string>
+    <string name="mark_as_favorite">Marcar como favorita</string>
+    <string name="modify_favorites_short">Modificar favoritas</string>
+    <string name="move">Mover</string>
+    <string name="remove_favorite">Eliminar favorita</string>
+    <string name="watch_next">Ver siguiente</string>
+    <string name="modify_channels">Modificar canales</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Para ordenar los canales, mantén presionado sobre uno y muévelo a la posición que desees.</string>
+    <string name="search">Buscar</string>
+    <string name="modify_favorites">Modifica tus aplicaciones favoritas</string>
+    <string name="system_modal">Opciones del sistema</string>
+    <string name="sleep">Suspender</string>
+    <string name="no_notifications">Sin notificaciones</string>
+    <string name="network_status">Red\n%1$s</string>
+    <string name="bluetooth_status">Accesorios\n%1$s</string>
+    <string name="not_connected">No conectado</string>
+    <string name="enabled">Activado</string>
+    <string name="disabled">Desactivado</string>
+    <string name="app_permissions_toast">Permisos no concedidos por el usuario.</string>
+    <string name="home_role_request_dialog_title">Establecer como lanzador</string>
+    <string name="home_role_request_dialog_message">Esta aplicación puede usarse como aplicación de inicio predeterminada, ¿quieres ir a Ajustes para cambiarla?</string>
+    <string name="home_role_request_dialog_neutral">Más tarde</string>
+    <string name="home_role_request_dialog_negative">No preguntar de nuevo</string>
+    <string name="unknown">Desconocido</string>
+    <string name="no_notification_access">Sin acceso a las notificaciones</string>
+    <string name="allow_notification_access">Permitir acceso a las notificaciones</string>
+    <string name="dismiss">Descartar</string>
+    <string name="connected">Conectado</string>
+    <string name="mic_assistant">Buscar usando el micrófono</string>
+    <string name="keyboard_assistant">Buscar usando el teclado</string>
+</resources>

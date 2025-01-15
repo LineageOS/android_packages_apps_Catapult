@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Cài đặt</string>
+    <string name="favorites">Yêu thích</string>
+    <string name="all_apps">Tất cả ứng dụng</string>
+    <string name="uninstall">Gỡ cài đặt</string>
+    <string name="mark_as_favorite">Đánh dấu là Yêu thích</string>
+    <string name="modify_favorites_short">Sửa đổi các mục yêu thích</string>
+    <string name="move">Di chuyển</string>
+    <string name="remove_favorite">Xóa mục yêu thích</string>
+    <string name="watch_next">Xem tiếp</string>
+    <string name="modify_channels">Sửa đổi kênh</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Để sắp xếp kênh, hãy nhấn giữ kênh và di chuyển đến vị trí mong muốn.</string>
+    <string name="search">Tìm kiếm</string>
+    <string name="modify_favorites">Sửa đổi các ứng dụng yêu thích của bạn</string>
+    <string name="system_modal">Tùy chọn hệ thống</string>
+    <string name="sleep">Ngủ</string>
+    <string name="no_notifications">Không có thông báo</string>
+    <string name="network_status">Mạng\n%1$s</string>
+    <string name="bluetooth_status">Phụ kiện\n%1$s</string>
+    <string name="not_connected">Không được kết nối</string>
+    <string name="enabled">Đã bật</string>
+    <string name="disabled">Đã tắt</string>
+    <string name="app_permissions_toast">Quyền không được cấp bởi người dùng.</string>
+    <string name="home_role_request_dialog_title">Đặt làm trình khởi chạy</string>
+    <string name="home_role_request_dialog_message">Ứng dụng này có thể hoạt động như ứng dụng trang chủ mặc định, bạn có muốn mở ứng dụng cài đặt để thay đổi ứng dụng trình khởi chạy không?</string>
+    <string name="home_role_request_dialog_neutral">Để sau</string>
+    <string name="home_role_request_dialog_negative">Đừng hỏi lại</string>
+    <string name="unknown">Không rõ</string>
+    <string name="no_notification_access">Không có quyền truy cập thông báo</string>
+    <string name="allow_notification_access">Cho phép truy cập thông báo</string>
+    <string name="dismiss">Loại bỏ</string>
+    <string name="connected">Đã kết nối</string>
+    <string name="mic_assistant">Tìm kiếm bằng micrô</string>
+    <string name="keyboard_assistant">Tìm kiếm bằng bàn phím</string>
+</resources>

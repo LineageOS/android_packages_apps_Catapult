@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">设置</string>
+    <string name="favorites">收藏夹</string>
+    <string name="all_apps">所有应用</string>
+    <string name="uninstall">卸载</string>
+    <string name="mark_as_favorite">标记为收藏</string>
+    <string name="modify_favorites_short">修改收藏夹</string>
+    <string name="move">移动</string>
+    <string name="remove_favorite">取消收藏</string>
+    <string name="watch_next">看下一个</string>
+    <string name="modify_channels">修改频道</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">要对频道进行排序，请长按所需频道并将其移动到所需位置。</string>
+    <string name="search">搜索</string>
+    <string name="modify_favorites">修改您收藏的应用</string>
+    <string name="system_modal">系统选项</string>
+    <string name="sleep">休眠</string>
+    <string name="no_notifications">没有通知</string>
+    <string name="network_status">网络\n%1$s</string>
+    <string name="bluetooth_status">附件\n%1$s</string>
+    <string name="not_connected">未连接</string>
+    <string name="enabled">已启用</string>
+    <string name="disabled">已禁用</string>
+    <string name="app_permissions_toast">用户没有授予权限。</string>
+    <string name="home_role_request_dialog_title">设置为启动器</string>
+    <string name="home_role_request_dialog_message">此应用程序可以充当系统默认桌面，您想打开设置程序来更改启动器吗？</string>
+    <string name="home_role_request_dialog_neutral">稍后</string>
+    <string name="home_role_request_dialog_negative">不再询问</string>
+    <string name="unknown">未知</string>
+    <string name="no_notification_access">无通知访问权限</string>
+    <string name="allow_notification_access">允许通知访问</string>
+    <string name="dismiss">忽略</string>
+    <string name="connected">已连接</string>
+    <string name="mic_assistant">使用麦克风搜索</string>
+    <string name="keyboard_assistant">使用键盘搜索</string>
+</resources>

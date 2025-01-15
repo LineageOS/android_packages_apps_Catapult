@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">설정</string>
+    <string name="favorites">즐겨찾기</string>
+    <string name="all_apps">모든 앱</string>
+    <string name="uninstall">설치 제거</string>
+    <string name="mark_as_favorite">즐겨찾기에 추가</string>
+    <string name="modify_favorites_short">즐겨찾기 편집</string>
+    <string name="move">이동</string>
+    <string name="remove_favorite">즐겨찾기 제거</string>
+    <string name="modify_channels">채널 편집</string>
+    <string name="channel_title">%1$s%2$s\"</string>
+    <string name="order_channels_guide">채널을 길게 누른 다음 원하는 위치로 이동하면 채널 순서를 바꿀 수 있습니다.</string>
+    <string name="search">검색</string>
+    <string name="modify_favorites">즐겨찾기에 추가한 앱 편집</string>
+    <string name="system_modal">시스템 옵션</string>
+    <string name="no_notifications">알림 없음</string>
+    <string name="network_status">네트워크\n%1$s</string>
+    <string name="bluetooth_status">액세서리\n%1$s</string>
+    <string name="not_connected">연결 안 됨</string>
+    <string name="enabled">사용</string>
+    <string name="disabled">사용 안 함</string>
+    <string name="app_permissions_toast">사용자에 의해 권한이 허용되어 있지 않습니다.</string>
+    <string name="home_role_request_dialog_title">기본 홈 화면으로 설정</string>
+    <string name="home_role_request_dialog_message">이 앱은 기본 홈 화면 애플리케이션으로 사용할 수 있습니다. 시스템 설정을 열어 홈 화면 설정을 변경하시겠습니까?</string>
+    <string name="home_role_request_dialog_neutral">나중에</string>
+    <string name="home_role_request_dialog_negative">다시 묻지 않기</string>
+    <string name="unknown">알 수 없음</string>
+    <string name="no_notification_access">알림 접근 권한 없음</string>
+    <string name="allow_notification_access">알림 접근 권한 허용</string>
+    <string name="dismiss">닫기</string>
+    <string name="connected">연결됨</string>
+    <string name="mic_assistant">마이크를 사용하여 검색</string>
+    <string name="keyboard_assistant">키보드를 사용하여 검색</string>
+</resources>

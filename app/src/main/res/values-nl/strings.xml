@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Katapult</string>
+    <string name="settings">Instellingen</string>
+    <string name="favorites">Favorieten</string>
+    <string name="all_apps">Alle apps</string>
+    <string name="uninstall">Deïnstalleren</string>
+    <string name="mark_as_favorite">Markeer als favoriet</string>
+    <string name="modify_favorites_short">Favorieten aanpassen</string>
+    <string name="move">Verplaats</string>
+    <string name="remove_favorite">Verwijder favoriet</string>
+    <string name="watch_next">Bekijk volgende</string>
+    <string name="modify_channels">Pas kanalen aan</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Om de volgorde van kanalen aan te passen, druk lang op een gewenst kanaal en verplaats het naar de gewenste positie.</string>
+    <string name="search">Zoek</string>
+    <string name="modify_favorites">Pas uw favoriete apps aan</string>
+    <string name="system_modal">Systeemopties</string>
+    <string name="sleep">Slaap</string>
+    <string name="no_notifications">Geen meldingen</string>
+    <string name="network_status">Netwerk\n%1$s</string>
+    <string name="bluetooth_status">Accesoires\n %1$s</string>
+    <string name="not_connected">Niet verbonden</string>
+    <string name="enabled">Ingeschakeld</string>
+    <string name="disabled">Uitgeschakeld</string>
+    <string name="app_permissions_toast">Machtigingen niet verleend door de gebruiker.</string>
+    <string name="home_role_request_dialog_title">Stel in als launcher</string>
+    <string name="home_role_request_dialog_message">Deze app kan fungeren als de standaard thuisapplicatie, wilt u de instellingen app openen om de launcher app te wijzigen?</string>
+    <string name="home_role_request_dialog_neutral">Later</string>
+    <string name="home_role_request_dialog_negative">Vraag het niet meer</string>
+    <string name="unknown">Onbekend</string>
+    <string name="no_notification_access">Geen toegang tot meldingen</string>
+    <string name="allow_notification_access">Sta toegang tot meldingen toe</string>
+    <string name="dismiss">Negeer</string>
+    <string name="connected">Verbonden</string>
+    <string name="mic_assistant">Zoek met behulp van microfoon</string>
+    <string name="keyboard_assistant">Zoeken met behulp van toetsenbord</string>
+</resources>

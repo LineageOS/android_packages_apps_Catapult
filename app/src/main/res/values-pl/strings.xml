@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Katapulta</string>
+    <string name="settings">Ustawienia</string>
+    <string name="favorites">Ulubione</string>
+    <string name="all_apps">Wszystkie aplikacje</string>
+    <string name="uninstall">Odinstaluj</string>
+    <string name="mark_as_favorite">Oznacz jako ulubiony</string>
+    <string name="modify_favorites_short">Zmień ulubione</string>
+    <string name="move">Przenieś</string>
+    <string name="remove_favorite">Usuń z ulubionych</string>
+    <string name="watch_next">Obejrzyj następne</string>
+    <string name="modify_channels">Modyfikuj kanały</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Aby uporządkować kanały, przytrzymaj wybrany kanał i przesuń go do żądanej pozycji.</string>
+    <string name="search">Szukaj</string>
+    <string name="modify_favorites">Modyfikuj swoje ulubione aplikacje</string>
+    <string name="system_modal">Opcje systemowe</string>
+    <string name="sleep">Uśpienie</string>
+    <string name="no_notifications">Brak powiadomień</string>
+    <string name="network_status">Sieć\n%1$s</string>
+    <string name="bluetooth_status">Akcesoria\n%1$s</string>
+    <string name="not_connected">Nie połączono</string>
+    <string name="enabled">Włączono</string>
+    <string name="disabled">Wyłączono</string>
+    <string name="app_permissions_toast">Uprawnienia nie zostały przyznane przez użytkownika.</string>
+    <string name="home_role_request_dialog_title">Ustaw jako launcher</string>
+    <string name="home_role_request_dialog_message">Ta aplikacja może działać jako domyślny launcher, czy chcesz przejść do Ustawień, aby zmienić aplikację uruchamiającą?</string>
+    <string name="home_role_request_dialog_neutral">Później</string>
+    <string name="home_role_request_dialog_negative">Nie pytaj ponownie</string>
+    <string name="unknown">Nieznane</string>
+    <string name="no_notification_access">Brak dostępu do powiadomień</string>
+    <string name="allow_notification_access">Zezwól na dostęp do powiadomień</string>
+    <string name="dismiss">Odrzuć</string>
+    <string name="connected">Połączono</string>
+    <string name="mic_assistant">Szukaj używając mikrofonu</string>
+    <string name="keyboard_assistant">Szukaj za pomocą klawiatury</string>
+</resources>

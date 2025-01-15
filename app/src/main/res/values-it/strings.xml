@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Impostazioni</string>
+    <string name="favorites">Preferiti</string>
+    <string name="all_apps">Tutte le applicazioni</string>
+    <string name="uninstall">Disinstalla</string>
+    <string name="mark_as_favorite">Aggiungi ai preferiti</string>
+    <string name="modify_favorites_short">Modifica preferiti</string>
+    <string name="move">Sposta</string>
+    <string name="remove_favorite">Rimuovi dai preferiti</string>
+    <string name="watch_next">Guarda il prossimo</string>
+    <string name="modify_channels">Modifica canali</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Per ordinare i canali, premere a lungo su un canale e spostarlo nella posizione desiderata.</string>
+    <string name="search">Cerca</string>
+    <string name="modify_favorites">Modifica le tue app preferite</string>
+    <string name="system_modal">Opzioni di sistema</string>
+    <string name="sleep">Sospendi</string>
+    <string name="no_notifications">Nessuna notifica</string>
+    <string name="network_status">Rete\n%1$s</string>
+    <string name="bluetooth_status">Accessori\n%1$s</string>
+    <string name="not_connected">Non connesso</string>
+    <string name="enabled">Abilitato</string>
+    <string name="disabled">Disabilitato</string>
+    <string name="app_permissions_toast">Autorizzazioni non concesse dall\'utente.</string>
+    <string name="home_role_request_dialog_title">Imposta come launcher</string>
+    <string name="home_role_request_dialog_message">Questa app può fungere da launcher predefinito, vuoi aprire l\'app impostazioni per modificare il launcher predefinito?</string>
+    <string name="home_role_request_dialog_neutral">Più tardi</string>
+    <string name="home_role_request_dialog_negative">Non richiedere di nuovo</string>
+    <string name="unknown">Sconosciuto</string>
+    <string name="no_notification_access">Nessun accesso alle notifiche</string>
+    <string name="allow_notification_access">Consenti l\'accesso alle notifiche</string>
+    <string name="dismiss">Chiudi</string>
+    <string name="connected">Connesso</string>
+    <string name="mic_assistant">Cerca usando il microfono</string>
+    <string name="keyboard_assistant">Cerca usando la tastiera</string>
+</resources>

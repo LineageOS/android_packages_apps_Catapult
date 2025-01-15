@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Setări</string>
+    <string name="favorites">Favorite</string>
+    <string name="all_apps">Toate aplicațiile</string>
+    <string name="uninstall">Dezinstalare</string>
+    <string name="mark_as_favorite">Marcare ca Favorit</string>
+    <string name="modify_favorites_short">Modifică favoritele</string>
+    <string name="move">Mută</string>
+    <string name="remove_favorite">Elimină favorit</string>
+    <string name="watch_next">Urmărește în continuare</string>
+    <string name="modify_channels">Modifică canalele</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Pentru a ordona canalele, apăsați lung pe un canal dorit și mutați-l în poziția dorită.</string>
+    <string name="search">Căutare</string>
+    <string name="modify_favorites">Modifică aplicațiile preferate</string>
+    <string name="system_modal">Opțiuni de sistem</string>
+    <string name="sleep">Somn</string>
+    <string name="no_notifications">Nicio notificare</string>
+    <string name="network_status">Rețea\n%1$s</string>
+    <string name="bluetooth_status">Accesorii\n%1$s</string>
+    <string name="not_connected">Neconectat</string>
+    <string name="enabled">Activat</string>
+    <string name="disabled">Dezactivat</string>
+    <string name="app_permissions_toast">Permisiuni care nu sunt acordate de utilizator.</string>
+    <string name="home_role_request_dialog_title">Setează ca lansator</string>
+    <string name="home_role_request_dialog_message">Această aplicație poate acționa ca aplicație implicită pentru acasă, doriți să deschideți aplicația de setări pentru a schimba aplicația de lansare?</string>
+    <string name="home_role_request_dialog_neutral">Mai târziu</string>
+    <string name="home_role_request_dialog_negative">Nu mai întreba</string>
+    <string name="unknown">Necunoscut</string>
+    <string name="no_notification_access">Fără acces la notificări</string>
+    <string name="allow_notification_access">Permite accesul la notificări</string>
+    <string name="dismiss">Închide</string>
+    <string name="connected">Conectat</string>
+    <string name="mic_assistant">Caută folosind microfonul</string>
+    <string name="keyboard_assistant">Caută folosind tastatura</string>
+</resources>

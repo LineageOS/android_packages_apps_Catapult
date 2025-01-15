@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Paramètres</string>
+    <string name="uninstall">Désinstaller</string>
+    <string name="move">Déplacer</string>
+    <string name="enabled">Activé</string>
+    <string name="disabled">Désactivé</string>
+    <string name="app_permissions_toast">Autorisations non accordées par l\'utilisateur.</string>
+    <string name="home_role_request_dialog_neutral">Plus tard</string>
+    <string name="home_role_request_dialog_negative">Ne plus demander</string>
+</resources>

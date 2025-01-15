@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Settings</string>
+    <string name="favorites">Favourites</string>
+    <string name="all_apps">All Apps</string>
+    <string name="uninstall">Uninstall</string>
+    <string name="mark_as_favorite">Mark as Favourite</string>
+    <string name="modify_favorites_short">Modify favourites</string>
+    <string name="move">Move</string>
+    <string name="remove_favorite">Remove favourite</string>
+    <string name="watch_next">Watch next</string>
+    <string name="modify_channels">Modify channels</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">To order channels, long press on a wanted channel and move it to the desired position.</string>
+    <string name="search">Search</string>
+    <string name="modify_favorites">Modify your favourite apps</string>
+    <string name="system_modal">System options</string>
+    <string name="sleep">Sleep</string>
+    <string name="no_notifications">No notifications</string>
+    <string name="network_status">Network\n%1$s</string>
+    <string name="bluetooth_status">Accessories\n%1$s</string>
+    <string name="not_connected">Not connected</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="app_permissions_toast">Permissions not granted by the user.</string>
+    <string name="home_role_request_dialog_title">Set as launcher</string>
+    <string name="home_role_request_dialog_message">This app can act as the default home application, would you like to open the settings app to change the launcher app?</string>
+    <string name="home_role_request_dialog_neutral">Later</string>
+    <string name="home_role_request_dialog_negative">Don\'t ask again</string>
+    <string name="unknown">Unknown</string>
+    <string name="no_notification_access">No notification access</string>
+    <string name="allow_notification_access">Allow notification access</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="connected">Connected</string>
+    <string name="mic_assistant">Search using microphone</string>
+    <string name="keyboard_assistant">Search using keyboard</string>
+</resources>

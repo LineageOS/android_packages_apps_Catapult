@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Configurações</string>
+    <string name="favorites">Favoritos</string>
+    <string name="all_apps">Todos os apps</string>
+    <string name="uninstall">Desinstalar</string>
+    <string name="mark_as_favorite">Marcar como favorito</string>
+    <string name="modify_favorites_short">Modificar favoritos</string>
+    <string name="move">Mover</string>
+    <string name="remove_favorite">Remover favorito</string>
+    <string name="watch_next">Assistir a seguir</string>
+    <string name="modify_channels">Modificar canais</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Para ordenar canais, pressione e segure no canal desejado e mova-o para a posição desejada.</string>
+    <string name="search">Pesquisar</string>
+    <string name="modify_favorites">Modifique seus apps favoritos</string>
+    <string name="system_modal">Opções do sistema</string>
+    <string name="sleep">Suspender</string>
+    <string name="no_notifications">Sem notificações</string>
+    <string name="network_status">Rede\n%1$s</string>
+    <string name="bluetooth_status">Acessórios\n%1$s</string>
+    <string name="not_connected">Desconectado</string>
+    <string name="enabled">Ativado</string>
+    <string name="disabled">Desativado</string>
+    <string name="app_permissions_toast">Permissões não concedidas pelo usuário.</string>
+    <string name="home_role_request_dialog_title">Definir como launcher</string>
+    <string name="home_role_request_dialog_message">Este app pode atuar como o app home padrão, você gostaria de abrir as configurações para alterar o app de launcher?</string>
+    <string name="home_role_request_dialog_neutral">Mais tarde</string>
+    <string name="home_role_request_dialog_negative">Não perguntar novamente</string>
+    <string name="unknown">Desconhecido</string>
+    <string name="no_notification_access">Sem acesso às notificações</string>
+    <string name="allow_notification_access">Permitir acesso às notificações</string>
+    <string name="dismiss">Ignorar</string>
+    <string name="connected">Conectado</string>
+    <string name="mic_assistant">Pesquisar usando o microfone</string>
+    <string name="keyboard_assistant">Pesquisar usando o teclado</string>
+</resources>

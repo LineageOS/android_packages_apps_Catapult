@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">設定</string>
+    <string name="favorites">お気に入り</string>
+    <string name="all_apps">すべてのアプリ</string>
+    <string name="uninstall">アンインストール</string>
+    <string name="mark_as_favorite">お気に入りにする</string>
+    <string name="modify_favorites_short">お気に入りを変更</string>
+    <string name="move">移動</string>
+    <string name="remove_favorite">お気に入りを削除</string>
+    <string name="watch_next">次を見る</string>
+    <string name="modify_channels">チャンネルの変更</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">チャンネルを並び替えるには、チャンネルを長押しして置きたい位置に移動してください。</string>
+    <string name="search">検索</string>
+    <string name="modify_favorites">お気に入りのアプリを変更</string>
+    <string name="system_modal">システム設定</string>
+    <string name="sleep">スリープ</string>
+    <string name="no_notifications">通知はありません</string>
+    <string name="network_status">ネットワーク\n%1$s</string>
+    <string name="bluetooth_status">アクセサリー\n%1$s</string>
+    <string name="not_connected">接続していません</string>
+    <string name="enabled">有効</string>
+    <string name="disabled">無効</string>
+    <string name="app_permissions_toast">権限がユーザーによって許可されていません。</string>
+    <string name="home_role_request_dialog_title">ホームアプリとして設定</string>
+    <string name="home_role_request_dialog_message">このアプリはデフォルトのホームアプリとして動作させられます。設定を開いてホームアプリを変更しますか？</string>
+    <string name="home_role_request_dialog_neutral">後で</string>
+    <string name="home_role_request_dialog_negative">次回から確認しない</string>
+    <string name="unknown">不明</string>
+    <string name="no_notification_access">通知の権限がありません</string>
+    <string name="allow_notification_access">通知の権限を許可する</string>
+    <string name="dismiss">とじる</string>
+    <string name="connected">接続済み</string>
+    <string name="mic_assistant">マイクを使って検索</string>
+    <string name="keyboard_assistant">キーボードで検索</string>
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapulta</string>
+    <string name="settings">Configuració</string>
+    <string name="favorites">Preferits</string>
+    <string name="all_apps">Totes les aplicacions</string>
+    <string name="uninstall">Desinstal·la</string>
+    <string name="mark_as_favorite">Marca com a preferit</string>
+    <string name="modify_favorites_short">Modifica els preferits</string>
+    <string name="move">Mou</string>
+    <string name="remove_favorite">Elimina el preferit</string>
+    <string name="watch_next">Veure el següent</string>
+    <string name="modify_channels">Modifica els canals</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Per ordenar els canals, mantingueu premut el canal desitjat i moveu-lo a la posició desitjada.</string>
+    <string name="search">Cerca</string>
+    <string name="modify_favorites">Modifica les vostres aplicacions preferides</string>
+    <string name="system_modal">Opcions del sistema</string>
+    <string name="sleep">Repòs</string>
+    <string name="no_notifications">Sense notificacions</string>
+    <string name="network_status">Xarxa\n%1$s</string>
+    <string name="bluetooth_status">Accessoris\n%1$s</string>
+    <string name="not_connected">No connectat</string>
+    <string name="enabled">Habilitat</string>
+    <string name="disabled">Deshabilitat</string>
+    <string name="app_permissions_toast">Permisos no concedits per l\'usuari.</string>
+    <string name="home_role_request_dialog_title">Estableix com a llançador</string>
+    <string name="home_role_request_dialog_message">Aquesta aplicació pot actuar com a aplicació d\'inici per defecte, voleu obrir l\'aplicació de configuració per canviar l\'aplicació del llançador?</string>
+    <string name="home_role_request_dialog_neutral">Més tard</string>
+    <string name="home_role_request_dialog_negative">No preguntis més</string>
+    <string name="unknown">Desconegut</string>
+    <string name="no_notification_access">Sense accés a les notificacions</string>
+    <string name="allow_notification_access">Permet l\'accés a les notificacions</string>
+    <string name="dismiss">Descarta</string>
+    <string name="connected">Connectat</string>
+    <string name="mic_assistant">Cerca utilitzant el micròfon</string>
+    <string name="keyboard_assistant">Cerca utilitzant el teclat</string>
+</resources>
