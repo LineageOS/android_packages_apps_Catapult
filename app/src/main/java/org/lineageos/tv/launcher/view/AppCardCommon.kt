@@ -13,7 +13,6 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.Launchable
