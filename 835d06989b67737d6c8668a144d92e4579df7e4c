@@ -16,6 +16,24 @@
       "message": "I trust it\u0027s the correct thing to do",
       "revId": "835d06989b67737d6c8668a144d92e4579df7e4c",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38a9520d_0a70d6c4",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-01-27T19:19:46Z",
+      "side": 1,
+      "message": "Yep, afaik the flag only means that when opening it, it auto cancels. Instead of it being forbidden to cancel manually.",
+      "parentUuid": "c62e8977_fbf798fc",
+      "revId": "835d06989b67737d6c8668a144d92e4579df7e4c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
