@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "acf3cd5b_536b12e7",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-01-27T20:02:10Z",
+      "side": 1,
+      "message": "I think that\u0027s now correct with it dismissing it on click and not minding manual dismiss. It\u0027s what car does:\nhttps://cs.android.com/android/platform/superproject/main/+/main:packages/apps/Car/Notification/src/com/android/car/notification/NotificationClickHandlerFactory.java;l\u003d446?q\u003dshouldAutoCancel\u0026ss\u003dandroid%2Fplatform%2Fsuperproject%2Fmain:packages%2Fapps%2FCar%2FNotification%2Fsrc%2Fcom%2Fandroid%2Fcar%2Fnotification%2F",
+      "revId": "b0380c15a91c994238c6af8b801dd19f83ff15e4",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
