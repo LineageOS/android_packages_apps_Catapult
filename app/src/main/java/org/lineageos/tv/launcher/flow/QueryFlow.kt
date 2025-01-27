@@ -5,7 +5,6 @@
 
 package org.lineageos.tv.launcher.flow
 
-import android.database.Cursor
 import kotlinx.coroutines.flow.Flow
 
 interface QueryFlow<T> {
