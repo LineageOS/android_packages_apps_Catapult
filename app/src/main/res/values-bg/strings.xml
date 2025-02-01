@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Настройки</string>
+    <string name="favorites">Любими</string>
+    <string name="all_apps">Всички приложения</string>
+    <string name="uninstall">Деинсталиране</string>
+    <string name="mark_as_favorite">Маркиране като любимо</string>
+    <string name="modify_favorites_short">Промяна на любими</string>
+    <string name="move">Преместване</string>
+    <string name="remove_favorite">Премахване от любими</string>
+    <string name="watch_next">Пусни следващ</string>
+    <string name="modify_channels">Промяна на каналите</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">За да наредите каналите, задръжте върху един и го преместете на желаната позиция</string>
+    <string name="search">Търсене</string>
+    <string name="modify_favorites">Промяна на списък с любими приложения</string>
+    <string name="system_modal">Системни настройки</string>
+    <string name="sleep">Заспиване</string>
+    <string name="no_notifications">Няма известия</string>
+    <string name="network_status">Мрежа\n%1$s</string>
+    <string name="bluetooth_status">Периферия\n%1$s</string>
+    <string name="not_connected">Няма връзка</string>
+    <string name="enabled">Включено</string>
+    <string name="disabled">Изключено</string>
+    <string name="app_permissions_toast">Позволения отказани от потребител.</string>
+    <string name="home_role_request_dialog_title">Задаване като главен екран</string>
+    <string name="home_role_request_dialog_neutral">По- късно</string>
+    <string name="home_role_request_dialog_negative">Не питай отново</string>
+    <string name="unknown">Неизвестно</string>
+    <string name="no_notification_access">Няма достъп до известията</string>
+    <string name="allow_notification_access">Разрешаване на достъп до известията</string>
+    <string name="dismiss">Отхвърляне</string>
+    <string name="connected">Свързано</string>
+    <string name="mic_assistant">Търсене с микрофон</string>
+    <string name="keyboard_assistant">Търсене с клавиатура</string>
+</resources>

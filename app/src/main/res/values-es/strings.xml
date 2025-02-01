@@ -4,6 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <string name="app_name">Catapult</string>
     <string name="settings">Ajustes</string>
     <string name="favorites">Favoritos</string>
     <string name="all_apps">Todas las aplicaciones</string>

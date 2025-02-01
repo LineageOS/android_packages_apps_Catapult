@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Catapult</string>
+    <string name="settings">Einstellungen</string>
+    <string name="favorites">Favoriten</string>
+    <string name="all_apps">Alle Apps</string>
+    <string name="uninstall">Deinstallieren</string>
+    <string name="mark_as_favorite">Zu Favoriten hinzufügen</string>
+    <string name="modify_favorites_short">Favoriten anpassen</string>
+    <string name="move">Verschieben</string>
+    <string name="remove_favorite">Favorit entfernen</string>
+    <string name="watch_next">Als Nächstes ansehen</string>
+    <string name="modify_channels">Kanäle anpassen</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Um Kanäle zu ordnen, drücke lange auf einen gewünschten Kanal und verschiebe ihn an die gewünschte Position.</string>
+    <string name="search">Suche</string>
+    <string name="modify_favorites">Anpassen deiner favorisierten Apps</string>
+    <string name="system_modal">Systemoptionen</string>
+    <string name="sleep">Ruhezustand</string>
+    <string name="no_notifications">Keine Benachrichtigungen</string>
+    <string name="network_status">Netzwerk\n%1$s</string>
+    <string name="bluetooth_status">Zubehör\n%1$s</string>
+    <string name="not_connected">Nicht verbunden</string>
+    <string name="enabled">Aktiviert</string>
+    <string name="disabled">Deaktiviert</string>
+    <string name="app_permissions_toast">Berechtigungen vom Nutzer nicht erteilt.</string>
+    <string name="home_role_request_dialog_title">Als Start-App festlegen</string>
+    <string name="home_role_request_dialog_message">Diese App kann als Standard-Startanwendung verwendet werden. Möchtest du die Einstellungen öffnen, um die Start-App zu ändern?</string>
+    <string name="home_role_request_dialog_neutral">Später</string>
+    <string name="home_role_request_dialog_negative">Nicht erneut nachfragen</string>
+    <string name="unknown">Unbekannt</string>
+    <string name="no_notification_access">Kein Zugriff auf Benachrichtigungen</string>
+    <string name="allow_notification_access">Zugriff auf Benachrichtigungen erlauben</string>
+    <string name="dismiss">Verwerfen</string>
+    <string name="connected">Verbunden</string>
+    <string name="mic_assistant">Suche mittels Mikrofon</string>
+    <string name="keyboard_assistant">Suche mittels Tastatur</string>
+</resources>
