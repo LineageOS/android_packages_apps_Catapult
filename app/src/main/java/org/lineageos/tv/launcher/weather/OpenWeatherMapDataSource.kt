@@ -11,9 +11,10 @@ import org.lineageos.tv.launcher.weather.openweathermap.OpenWeatherMapClient
 import org.lineageos.tv.launcher.weather.openweathermap.WeatherUtils
 import org.lineageos.tv.launcher.weather.openweathermap.models.WeatherResponse
 
-class OpenWeatherDataSource : WeatherDataSource {
+class OpenWeatherDataSource(apiKey: String) : WeatherDataSource {
     private val client = OpenWeatherMapClient(
-        "https://api.openweathermap.org", "")
+        "https://api.openweathermap.org", apiKey
+    )
 
     override fun currentWeather(city: String) = suspend {
         client.getCurrentWeather(city).toRequestStatus {

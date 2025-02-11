@@ -49,4 +49,10 @@
     <!-- Weather -->
     <string name="loading">Loading…</string>
     <string name="temperature_c">%1$s \u2103</string>
+    <string name="api_key">API key</string>
+    <string name="city">City</string>
+    <string name="configure_weather_widget">Configure the weather widget</string>
+    <string name="save">Save</string>
+    <string name="api_key_required">API key is required</string>
+    <string name="city_required">City is required</string>
 </resources>
