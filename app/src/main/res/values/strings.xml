@@ -45,4 +45,8 @@
     <string name="connected">Connected</string>
     <string name="mic_assistant">Search using microphone</string>
     <string name="keyboard_assistant">Search using keyboard</string>
+
+    <!-- Weather -->
+    <string name="loading">Loading…</string>
+    <string name="temperature_c">%1$s \u2103</string>
 </resources>

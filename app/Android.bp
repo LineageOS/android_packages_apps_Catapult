@@ -39,8 +39,11 @@ android_app {
         "androidx.preference_preference",
         "androidx.tvprovider_tvprovider",
         "com.google.android.material_material",
+        "Catapult_com.squareup.okhttp3_okhttp",
         "Catapult_io.coil-kt_coil",
         "kotlin-stdlib",
+        "kotlinx-coroutines-android",
+        "kotlinx_serialization_json",
     ] + ["SettingsLib"],
 }
 
