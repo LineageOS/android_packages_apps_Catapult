@@ -55,4 +55,23 @@
     <string name="program_episode">E%1$s</string>
     <string name="move_left">Move left</string>
     <string name="move_right">Move right</string>
+
+    <!-- Weather -->
+    <string name="loading">Loading…</string>
+    <string name="temperature_c">%1$s \u2103</string>
+    <string name="temperature_f">%1$s \u2109</string>
+    <string name="temperature_k">%1$s K</string>
+    <string name="city">City</string>
+    <string name="configure_weather_widget">Configure the weather widget</string>
+    <string name="save">Save</string>
+    <string name="modify_favorite_row">Modify your favorites row</string>
+    <string name="weather_widget_title">Weather widget</string>
+    <string name="weather_set_city">Select to set your city</string>
+    <string name="weather_unavailable">Weather unavailable</string>
+    <string name="weather_clear">Clear</string>
+    <string name="weather_cloudy">Cloudy</string>
+    <string name="weather_fog">Fog</string>
+    <string name="weather_rain">Rain</string>
+    <string name="weather_snow">Snow</string>
+    <string name="weather_thunderstorm">Thunderstorm</string>
 </resources>
