@@ -9,6 +9,7 @@ import org.lineageos.generatebp.models.Module
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlinx-serialization")
     id("org.lineageos.generatebp")
 }
 
@@ -68,6 +69,9 @@ dependencies {
     implementation("androidx.tvprovider:tvprovider:1.0.0")
     implementation("com.google.android.material:material:1.9.0")
     implementation("io.coil-kt:coil:2.6.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
 }
 
 configure<GenerateBpPluginExtension> {
