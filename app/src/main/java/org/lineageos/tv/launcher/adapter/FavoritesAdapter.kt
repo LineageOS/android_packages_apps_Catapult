@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -15,28 +15,53 @@ import org.lineageos.tv.launcher.ModifyChannelsActivity
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.ActivityLauncher
 import org.lineageos.tv.launcher.model.Launchable
+import org.lineageos.tv.launcher.model.Widget
+import org.lineageos.tv.launcher.view.Card
 import org.lineageos.tv.launcher.view.FavoriteCard
+import org.lineageos.tv.launcher.view.WeatherWidgetCard
 import java.util.Collections
 
-class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
+class FavoritesAdapter : TvAdapter<Launchable, Card>() {
     var onFavoritesChangedCallback: (favorites: List<String>) -> Unit = {}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        FavoriteCard(parent.context).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return when (viewType) {
+            VIEW_TYPE_FAVORITE_CARD -> {
+                ViewHolder(
+                    FavoriteCard(parent.context).apply {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                        descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                    }
+                )
+            }
+
+            VIEW_TYPE_WIDGET_CARD -> {
+                ViewHolder(
+                    WeatherWidgetCard(parent.context).apply {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                        descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                    }
+                )
+            }
+
+            else -> throw IllegalArgumentException("Invalid view type")
         }
-    )
+    }
 
     override fun handleKey(
-        card: FavoriteCard,
+        card: Card,
         keyCode: Int,
         event: KeyEvent?,
         bindingAdapterPosition: Int,
     ): Boolean {
+        if (card !is FavoriteCard) return false
+
         // Leave center key for onClick handler
         if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
             return false
@@ -103,7 +128,9 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return false
     }
 
-    override fun handleLongClick(card: FavoriteCard): Boolean {
+    override fun handleLongClick(card: Card): Boolean {
+        if (card !is FavoriteCard) return false
+
         if (card.moving || !card.hasMenu) {
             return true
         }
@@ -112,7 +139,9 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return true
     }
 
-    override fun handleClick(card: FavoriteCard) {
+    override fun handleClick(card: Card) {
+        if (card !is FavoriteCard) return
+
         if (!card.moving) {
             super.handleClick(card)
             return
@@ -131,7 +160,17 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         onFavoritesChangedCallback(newFavoritesSet)
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return if (currentList[position] is Widget) {
+            VIEW_TYPE_WIDGET_CARD
+        } else {
+            VIEW_TYPE_FAVORITE_CARD
+        }
+    }
+
     companion object {
+        private const val VIEW_TYPE_FAVORITE_CARD = 1
+        private const val VIEW_TYPE_WIDGET_CARD = 2
         const val STATIC_ITEMS = 2
 
         fun createAddFavoriteEntry(context: Context): Launchable {
@@ -150,6 +189,10 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
                 context,
                 Intent(context, ModifyChannelsActivity::class.java)
             )
+        }
+
+        fun createWeatherWidgetEntry(context: Context): Widget {
+            return Widget(AppCompatResources.getDrawable(context, R.drawable.ic_sunny)!!, context)
         }
     }
 }
