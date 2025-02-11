@@ -11,9 +11,11 @@ import androidx.leanback.widget.VerticalGridView
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.ConcatAdapter
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.lineageos.tv.launcher.adapter.ModifyFavoritesAdapter
+import org.lineageos.tv.launcher.adapter.SectionHeaderAdapter
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
 import org.lineageos.tv.launcher.viewmodels.AddFavoriteViewModel
@@ -27,10 +29,17 @@ class AddFavoriteActivity : ModalActivity(R.layout.activity_add_favorite) {
 
     // Adapters
     private val allAppsAdapter by lazy { ModifyFavoritesAdapter() }
+    private val widgetsAdapter by lazy { ModifyFavoritesAdapter() }
 
     private val permissionsGatedCallback = PermissionsGatedCallback(this) {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                launch {
+                    model.widgetsToFavorites.collectLatest {
+                        widgetsAdapter.submitList(it)
+                    }
+                }
+
                 model.appsToFavorites.collectLatest {
                     allAppsAdapter.submitList(it)
                 }
@@ -41,11 +50,18 @@ class AddFavoriteActivity : ModalActivity(R.layout.activity_add_favorite) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        allAppsGridView.adapter = allAppsAdapter
+        allAppsGridView.adapter = ConcatAdapter(
+            SectionHeaderAdapter(R.string.widgets),
+            widgetsAdapter,
+            SectionHeaderAdapter(R.string.all_apps),
+            allAppsAdapter,
+        )
 
-        allAppsAdapter.onFavoriteChanged = { packageName, favorite ->
+        val onFavoriteChanged = { packageName: String, favorite: Boolean ->
             AppManager.toggleFavoriteApp(this@AddFavoriteActivity, packageName, favorite)
         }
+        allAppsAdapter.onFavoriteChanged = onFavoriteChanged
+        widgetsAdapter.onFavoriteChanged = onFavoriteChanged
 
         permissionsGatedCallback.runAfterPermissionsCheck()
     }
