@@ -146,6 +146,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         } + listOf(
                             FavoritesAdapter.createAddFavoriteEntry(this@MainActivity),
                             FavoritesAdapter.createModifyChannelsEntry(this@MainActivity),
+                            FavoritesAdapter.createWeatherWidgetEntry(this@MainActivity),
                         )
                     )
                 }
