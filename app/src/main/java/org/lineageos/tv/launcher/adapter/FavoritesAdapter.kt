@@ -140,6 +140,10 @@ class FavoritesAdapter : TvAdapter<Launchable, Card>() {
     }
 
     override fun handleClick(card: Card) {
+        if (card is WeatherWidgetCard) {
+            card.showDialog()
+            return
+        }
         if (card !is FavoriteCard) return
 
         if (!card.moving) {
