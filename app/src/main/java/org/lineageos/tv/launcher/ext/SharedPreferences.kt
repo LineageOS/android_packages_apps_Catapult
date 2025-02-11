@@ -44,6 +44,17 @@ var SharedPreferences.favoriteApps: List<String>
 const val KNOWN_CHANNELS_KEY = "known_channels"
 
 /**
+ * The city to get weather for.
+ */
+var SharedPreferences.weatherCity: String?
+    get() = getString(WEATHER_CITY, null)
+    set(value) = edit {
+        putString(WEATHER_CITY, value)
+    }
+
+const val WEATHER_CITY = "weather_city"
+
+/**
  * The list of known channels, used for ordering.
  */
 var SharedPreferences.knownChannels: List<Long>

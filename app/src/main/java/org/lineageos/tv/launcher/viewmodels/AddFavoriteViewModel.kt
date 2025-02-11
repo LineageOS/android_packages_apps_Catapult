@@ -14,12 +14,15 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.stateIn
 import org.lineageos.tv.launcher.ext.context
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.repository.LauncherRepository
 
 class AddFavoriteViewModel(application: Application) : AndroidViewModel(application) {
     val appsToFavorites = LauncherRepository.installedApps(context)
         .combine(LauncherRepository.favoriteApps(context)) { installedApps, favoriteApps ->
-            installedApps.map { it to favoriteApps.contains(it.packageName) }
+            val widgets = Widget.WIDGETS.mapNotNull { Widget.create(context, it) }
+
+            (installedApps + widgets).map { it to favoriteApps.contains(it.packageName) }
         }
         .flowOn(Dispatchers.IO)
         .stateIn(

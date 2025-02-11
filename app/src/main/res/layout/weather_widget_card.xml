@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/card_container"
+    android:layout_width="@dimen/favorite_card_width"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="6dp"
+    android:clickable="true"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:duplicateParentState="true"
+    android:longClickable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/favorite_card_height"
+        android:clipChildren="false"
+        android:clipToPadding="false">
+
+        <FrameLayout
+            android:id="@+id/app_graphic_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/favorites_app_card_background"
+            android:clipChildren="true"
+            android:clipToOutline="true"
+            android:duplicateParentState="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/weather_widget_background">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/temperatureTextView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                            android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                    <ImageView
+                        android:id="@+id/weatherIconImageView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_cloudy"
+                        android:gravity="end"
+                        tools:ignore="ContentDescription" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:paddingEnd="12dp"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/weatherDescriptionTextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/loading"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Subhead" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/app_move_left"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="-14dp"
+            android:background="@drawable/move_chevron_background"
+            android:contentDescription="@string/move_left"
+            android:src="@drawable/ic_chevron_backward"
+            android:visibility="gone"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+        <ImageButton
+            android:id="@+id/app_move_right"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="-14dp"
+            android:background="@drawable/move_chevron_background"
+            android:contentDescription="@string/move_right"
+            android:src="@drawable/ic_chevron_forward"
+            android:visibility="gone"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/app_name"
+        style="@style/WatchNextCardTitle"
+        android:layout_width="@dimen/favorite_card_width"
+        android:layout_height="wrap_content" />
+</LinearLayout>
