@@ -5,6 +5,7 @@
 package org.lineageos.tv.launcher.weather.openweathermap
 
 import android.net.Uri
+import androidx.core.text.util.LocalePreferences
 import okhttp3.Cache
 import okhttp3.OkHttpClient
 import org.lineageos.tv.launcher.utils.Api
@@ -28,7 +29,12 @@ class OpenWeatherMapClient(
         queryParameters = listOf(
             "q" to city,
             "appid" to apiKey,
-            "units" to "metric",
+            "units" to if (LocalePreferences.getTemperatureUnit() == LocalePreferences.TemperatureUnit.CELSIUS)
+                "metric"
+            else if (LocalePreferences.getTemperatureUnit() == LocalePreferences.TemperatureUnit.FAHRENHEIT)
+                "imperial"
+            else
+                "standard"
         ),
     ).execute(api)
 }

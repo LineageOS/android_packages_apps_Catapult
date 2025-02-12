@@ -12,6 +12,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.core.text.util.LocalePreferences
 import androidx.preference.PreferenceManager
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
@@ -23,7 +24,6 @@ import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.ext.weatherApiKey
 import org.lineageos.tv.launcher.ext.weatherCity
 import org.lineageos.tv.launcher.viewmodels.WeatherViewModel
-import org.lineageos.tv.launcher.weather.openweathermap.WeatherUtils
 import org.lineageos.tv.launcher.weather.openweathermap.models.RequestStatus
 import kotlin.math.roundToInt
 
@@ -62,10 +62,24 @@ class WeatherWidgetCard @JvmOverloads constructor(
                             AppCompatResources.getDrawable(context, status.data.iconResId)
                         )
                         weatherDescriptionTextView.text = status.data.description
-                        temperatureTextView.text = context.getString(
-                            R.string.temperature_c,
-                            status.data.temperature.roundToInt().toString()
-                        )
+                        val temperatureString =
+                            if (LocalePreferences.getTemperatureUnit() == LocalePreferences.TemperatureUnit.CELSIUS)
+                                context.getString(
+                                    R.string.temperature_c,
+                                    status.data.temperature.roundToInt().toString()
+                                )
+                            else if (LocalePreferences.getTemperatureUnit() == LocalePreferences.TemperatureUnit.FAHRENHEIT)
+                                context.getString(
+                                    R.string.temperature_f,
+                                    status.data.temperature.roundToInt().toString()
+                                )
+                            else
+                                context.getString(
+                                    R.string.temperature_k,
+                                    status.data.temperature.roundToInt().toString()
+                                )
+
+                        temperatureTextView.text = temperatureString
                     }
 
                     is RequestStatus.Error -> {
