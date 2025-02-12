@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4baf7d00_dbcb05ca",
+        "filename": "app/Android.bp",
+        "patchSetId": 5
+      },
+      "lineNbr": 31,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-02-12T18:17:14Z",
+      "side": 1,
+      "message": "kotlin_plugins: [\n        \"kotlin-serialize-compiler-plugin\",\n    ],",
+      "revId": "f72da5a9e673139cc7c1c1b580cff975b9e51520",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
