@@ -57,4 +57,6 @@
     <string name="save">Save</string>
     <string name="api_key_required">API key is required</string>
     <string name="city_required">City is required</string>
+    <string name="modify_favorite_row">Modify your favorites row</string>
+    <string name="weather_widget_title">Weather widget</string>
 </resources>

@@ -14,6 +14,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import org.lineageos.tv.launcher.adapter.ModifyFavoritesAdapter
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
 import org.lineageos.tv.launcher.viewmodels.AddFavoriteViewModel
@@ -44,7 +45,21 @@ class AddFavoriteActivity : ModalActivity(R.layout.activity_add_favorite) {
         allAppsGridView.adapter = allAppsAdapter
 
         allAppsAdapter.onFavoriteChanged = { packageName, favorite ->
-            AppManager.toggleFavoriteApp(this@AddFavoriteActivity, packageName, favorite)
+            when (packageName.startsWith(Widget.WIDGET_PREFIX)) {
+                true -> {
+                    AppManager.toggleFavoriteWidget(
+                        this@AddFavoriteActivity,
+                        packageName,
+                        favorite
+                    )
+                }
+
+                false -> AppManager.toggleFavoriteApp(
+                    this@AddFavoriteActivity,
+                    packageName,
+                    favorite
+                )
+            }
         }
 
         permissionsGatedCallback.runAfterPermissionsCheck()

@@ -19,6 +19,7 @@ import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.view.Card
 import org.lineageos.tv.launcher.view.FavoriteCard
 import org.lineageos.tv.launcher.view.WeatherWidgetCard
+import org.lineageos.tv.launcher.view.WidgetCard
 import java.util.Collections
 
 class FavoritesAdapter : TvAdapter<Launchable, Card>() {
@@ -140,13 +141,16 @@ class FavoritesAdapter : TvAdapter<Launchable, Card>() {
     }
 
     override fun handleClick(card: Card) {
-        if (card is WeatherWidgetCard) {
-            card.showDialog()
+        if (card !is FavoriteCard) {
             return
         }
-        if (card !is FavoriteCard) return
 
         if (!card.moving) {
+            if (card is WidgetCard) {
+                card.handleClick()
+                return
+            }
+
             super.handleClick(card)
             return
         }
@@ -193,10 +197,6 @@ class FavoritesAdapter : TvAdapter<Launchable, Card>() {
                 context,
                 Intent(context, ModifyChannelsActivity::class.java)
             )
-        }
-
-        fun createWeatherWidgetEntry(context: Context): Widget {
-            return Widget(AppCompatResources.getDrawable(context, R.drawable.ic_sunny)!!, context)
         }
     }
 }

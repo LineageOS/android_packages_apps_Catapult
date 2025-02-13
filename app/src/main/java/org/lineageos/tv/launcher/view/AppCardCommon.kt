@@ -18,6 +18,7 @@ import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.Launchable
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.utils.AppManager
 import kotlin.reflect.safeCast
 
@@ -33,7 +34,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
     protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
-    private var uninstallable: Boolean = true
+    protected open var uninstallable: Boolean = true
 
     init {
         setupNameMarquee()
@@ -79,7 +80,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
         popupMenu.setForceShowIcon(true)
 
         // See if this card is already a favorite
-        if (packageName in AppManager.getFavoriteApps(context)) {
+        if (packageName in AppManager.getFavoriteApps(context) || packageName.startsWith(Widget.WIDGET_PREFIX)) {
             popupMenu.menu.removeItem(R.id.menu_mark_as_favorite)
         } else {
             popupMenu.menu.removeItem(R.id.menu_remove_favorite)
