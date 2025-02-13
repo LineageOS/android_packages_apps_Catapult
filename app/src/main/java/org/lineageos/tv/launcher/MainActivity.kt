@@ -43,6 +43,7 @@ import org.lineageos.tv.launcher.ext.roleCanBeRequested
 import org.lineageos.tv.launcher.model.AppInfo
 import org.lineageos.tv.launcher.model.InternalChannel
 import org.lineageos.tv.launcher.model.MainRowItem
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
@@ -141,12 +142,15 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     favoritesAdapter.submitList(
                         it.mapNotNull {
                             runCatching {
-                                AppInfo.create(this@MainActivity, it)
+                                if (it.startsWith(Widget.WIDGET_PREFIX)) {
+                                    Widget.create(this@MainActivity, it)
+                                } else {
+                                    AppInfo.create(this@MainActivity, it)
+                                }
                             }.getOrNull()
                         } + listOf(
                             FavoritesAdapter.createAddFavoriteEntry(this@MainActivity),
                             FavoritesAdapter.createModifyChannelsEntry(this@MainActivity),
-                            FavoritesAdapter.createWeatherWidgetEntry(this@MainActivity),
                         )
                     )
                 }
@@ -199,6 +203,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         ServiceConnectionState.Disconnected -> {
                             notificationCountTextView.text = ""
                         }
+
                         is ServiceConnectionState.Notifications -> {
                             if (state.notifications.isNotEmpty()) {
                                 notificationCountTextView.text = String.format(

@@ -13,6 +13,7 @@ import android.net.Uri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.model.Widget
 
 import com.android.settingslib.Utils as SettingsLibUtils
 
@@ -24,7 +25,7 @@ object AppManager {
         // Remove apps from favorite if they got uninstalled
         installedApps.map { it.packageName }.let { installedPackageNames ->
             favoriteApps.filter { favoriteApp ->
-                !installedPackageNames.contains(favoriteApp)
+                !installedPackageNames.contains(favoriteApp) && !favoriteApp.startsWith(Widget.WIDGET_PREFIX)
             }
         }.forEach { uninstalledFavoriteApp ->
             favoriteApps.remove(uninstalledFavoriteApp)
@@ -48,9 +49,12 @@ object AppManager {
         sharedPreferences.favoriteApps = favoriteApps
     }
 
+    fun toggleFavoriteWidget(context: Context, widgetId: String, favorite: Boolean) {
+        toggleFavoriteApp(context, widgetId, favorite)
+    }
+
     fun getFavoriteApps(context: Context): List<String> {
         val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-
         return sharedPreferences.favoriteApps
     }
 

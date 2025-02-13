@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
@@ -14,12 +14,22 @@ import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
 import kotlinx.coroutines.flow.stateIn
 import org.lineageos.tv.launcher.ext.context
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.repository.LauncherRepository
 
 class AddFavoriteViewModel(application: Application) : AndroidViewModel(application) {
     val appsToFavorites = LauncherRepository.installedApps(context)
         .combine(LauncherRepository.favoriteApps(context)) { installedApps, favoriteApps ->
-            installedApps.map { it to favoriteApps.contains(it.packageName) }
+            val favoriteAppsList = installedApps.map { app ->
+                app to (favoriteApps.contains(app.packageName))
+            }
+
+            val widgetList = favoriteApps.filter { it.startsWith(Widget.WIDGET_PREFIX) }
+            val favoriteWidgetList = Widget.WIDGETS.map { widgetId ->
+                Widget.create(context, widgetId)?.let { it to widgetList.contains(it.id) }
+            }
+
+            favoriteAppsList + favoriteWidgetList
         }
         .flowOn(Dispatchers.IO)
         .stateIn(

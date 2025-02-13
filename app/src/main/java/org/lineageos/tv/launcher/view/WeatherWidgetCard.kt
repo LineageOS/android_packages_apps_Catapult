@@ -4,7 +4,6 @@
  */
 package org.lineageos.tv.launcher.view
 
-import android.animation.AnimatorInflater
 import android.content.Context
 import android.text.InputType
 import android.util.AttributeSet
@@ -23,13 +22,14 @@ import kotlinx.coroutines.launch
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.ext.weatherApiKey
 import org.lineageos.tv.launcher.ext.weatherCity
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.viewmodels.WeatherViewModel
 import org.lineageos.tv.launcher.weather.openweathermap.models.RequestStatus
 import kotlin.math.roundToInt
 
 class WeatherWidgetCard @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
-) : Card(context, attrs, defStyleAttr) {
+) : WidgetCard(context, attrs, defStyleAttr) {
 
     // Views
     private val weatherIconImageView by lazy { findViewById<ImageView>(R.id.weatherIconImageView)!! }
@@ -43,11 +43,6 @@ class WeatherWidgetCard @JvmOverloads constructor(
     private val weatherViewModel: WeatherViewModel = WeatherViewModel(sharedPreferences)
 
     init {
-        inflate(context, R.layout.weather_widget_card, this)
-
-        stateListAnimator =
-            AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
-
         weatherViewModel.fetchWeather()
 
         CoroutineScope(Dispatchers.Main).launch {
@@ -92,12 +87,16 @@ class WeatherWidgetCard @JvmOverloads constructor(
         }
     }
 
+    override fun setupLayout() {
+        inflate(context, R.layout.weather_widget_card, this)
+    }
+
     sealed class ApiKeyDialogResult {
         data class Success(val apiKey: String, val city: String) : ApiKeyDialogResult()
         data object Cancelled : ApiKeyDialogResult()
     }
 
-    fun showDialog() {
+    override fun handleClick() {
         val context = this.context
         context.showApiKeyDialog { result ->
             when (result) {
@@ -177,5 +176,18 @@ class WeatherWidgetCard @JvmOverloads constructor(
 
     private fun showError(viewId: Int, message: String) {
         findViewById<TextInputLayout>(viewId)?.error = message
+    }
+
+    companion object {
+        const val WEATHER_WIDGET_CARD_ID = "weather"
+
+        fun createModel(context: Context): Widget {
+            return Widget(
+                Widget.WIDGET_PREFIX + WEATHER_WIDGET_CARD_ID,
+                context.getString(R.string.weather_widget_title),
+                AppCompatResources.getDrawable(context, R.drawable.ic_sunny)!!,
+                context
+            )
+        }
     }
 }
