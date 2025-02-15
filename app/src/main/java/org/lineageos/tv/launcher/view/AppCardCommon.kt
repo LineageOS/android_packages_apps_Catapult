@@ -108,7 +108,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
                 }
 
                 R.id.menu_move -> {
-                    FavoriteCard::class.safeCast(this)?.setMoving()
+                    FavoriteRowCard::class.safeCast(this)?.setMoving()
                     true
                 }
 

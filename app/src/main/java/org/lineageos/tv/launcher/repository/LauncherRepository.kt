@@ -7,6 +7,7 @@ package org.lineageos.tv.launcher.repository
 
 import android.content.Context
 import org.lineageos.tv.launcher.flow.InstalledAppsFlow
+import org.lineageos.tv.launcher.flow.InstalledWidgetsFlow
 import org.lineageos.tv.launcher.flow.PreviewChannelsFlow
 import org.lineageos.tv.launcher.flow.PreviewProgramsFlow
 import org.lineageos.tv.launcher.flow.SharedPreferencesFlows
@@ -30,9 +31,13 @@ object LauncherRepository {
         context: Context,
     ) = WatchNextProgramsFlow(context).flowData()
 
-    fun favoriteApps(
+    fun favorites(
         context: Context,
-    ) = SharedPreferencesFlows(context).favoriteAppsFlow()
+    ) = SharedPreferencesFlows(context).favoritesFlow()
+
+    fun installedWidgets(
+        context: Context,
+    ) = InstalledWidgetsFlow(context).flow()
 
     fun knownChannels(
         context: Context,

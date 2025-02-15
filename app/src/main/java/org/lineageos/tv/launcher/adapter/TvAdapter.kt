@@ -58,11 +58,12 @@ abstract class TvAdapter<L : Launchable, C : Card> : ListAdapter<L, TvAdapter<L,
     ) = false
 
     companion object {
-        private fun <T : Launchable> getDiffCallback() = object : DiffUtil.ItemCallback<T>() {
+        protected fun <T : Launchable> getDiffCallback() = object : DiffUtil.ItemCallback<T>() {
             override fun areItemsTheSame(
                 oldItem: T,
                 newItem: T,
-            ) = oldItem.packageName == newItem.packageName
+            ) = oldItem.packageName == newItem.packageName &&
+                    oldItem.launchIntent == newItem.launchIntent
 
             override fun areContentsTheSame(
                 oldItem: T,

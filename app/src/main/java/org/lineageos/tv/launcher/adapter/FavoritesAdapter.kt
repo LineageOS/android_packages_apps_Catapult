@@ -1,38 +1,65 @@
 /*
- * SPDX-FileCopyrightText: 2024 The LineageOS Project
+ * SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
 
 package org.lineageos.tv.launcher.adapter
 
+import android.appwidget.AppWidgetHost
 import android.content.Context
 import android.content.Intent
 import android.view.KeyEvent
 import android.view.ViewGroup
 import androidx.appcompat.content.res.AppCompatResources
+import androidx.recyclerview.widget.DiffUtil
 import org.lineageos.tv.launcher.AddFavoriteActivity
 import org.lineageos.tv.launcher.ModifyChannelsActivity
 import org.lineageos.tv.launcher.R
+import org.lineageos.tv.launcher.ext.pixelsEqualTo
 import org.lineageos.tv.launcher.model.ActivityLauncher
 import org.lineageos.tv.launcher.model.Launchable
+import org.lineageos.tv.launcher.model.WidgetInfo
 import org.lineageos.tv.launcher.view.FavoriteCard
+import org.lineageos.tv.launcher.view.FavoriteRowCard
+import org.lineageos.tv.launcher.view.WidgetCard
 import java.util.Collections
 
-class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
+class FavoritesAdapter(private val appWidgetHost: AppWidgetHost, private val appWidgetId: Int) :
+    TvAdapter<Launchable, FavoriteRowCard>() {
     var onFavoritesChangedCallback: (favorites: List<String>) -> Unit = {}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        FavoriteCard(parent.context).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        return when (viewType) {
+            VIEW_TYPE_APP_CARD -> {
+                ViewHolder(
+                    FavoriteCard(parent.context).apply {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                        descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                    }
+                )
+            }
+
+            VIEW_TYPE_WIDGET_CARD -> {
+                ViewHolder(
+                    WidgetCard(appWidgetHost, appWidgetId, parent.context).apply {
+                        layoutParams = ViewGroup.LayoutParams(
+                            ViewGroup.LayoutParams.WRAP_CONTENT,
+                            ViewGroup.LayoutParams.WRAP_CONTENT
+                        )
+                        descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+                    }
+                )
+            }
+
+            else -> throw IllegalArgumentException("Invalid view type")
         }
-    )
+    }
 
     override fun handleKey(
-        card: FavoriteCard,
+        card: FavoriteRowCard,
         keyCode: Int,
         event: KeyEvent?,
         bindingAdapterPosition: Int,
@@ -103,7 +130,7 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return false
     }
 
-    override fun handleLongClick(card: FavoriteCard): Boolean {
+    override fun handleLongClick(card: FavoriteRowCard): Boolean {
         if (card.moving || !card.hasMenu) {
             return true
         }
@@ -112,7 +139,7 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return true
     }
 
-    override fun handleClick(card: FavoriteCard) {
+    override fun handleClick(card: FavoriteRowCard) {
         if (!card.moving) {
             super.handleClick(card)
             return
@@ -131,8 +158,18 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         onFavoritesChangedCallback(newFavoritesSet)
     }
 
+    override fun getItemViewType(position: Int): Int {
+        return if (currentList[position] is WidgetInfo) {
+            VIEW_TYPE_WIDGET_CARD
+        } else {
+            VIEW_TYPE_APP_CARD
+        }
+    }
+
     companion object {
         const val STATIC_ITEMS = 2
+        private const val VIEW_TYPE_APP_CARD = 1
+        private const val VIEW_TYPE_WIDGET_CARD = 2
 
         fun createAddFavoriteEntry(context: Context): Launchable {
             return ActivityLauncher(
