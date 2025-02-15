@@ -15,15 +15,15 @@ import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.ext.getAttributeResourceId
 import org.lineageos.tv.launcher.model.Launchable
 
-class AddFavoriteItemView @JvmOverloads constructor(
+open class AddFavoriteItemView @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : LinearLayout(context, attrs, defStyleAttr) {
     var packageName: String = ""
 
     // Views
     private val stateSwitch by lazy { findViewById<MaterialSwitch>(R.id.state_switch)!! }
-    private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
-    private val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
+    protected val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
+    protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
     init {
         inflate(context, R.layout.favorites_add_app_card, this)
@@ -36,7 +36,7 @@ class AddFavoriteItemView @JvmOverloads constructor(
         stateSwitch.isChecked = favorite
     }
 
-    fun setCardInfo(appInfo: Launchable) {
+    open fun setCardInfo(appInfo: Launchable) {
         packageName = appInfo.packageName
         nameView.text = appInfo.label
         iconView.setImageDrawable(appInfo.icon)

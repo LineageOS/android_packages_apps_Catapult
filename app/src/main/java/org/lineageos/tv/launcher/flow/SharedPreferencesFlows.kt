@@ -20,7 +20,7 @@ class SharedPreferencesFlows(context: Context) {
         PreferenceManager.getDefaultSharedPreferences(context)
     }
 
-    fun favoriteAppsFlow() = sharedPreferences.valueFlow(FAVORITE_APPS_KEY) { favoriteApps }
+    fun favoritesFlow() = sharedPreferences.valueFlow(FAVORITE_APPS_KEY) { favoriteApps }
 
     fun knownChannelsFlow() = sharedPreferences.valueFlow(KNOWN_CHANNELS_KEY) { knownChannels }
 

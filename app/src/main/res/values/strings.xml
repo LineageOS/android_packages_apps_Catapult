@@ -45,4 +45,7 @@
     <string name="connected">Connected</string>
     <string name="mic_assistant">Search using microphone</string>
     <string name="keyboard_assistant">Search using keyboard</string>
+
+    <!-- Widgets -->
+    <string name="favorites_add_widget_widget_title">Widget: %1$s</string>
 </resources>

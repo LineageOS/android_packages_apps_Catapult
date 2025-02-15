@@ -77,7 +77,7 @@ class LauncherViewModel(application: Application) : AndroidViewModel(application
             initialValue = listOf(),
         )
 
-    val favoriteApps = LauncherRepository.favoriteApps(context)
+    val favorites = LauncherRepository.favorites(context)
         .flowOn(Dispatchers.IO)
         .stateIn(
             viewModelScope,

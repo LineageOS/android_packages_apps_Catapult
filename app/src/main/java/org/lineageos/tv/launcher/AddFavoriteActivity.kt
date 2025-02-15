@@ -31,7 +31,7 @@ class AddFavoriteActivity : ModalActivity(R.layout.activity_add_favorite) {
     private val permissionsGatedCallback = PermissionsGatedCallback(this) {
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                model.appsToFavorites.collectLatest {
+                model.favorites.collectLatest {
                     allAppsAdapter.submitList(it)
                 }
             }

@@ -6,6 +6,7 @@
 package org.lineageos.tv.launcher
 
 import android.app.role.RoleManager
+import android.appwidget.AppWidgetHost
 import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
@@ -43,6 +44,7 @@ import org.lineageos.tv.launcher.ext.roleCanBeRequested
 import org.lineageos.tv.launcher.model.AppInfo
 import org.lineageos.tv.launcher.model.InternalChannel
 import org.lineageos.tv.launcher.model.MainRowItem
+import org.lineageos.tv.launcher.model.WidgetInfo
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
@@ -50,6 +52,7 @@ import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
 import org.lineageos.tv.launcher.viewmodels.LauncherViewModel
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
 import java.util.Locale
+
 
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // View models
@@ -78,7 +81,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     // Adapters
     private val allAppsAdapter by lazy { AllAppsAdapter() }
-    private val favoritesAdapter by lazy { FavoritesAdapter() }
+    private lateinit var favoritesAdapter: FavoritesAdapter
     private val mainVerticalAdapter by lazy { MainVerticalAdapter() }
     private val watchNextAdapter by lazy { WatchNextAdapter() }
     private val previewChannelAdapters = mutableMapOf<Long, PreviewProgramsAdapter>()
@@ -137,11 +140,14 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         lifecycleScope.launch {
             lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
-                model.favoriteApps.collectLatest {
+                model.favorites.collectLatest {
                     favoritesAdapter.submitList(
                         it.mapNotNull {
                             runCatching {
-                                AppInfo.create(this@MainActivity, it)
+                                when (it.startsWith(WidgetInfo.WIDGET_PREFIX)) {
+                                    true -> WidgetInfo.create(this@MainActivity, it)
+                                    false -> AppInfo.create(this@MainActivity, it)
+                                }
                             }.getOrNull()
                         } + listOf(
                             FavoritesAdapter.createAddFavoriteEntry(this@MainActivity),
@@ -158,6 +164,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     @Suppress("RestrictedApi")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val appWidgetHost = AppWidgetHost(this, 1024)
+        val appWidgetId = appWidgetHost.allocateAppWidgetId()
+        appWidgetHost.startListening()
+        favoritesAdapter = FavoritesAdapter(appWidgetHost, appWidgetId)
 
         settingButton.setOnClickListener {
             startActivity(Intent(android.provider.Settings.ACTION_SETTINGS))
