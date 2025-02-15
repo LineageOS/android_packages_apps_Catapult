@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="app_name">Katapult</string>
+    <string name="settings">Cilësimet</string>
+    <string name="favorites">Të preferuarat</string>
+    <string name="all_apps">Të gjitha aplikacionet</string>
+    <string name="uninstall">Çinstalo</string>
+    <string name="mark_as_favorite">Bëje si të preferuar</string>
+    <string name="modify_favorites_short">Modifiko të preferuarat</string>
+    <string name="move">Lëvize</string>
+    <string name="remove_favorite">Hiqe nga të preferuarat</string>
+    <string name="watch_next">Shiko tjetër</string>
+    <string name="modify_channels">Modifiko kanalet</string>
+    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="order_channels_guide">Për të modifikuar vendet e kanaleve, shtypni gjatë një kanal të kërkuar dhe zhvendoseni në pozicionin e dëshiruar.</string>
+    <string name="search">Kërko</string>
+    <string name="modify_favorites">Modifiko aplikacionet e tua të preferuara</string>
+    <string name="system_modal">Cilësimet e sistemit</string>
+    <string name="sleep">Fli</string>
+    <string name="no_notifications">Nuk ka njoftime.</string>
+    <string name="network_status">Rrejt\n%1$s</string>
+    <string name="bluetooth_status">Aksesorë\n%1$s</string>
+    <string name="not_connected">Nuk është lidhur</string>
+    <string name="enabled">E aktivizuar</string>
+    <string name="disabled">E çaktivizuar</string>
+    <string name="app_permissions_toast">Lejet nuk janë dhënë nga përdoruesi.</string>
+    <string name="home_role_request_dialog_title">Vendosur si lëshues</string>
+    <string name="home_role_request_dialog_message">Ky aplikacion mund të veprojë si aplikacioni i paracaktuar në menu, do të dëshironit të hapni aplikacionin e cilësimeve për të ndryshuar aplikacionin e lëshuesit?</string>
+    <string name="home_role_request_dialog_neutral">Më vonë</string>
+    <string name="home_role_request_dialog_negative">Mos pyet përsëri</string>
+    <string name="unknown">E panjohur</string>
+    <string name="no_notification_access">Nuk ka akses tek njoftimet.</string>
+    <string name="allow_notification_access">Lejo akses tek njoftimet.</string>
+    <string name="dismiss">Largo</string>
+    <string name="connected">Lidhur</string>
+    <string name="mic_assistant">Kërko duke përdorur mikrofonin</string>
+    <string name="keyboard_assistant">Kërko duke përdorur tastjerën</string>
+</resources>
