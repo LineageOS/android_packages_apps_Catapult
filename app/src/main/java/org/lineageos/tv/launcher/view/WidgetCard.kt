@@ -28,16 +28,16 @@ class WidgetCard @JvmOverloads constructor(
 
     override fun setCardInfo(appInfo: Launchable) {
         if (appInfo !is WidgetInfo) return
-        if (AppWidgetManager.getInstance(context)
-                .bindAppWidgetIdIfAllowed(appWidgetId, appInfo.appWidgetProviderInfo.provider)
-        ) {
+//        if (AppWidgetManager.getInstance(context)
+//                .bindAppWidgetIdIfAllowed(appWidgetId, appInfo.appWidgetProviderInfo.provider)
+//        ) {
             val hostView =
                 appWidgetHost.createView(context, appWidgetId, appInfo.appWidgetProviderInfo)
             val widgetParentView = findViewById<FrameLayout>(R.id.widget_container)
             widgetParentView?.addView(hostView)
-        } else {
-            // Action android.appwidget.action.APPWIDGET_BIND is not available on TV.
-        }
+//        } else {
+//            // Action android.appwidget.action.APPWIDGET_BIND is not available on TV.
+//        }
 
         // Setup configuration activity
         val configActivity = appInfo.appWidgetProviderInfo.configure

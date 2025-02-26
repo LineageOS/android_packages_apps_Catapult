@@ -13,8 +13,9 @@ import android.net.Uri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.model.WidgetInfo
 
-import com.android.settingslib.Utils as SettingsLibUtils
+//import com.android.settingslib.Utils as SettingsLibUtils
 
 object AppManager {
     fun updateFavoriteApps(context: Context, installedApps: List<LeanbackAppInfo>) {
@@ -24,7 +25,7 @@ object AppManager {
         // Remove apps from favorite if they got uninstalled
         installedApps.map { it.packageName }.let { installedPackageNames ->
             favoriteApps.filter { favoriteApp ->
-                !installedPackageNames.contains(favoriteApp)
+                !installedPackageNames.contains(favoriteApp.removePrefix(WidgetInfo.WIDGET_PREFIX))
             }
         }.forEach { uninstalledFavoriteApp ->
             favoriteApps.remove(uninstalledFavoriteApp)
@@ -61,11 +62,12 @@ object AppManager {
     }
 
     fun uninstallable(app: ApplicationInfo, context: Context): Boolean {
-        return !isSystemApp(context) && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
-            context.resources,
-            context.packageManager,
-            app.packageName
-        )
+//        return !isSystemApp(context) && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
+//            context.resources,
+//            context.packageManager,
+//            app.packageName
+//        )
+        return true
     }
 
     fun isSystemApp(context: Context): Boolean {
