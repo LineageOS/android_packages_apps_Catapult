@@ -224,6 +224,11 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
     override fun onResume() {
         super.onResume()
+
+        mainVerticalGridView.post {
+            val viewHolder = mainVerticalGridView.findViewHolderForAdapterPosition(0)
+            viewHolder?.itemView?.requestFocus()
+        }
     }
 
     override fun onDestroy() {
