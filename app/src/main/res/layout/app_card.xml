@@ -12,7 +12,8 @@
     android:clipChildren="false"
     android:clipToPadding="false"
     android:longClickable="true"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/card_border_only">
 
     <FrameLayout
         android:layout_width="match_parent"

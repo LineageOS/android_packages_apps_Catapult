@@ -53,6 +53,10 @@ abstract class AppCardCommon @JvmOverloads constructor(
     override fun setCardInfo(appInfo: Launchable) {
         super.setCardInfo(appInfo)
 
+        // Reset
+        bannerView.visibility = View.GONE
+        iconContainer.visibility = View.VISIBLE
+
         nameView.text = appInfo.label
         iconView.setImageDrawable(appInfo.icon)
 
@@ -64,12 +68,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
                 bannerView.setImageDrawable(appInfo.banner)
                 bannerView.visibility = View.VISIBLE
                 iconContainer.visibility = View.GONE
-                cardContainer.background =
-                    AppCompatResources.getDrawable(context, R.drawable.card_border_only)
             }
-        } else {
-            // App with an icon
-            iconView.setImageDrawable(appInfo.icon)
         }
     }
 
