@@ -4,7 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Catapult</string>
     <string name="settings">Einstellungen</string>
     <string name="favorites">Favoriten</string>
     <string name="all_apps">Alle Apps</string>
@@ -15,7 +14,6 @@
     <string name="remove_favorite">Favorit entfernen</string>
     <string name="watch_next">Als Nächstes ansehen</string>
     <string name="modify_channels">Kanäle anpassen</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
     <string name="order_channels_guide">Um Kanäle zu ordnen, drücke lange auf einen gewünschten Kanal und verschiebe ihn an die gewünschte Position.</string>
     <string name="search">Suche</string>
     <string name="modify_favorites">Anpassen deiner favorisierten Apps</string>

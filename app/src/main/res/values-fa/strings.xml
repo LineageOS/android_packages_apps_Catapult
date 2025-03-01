@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">تنظیمات</string>
+    <string name="favorites">موارد دلخواه</string>
+    <string name="all_apps">همهٔ برنامه‌ها</string>
+    <string name="uninstall">لغو نصب</string>
+    <string name="mark_as_favorite">علامت‌‎گذاری به عنوان دلخواه</string>
+    <string name="modify_favorites_short">ویرایش موارد دلخواه</string>
+    <string name="move">انتقال</string>
+    <string name="remove_favorite">حذف مورد پسند</string>
+    <string name="watch_next">تماشای بعدی</string>
+    <string name="modify_channels">تغییر کانال ها</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">برای سفارشی کردن کانال، کانال مورد نظر را طولانی فشار دهید و آن را به موقعیت دلخواه منتقل کنید.</string>
+    <string name="search">جستجو</string>
+    <string name="modify_favorites">برنامه های مورد علاقه خود را تغییر دهید</string>
+    <string name="system_modal">گزینه های سیستم</string>
+    <string name="sleep">خواب</string>
+    <string name="no_notifications">بدون اعلان</string>
+    <string name="network_status">شبکه\n%1$s</string>
+    <string name="bluetooth_status">لوازم جانبی\n%1$s</string>
+    <string name="not_connected">متصل نیست</string>
+    <string name="enabled">فعال</string>
+    <string name="disabled">غیرفعال</string>
+    <string name="app_permissions_toast">مجوز توسط کاربر داده نشد.</string>
+    <string name="home_role_request_dialog_title">تنظیم به عنوان راه‌انداز</string>
+    <string name="home_role_request_dialog_message">این برنامه می تواند به عنوان برنامه پیش فرض خانه عمل کند، آیا می خواهید برنامه تنظیمات را برای تغییر برنامه راه‌اندازی باز کنید؟</string>
+    <string name="home_role_request_dialog_neutral">بعداً</string>
+    <string name="home_role_request_dialog_negative">دوباره نپرس</string>
+    <string name="unknown">ناشناخته</string>
+    <string name="no_notification_access">بدون دسترسی به اعلان</string>
+    <string name="allow_notification_access">اجازه دسترسی به اعلان</string>
+    <string name="dismiss">رد کردن</string>
+    <string name="connected">متصل</string>
+    <string name="mic_assistant">جستجو با میکروفون</string>
+    <string name="keyboard_assistant">جستجو با صفحه کلید</string>
+</resources>

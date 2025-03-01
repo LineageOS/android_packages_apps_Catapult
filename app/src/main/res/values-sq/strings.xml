@@ -4,18 +4,14 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Katapult</string>
     <string name="settings">Cilësimet</string>
     <string name="favorites">Të preferuarat</string>
-    <string name="all_apps">Të gjitha aplikacionet</string>
     <string name="uninstall">Çinstalo</string>
-    <string name="mark_as_favorite">Bëje si të preferuar</string>
     <string name="modify_favorites_short">Modifiko të preferuarat</string>
     <string name="move">Lëvize</string>
     <string name="remove_favorite">Hiqe nga të preferuarat</string>
     <string name="watch_next">Shiko tjetër</string>
     <string name="modify_channels">Modifiko kanalet</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
     <string name="order_channels_guide">Për të modifikuar vendet e kanaleve, shtypni gjatë një kanal të kërkuar dhe zhvendoseni në pozicionin e dëshiruar.</string>
     <string name="search">Kërko</string>
     <string name="modify_favorites">Modifiko aplikacionet e tua të preferuara</string>

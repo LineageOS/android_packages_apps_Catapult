@@ -4,10 +4,9 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Catapalt</string>
     <string name="settings">Socruithe</string>
     <string name="favorites">Ceanáin</string>
-    <string name="all_apps">Gach Aipeanna</string>
+    <string name="all_apps">Gach aipeanna</string>
     <string name="uninstall">Díshuiteáil</string>
     <string name="mark_as_favorite">Marcáil mar is fearr leat</string>
     <string name="modify_favorites_short">Athraigh ceanáin</string>
@@ -15,7 +14,7 @@
     <string name="remove_favorite">Bain is fearr leat</string>
     <string name="watch_next">Féach ar seo chugainn</string>
     <string name="modify_channels">Cainéil a mhodhnú</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="channel_title">%1$s: %2$s</string>
     <string name="order_channels_guide">Chun cainéil a ordú, brúigh fada ar chainéal atá uait agus bog é go dtí an suíomh inmhianaithe.</string>
     <string name="search">Cuardach</string>
     <string name="modify_favorites">Athraigh na haipeanna is fearr leat</string>
