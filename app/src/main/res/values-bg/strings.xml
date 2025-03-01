@@ -8,13 +8,12 @@
     <string name="favorites">Любими</string>
     <string name="all_apps">Всички приложения</string>
     <string name="uninstall">Деинсталиране</string>
-    <string name="mark_as_favorite">Маркиране като любимо</string>
+    <string name="mark_as_favorite">Маркирай като любимо</string>
     <string name="modify_favorites_short">Промяна на любими</string>
     <string name="move">Преместване</string>
     <string name="remove_favorite">Премахване от любими</string>
     <string name="watch_next">Пусни следващ</string>
     <string name="modify_channels">Промяна на каналите</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
     <string name="order_channels_guide">За да наредите каналите, задръжте върху един и го преместете на желаната позиция</string>
     <string name="search">Търсене</string>
     <string name="modify_favorites">Промяна на списък с любими приложения</string>

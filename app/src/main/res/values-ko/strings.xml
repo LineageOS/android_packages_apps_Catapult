@@ -4,7 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Catapult</string>
     <string name="settings">설정</string>
     <string name="favorites">즐겨찾기</string>
     <string name="all_apps">모든 앱</string>
@@ -13,8 +12,9 @@
     <string name="modify_favorites_short">즐겨찾기 편집</string>
     <string name="move">이동</string>
     <string name="remove_favorite">즐겨찾기 제거</string>
+    <string name="watch_next">다음 보기</string>
     <string name="modify_channels">채널 편집</string>
-    <string name="channel_title">%1$s%2$s\"</string>
+    <string name="channel_title">%1$s: %2$s</string>
     <string name="order_channels_guide">채널을 길게 누른 다음 원하는 위치로 이동하면 채널 순서를 바꿀 수 있습니다.</string>
     <string name="search">검색</string>
     <string name="modify_favorites">즐겨찾기에 추가한 앱 편집</string>

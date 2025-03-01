@@ -4,18 +4,17 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Catapult</string>
     <string name="settings">Nastavitve</string>
     <string name="favorites">Priljubljene</string>
     <string name="all_apps">Vse aplikacije</string>
     <string name="uninstall">Odmesti</string>
-    <string name="mark_as_favorite">Označi kot Priljubljeno</string>
+    <string name="mark_as_favorite">Označi kot priljubljeno</string>
     <string name="modify_favorites_short">Spremeni priljubljene</string>
     <string name="move">Premakni</string>
     <string name="remove_favorite">Odstrani priljubljeno</string>
     <string name="watch_next">Glej naslednje</string>
     <string name="modify_channels">Spremeni kanale</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="channel_title">%1$s: %2$s</string>
     <string name="order_channels_guide">Za premik kanalov, pridržite želeni kanal in ga premaknite na želeni položaj.</string>
     <string name="search">Išči</string>
     <string name="modify_favorites">Spremenite vaše priljubljene aplikacije</string>

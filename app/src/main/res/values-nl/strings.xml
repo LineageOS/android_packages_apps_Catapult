@@ -4,18 +4,14 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
-    <string name="app_name">Katapult</string>
     <string name="settings">Instellingen</string>
     <string name="favorites">Favorieten</string>
-    <string name="all_apps">Alle apps</string>
     <string name="uninstall">Deïnstalleren</string>
-    <string name="mark_as_favorite">Markeer als favoriet</string>
     <string name="modify_favorites_short">Favorieten aanpassen</string>
     <string name="move">Verplaats</string>
     <string name="remove_favorite">Verwijder favoriet</string>
     <string name="watch_next">Bekijk volgende</string>
     <string name="modify_channels">Pas kanalen aan</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
     <string name="order_channels_guide">Om de volgorde van kanalen aan te passen, druk lang op een gewenst kanaal en verplaats het naar de gewenste positie.</string>
     <string name="search">Zoek</string>
     <string name="modify_favorites">Pas uw favoriete apps aan</string>

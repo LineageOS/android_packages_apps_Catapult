@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">設定</string>
+    <string name="favorites">我的最愛</string>
+    <string name="all_apps">所有應用程式</string>
+    <string name="uninstall">移除</string>
+    <string name="mark_as_favorite">標記為最愛</string>
+    <string name="modify_favorites_short">修改最愛</string>
+    <string name="move">移動</string>
+    <string name="remove_favorite">取消收藏</string>
+    <string name="watch_next">觀看下一個</string>
+    <string name="modify_channels">修改頻道</string>
+    <string name="channel_title">%1$s：%2$s</string>
+    <string name="order_channels_guide">要對頻道進行排序，請長按有關頻道並移動其到所需的位置。</string>
+    <string name="search">搜尋</string>
+    <string name="modify_favorites">修改你最愛的應用程式</string>
+    <string name="system_modal">系統選項</string>
+    <string name="sleep">休眠</string>
+    <string name="no_notifications">沒有通知</string>
+    <string name="network_status">網路\n%1$s</string>
+    <string name="bluetooth_status">附件\n%1$s</string>
+    <string name="not_connected">未連線</string>
+    <string name="enabled">已啟用</string>
+    <string name="disabled">已停用</string>
+    <string name="app_permissions_toast">使用者未授予權限。</string>
+    <string name="home_role_request_dialog_title">設置為啟動器</string>
+    <string name="home_role_request_dialog_message">此應用程式可以當為系統默認桌面，你想打開設定來更改啟動器嗎？</string>
+    <string name="home_role_request_dialog_neutral">稍後再說</string>
+    <string name="home_role_request_dialog_negative">不要再次詢問</string>
+    <string name="unknown">未知</string>
+    <string name="no_notification_access">沒有通知使用權</string>
+    <string name="allow_notification_access">允許通知使用權</string>
+    <string name="dismiss">忽略</string>
+    <string name="connected">已連線</string>
+    <string name="mic_assistant">使用麥克風搜尋</string>
+    <string name="keyboard_assistant">使用鍵盤搜尋</string>
+</resources>
