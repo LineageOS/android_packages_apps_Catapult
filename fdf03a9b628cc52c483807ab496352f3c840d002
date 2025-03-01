@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "6b8d9388_9b804aaf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 5
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-03-01T13:44:35Z",
+      "side": 1,
+      "message": "Doesn\u0027t seem to work with a real remote, only in emulator.",
+      "revId": "fdf03a9b628cc52c483807ab496352f3c840d002",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
