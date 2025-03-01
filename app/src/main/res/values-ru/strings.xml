@@ -7,8 +7,9 @@
     <string name="settings">Настройки</string>
     <string name="all_apps">Все приложения</string>
     <string name="uninstall">Удалить</string>
+    <string name="mark_as_favorite">В избранное</string>
     <string name="move">Переместить</string>
-    <string name="channel_title">%1$s: %2$s\"</string>
+    <string name="channel_title">%1$s: %2$s</string>
     <string name="search">Поиск</string>
     <string name="network_status">Сеть\n%1$s</string>
     <string name="app_permissions_toast">Пользователь не предоставил разрешения.</string>
