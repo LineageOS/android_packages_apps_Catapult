@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Impostazions</string>
+    <string name="favorites">Preferîts</string>
+    <string name="all_apps">Dutis lis aplicazions</string>
+    <string name="uninstall">Disinstale</string>
+    <string name="mark_as_favorite">Segne come preferît</string>
+    <string name="modify_favorites_short">Modifiche preferîts</string>
+    <string name="move">Sposte</string>
+    <string name="remove_favorite">Gjave preferît</string>
+    <string name="watch_next">Cjale il sucessîf</string>
+    <string name="modify_channels">Modifiche i canâi</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Par ordenâ i canâi, frache a dilunc suntun canâl e spostilu inte posizion desiderade.</string>
+    <string name="search">Cîr</string>
+    <string name="modify_favorites">Modifiche lis aplicazions preferidis</string>
+    <string name="system_modal">Opzions di sisteme</string>
+    <string name="sleep">Met in polse</string>
+    <string name="no_notifications">Nissune notifiche</string>
+    <string name="network_status">Rêt\n%1$s</string>
+    <string name="bluetooth_status">Acessoris\n%1$s</string>
+    <string name="not_connected">No conetût</string>
+    <string name="enabled">Ativât</string>
+    <string name="disabled">Disativât</string>
+    <string name="app_permissions_toast">L\'utent nol à concedût i permès.</string>
+    <string name="home_role_request_dialog_title">Met come inviadôr</string>
+    <string name="home_role_request_dialog_message">Cheste aplicazion e pues fâ di inviadôr predefinît, tu âs di vierzi lis impostazions par cambiâ la aplicazion dal inviadôr?</string>
+    <string name="home_role_request_dialog_neutral">Plui indenant</string>
+    <string name="home_role_request_dialog_negative">No sta domandâ plui</string>
+    <string name="unknown">No cognossût</string>
+    <string name="no_notification_access">Nissun acès aes notifichis</string>
+    <string name="allow_notification_access">Permet l\'acès aes notifichis</string>
+    <string name="dismiss">Ignore</string>
+    <string name="connected">Conetût</string>
+    <string name="mic_assistant">Cîr doprant il microfon</string>
+    <string name="keyboard_assistant">Cîr doprant la tastiere</string>
+</resources>

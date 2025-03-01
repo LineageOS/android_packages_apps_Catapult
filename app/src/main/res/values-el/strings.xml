@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Ρυθμίσεις</string>
+    <string name="favorites">Αγαπημένα</string>
+    <string name="all_apps">Όλες οι εφαρμογές</string>
+    <string name="uninstall">Απεγκατάσταση</string>
+    <string name="mark_as_favorite">Σήμανση ως αγαπημένο</string>
+    <string name="modify_favorites_short">Τροποποίηση αγαπημένων</string>
+    <string name="move">Μετακίνηση</string>
+    <string name="remove_favorite">Αφαίρεση αγαπημένου</string>
+    <string name="watch_next">Δείτε στη συνέχεια</string>
+    <string name="modify_channels">Τροποποίηση καναλιών</string>
+    <string name="order_channels_guide">Για να τακτοποιήσετε τα κανάλια, πατήστε παρατεταμένα ένα επιθυμητό κανάλι και μετακινήστε το στην επιθυμητή θέση.</string>
+    <string name="search">Αναζήτηση</string>
+    <string name="modify_favorites">Τροποποιήστε τις αγαπημένες σας εφαρμογές</string>
+    <string name="system_modal">Επιλογές συστήματος</string>
+    <string name="sleep">Αναστολή</string>
+    <string name="no_notifications">Καμία ειδοποίηση</string>
+    <string name="network_status">Δίκτυο\n%1$s</string>
+    <string name="bluetooth_status">Αξεσουάρ\n%1$s</string>
+    <string name="not_connected">Χωρίς σύνδεση</string>
+    <string name="enabled">Ενεργό</string>
+    <string name="disabled">Ανενεργό</string>
+    <string name="app_permissions_toast">Τα δικαιώματα δε χορηγήθηκαν από το χρήστη.</string>
+    <string name="home_role_request_dialog_title">Ορισμός ως εκκινητή</string>
+    <string name="home_role_request_dialog_message">Αυτή η εφαρμογή μπορεί να λειτουργήσει ως προεπιλεγμένη εφαρμογή αρχικής οθόνης, θα θέλατε να ανοίξετε τις Ρυθμίσεις για να αλλάξετε την εφαρμογή εκκινητή;</string>
+    <string name="home_role_request_dialog_neutral">Αργότερα</string>
+    <string name="home_role_request_dialog_negative">Να μην ερωτηθώ ξανά</string>
+    <string name="unknown">Άγνωστο</string>
+    <string name="no_notification_access">Χωρίς πρόσβαση στις ειδοποιήσεις</string>
+    <string name="allow_notification_access">Να επιτρέπεται η πρόσβαση στις ειδοποιήσεις</string>
+    <string name="dismiss">Παράβλεψη</string>
+    <string name="connected">Συνδεδεμένο</string>
+    <string name="mic_assistant">Αναζήτηση με μικρόφωνο</string>
+    <string name="keyboard_assistant">Αναζήτηση με πληκτρολόγιο</string>
+</resources>
