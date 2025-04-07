@@ -5,12 +5,37 @@
 -->
 <resources>
     <string name="settings">Настройки</string>
+    <string name="favorites">Избранное</string>
     <string name="all_apps">Все приложения</string>
     <string name="uninstall">Удалить</string>
     <string name="mark_as_favorite">В избранное</string>
+    <string name="modify_favorites_short">Изменить избранное</string>
     <string name="move">Переместить</string>
+    <string name="remove_favorite">Удалить из избранного</string>
+    <string name="watch_next">Смотреть далее</string>
+    <string name="modify_channels">Изменить каналы</string>
     <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Чтобы упорядочить каналы, удерживайте нужный канал и переместите его на желаемую позицию.</string>
     <string name="search">Поиск</string>
+    <string name="modify_favorites">Измените свои любимые приложения</string>
+    <string name="system_modal">Системные настройки</string>
+    <string name="sleep">Спящий режим</string>
+    <string name="no_notifications">Без уведомлений</string>
     <string name="network_status">Сеть\n%1$s</string>
+    <string name="bluetooth_status">Аксессуары\n%1$s</string>
+    <string name="not_connected">Нет подключения</string>
+    <string name="enabled">Включен</string>
+    <string name="disabled">Выключен</string>
     <string name="app_permissions_toast">Пользователь не предоставил разрешения.</string>
+    <string name="home_role_request_dialog_title">Установить как лаунчер</string>
+    <string name="home_role_request_dialog_message">Это приложение может работать в качестве лаунчера по умолчанию, вы хотите открыть настройки для изменения лаунчера?</string>
+    <string name="home_role_request_dialog_neutral">Позже</string>
+    <string name="home_role_request_dialog_negative">Больше не спрашивать</string>
+    <string name="unknown">Неизвестно</string>
+    <string name="no_notification_access">Нет доступа к уведомлениям</string>
+    <string name="allow_notification_access">Разрешить доступ к уведомлениям</string>
+    <string name="dismiss">Отклонить</string>
+    <string name="connected">Подключено</string>
+    <string name="mic_assistant">Поиск с помощью микрофона</string>
+    <string name="keyboard_assistant">Поиск с помощью клавиатуры</string>
 </resources>

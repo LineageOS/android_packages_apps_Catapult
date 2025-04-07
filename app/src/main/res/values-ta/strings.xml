@@ -4,5 +4,25 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <string name="settings">அமைப்புகள்</string>
+    <string name="favorites">பிடித்தவை</string>
+    <string name="all_apps">அனைத்துச் செயலிகள்</string>
+    <string name="uninstall">நிறுவநீக்குக</string>
+    <string name="mark_as_favorite">பிடித்ததாகக் குறிக்க</string>
+    <string name="modify_favorites_short">பிடித்தவற்றை மாற்றுக</string>
+    <string name="move">நகர்த்துக</string>
+    <string name="remove_favorite">பிடித்ததை அகற்றுக</string>
+    <string name="watch_next">அடுத்துப் பார்க்க</string>
+    <string name="not_connected">இணைக்கப்படவில்லை</string>
+    <string name="enabled">இயல்விக்கப்பட்டது</string>
+    <string name="disabled">முடக்கப்பட்டது</string>
     <string name="app_permissions_toast">பயனரால் அனுமதிகள் வழங்கப்படவில்லை.</string>
+    <string name="home_role_request_dialog_title">தொடங்கியாக அமைக்க</string>
+    <string name="unknown">அறியப்படா</string>
+    <string name="no_notification_access">அறிவிப்பு அணுகல் இல்லை</string>
+    <string name="allow_notification_access">அறிவிப்பு அணுகலை இசைவளிக்க</string>
+    <string name="dismiss">விலக்குக</string>
+    <string name="connected">இணைக்கப்பட்டது</string>
+    <string name="mic_assistant">ஒலிவாங்கியைப் பயன்படுத்தித் தேடுக</string>
+    <string name="keyboard_assistant">விசைப்பலகையைப் பயன்படுத்தித் தேடுக</string>
 </resources>
