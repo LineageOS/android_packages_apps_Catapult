@@ -27,6 +27,7 @@
     <string name="disabled">Изключено</string>
     <string name="app_permissions_toast">Позволения отказани от потребител.</string>
     <string name="home_role_request_dialog_title">Задаване като главен екран</string>
+    <string name="home_role_request_dialog_message">Това приложение може да бъде зададено като основното за начален екран. Искате ли да отворите настройките, за да замените текущото приложение за начален екран?</string>
     <string name="home_role_request_dialog_neutral">По- късно</string>
     <string name="home_role_request_dialog_negative">Не питай отново</string>
     <string name="unknown">Неизвестно</string>

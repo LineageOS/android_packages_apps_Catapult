@@ -6,7 +6,11 @@
 <resources>
     <string name="settings">Paramètres</string>
     <string name="uninstall">Désinstaller</string>
+    <string name="mark_as_favorite">Ajouter aux favoris</string>
+    <string name="modify_favorites_short">Modifier les favoris</string>
     <string name="move">Déplacer</string>
+    <string name="remove_favorite">Supprimer des favoris</string>
+    <string name="search">Rechercher</string>
     <string name="enabled">Activé</string>
     <string name="disabled">Désactivé</string>
     <string name="app_permissions_toast">Autorisations non accordées par l\'utilisateur.</string>
