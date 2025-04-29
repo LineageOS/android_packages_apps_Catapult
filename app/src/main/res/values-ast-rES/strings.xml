@@ -6,4 +6,5 @@
 <resources>
     <string name="settings">Configuración</string>
     <string name="all_apps">Toles aplicaciones</string>
+    <string name="system_modal">Opciones del sistema</string>
 </resources>
