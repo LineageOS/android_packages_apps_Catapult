@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Ayarlar</string>
+    <string name="favorites">Favoriler</string>
+    <string name="all_apps">Tüm uygulamalar</string>
+    <string name="uninstall">Yüklemeyi kaldır</string>
+    <string name="mark_as_favorite">Favori olarak işaretle</string>
+    <string name="modify_favorites_short">Favorileri Düzenle</string>
+    <string name="move">Taşı</string>
+    <string name="remove_favorite">Favoriyi kaldır</string>
+    <string name="watch_next">Sonrakini İzle</string>
+    <string name="modify_channels">Kanalları değiştir</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Kanalları sıralamak için, istenilen kanala basılı tutun ve istenen pozisyona taşıyın.</string>
+    <string name="search">Ara</string>
+    <string name="modify_favorites">Favori uygulamalarınızı değiştirin</string>
+    <string name="system_modal">Sistem seçenekleri</string>
+    <string name="sleep">Uyku</string>
+    <string name="no_notifications">Bildirim yok</string>
+    <string name="network_status">Ağ\n%1$s</string>
+    <string name="bluetooth_status">Aksesuarlar\n%1$s</string>
+    <string name="not_connected">Bağlı değil</string>
+    <string name="enabled">Etkin</string>
+    <string name="disabled">Devre dışı</string>
+    <string name="app_permissions_toast">Kullanıcı izinleri vermedi.</string>
+    <string name="home_role_request_dialog_title">Başlatıcı olarak ayarla</string>
+    <string name="home_role_request_dialog_message">Bu uygulama, varsayılan başlatıcı uygulaması olarak kullanılabilir. Başlatıcı uygulamasını değiştirmek için ayarları açmak ister misiniz?</string>
+    <string name="home_role_request_dialog_neutral">Sonra</string>
+    <string name="home_role_request_dialog_negative">Bir daha sorma</string>
+    <string name="unknown">Bilinmeyen</string>
+    <string name="no_notification_access">Bildirim erişimi yok</string>
+    <string name="allow_notification_access">Bildirim erişimine izin ver</string>
+    <string name="dismiss">Yoksay</string>
+    <string name="connected">Bağlandı</string>
+    <string name="mic_assistant">Mikrofon kullanarak ara</string>
+    <string name="keyboard_assistant">Klavye kullanarak ayarla</string>
+</resources>
