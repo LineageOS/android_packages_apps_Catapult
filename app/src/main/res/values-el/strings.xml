@@ -14,6 +14,7 @@
     <string name="remove_favorite">Αφαίρεση αγαπημένου</string>
     <string name="watch_next">Δείτε στη συνέχεια</string>
     <string name="modify_channels">Τροποποίηση καναλιών</string>
+    <string name="channel_title">%1$s: %2$s</string>
     <string name="order_channels_guide">Για να τακτοποιήσετε τα κανάλια, πατήστε παρατεταμένα ένα επιθυμητό κανάλι και μετακινήστε το στην επιθυμητή θέση.</string>
     <string name="search">Αναζήτηση</string>
     <string name="modify_favorites">Τροποποιήστε τις αγαπημένες σας εφαρμογές</string>

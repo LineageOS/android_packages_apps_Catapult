@@ -33,7 +33,7 @@
     <string name="home_role_request_dialog_negative">மீண்டும் கேட்காதே</string>
     <string name="unknown">அறியப்படா</string>
     <string name="no_notification_access">அறிவிப்பு அணுகல் இல்லை</string>
-    <string name="allow_notification_access">அறிவிப்பு அணுகலை இசைவளிக்க</string>
+    <string name="allow_notification_access">அறிவிப்பு அணுகலை அனுமதிக்க</string>
     <string name="dismiss">விலக்குக</string>
     <string name="connected">இணைக்கப்பட்டது</string>
     <string name="mic_assistant">ஒலிவாங்கியைப் பயன்படுத்தித் தேடுக</string>
