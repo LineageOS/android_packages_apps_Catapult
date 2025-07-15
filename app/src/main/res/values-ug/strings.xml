@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">تەڭشەك</string>
+    <string name="favorites">يىغقۇچ</string>
+    <string name="all_apps">ھەممە ئەپ</string>
+    <string name="uninstall">ئۆچۈر</string>
+    <string name="mark_as_favorite">يىغقۇچقا قوش</string>
+    <string name="modify_favorites_short">يىغقۇچ ئۆزگەرت</string>
+    <string name="move">يۆتكە</string>
+    <string name="remove_favorite">يىغقۇچتىن چىقىرىۋەت</string>
+    <string name="watch_next">كېيىنكىنى كۆرسەت</string>
+    <string name="modify_channels">قانال ئۆزگەرت</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">قانال رەتلەشتە، لازىملىق قانالنى ئۇزۇن بېسىپ ئاندىن ئارزۇ قىلغان ئورۇنغا يۆتكىسە بولىدۇ.</string>
+    <string name="search">ئىزدە</string>
+    <string name="modify_favorites">ياقتۇرىدىغان ئەپلىرىڭىزنى ئۆزگەرتىدۇ</string>
+    <string name="system_modal">سىستېما تاللانمىسى</string>
+    <string name="sleep">ئۇخلات</string>
+    <string name="no_notifications">ئۇقتۇرۇش يوق</string>
+    <string name="network_status">تور\n%1$s</string>
+    <string name="bluetooth_status">قوشۇمچە ئىقتىدار\n%1$s</string>
+    <string name="not_connected">باغلانمىدى</string>
+    <string name="enabled">قوزغىتىلغان</string>
+    <string name="disabled">چەكلەنگەن</string>
+    <string name="app_permissions_toast">ئىشلەتكۈچى ئىجازەت بەرمىگەن.</string>
+    <string name="home_role_request_dialog_title">قوزغاتقۇچ تەڭشىكى</string>
+    <string name="home_role_request_dialog_message">بۇ ئەپكە كۆڭۈلدىكى باش بەتتىكى ئەپتەك مۇئامىلە قىلىنىدۇ، تەڭشەك ئەپنى ئېچىپ قوزغاتقۇچ ئەپنى ئالماشتۇرامسىز؟</string>
+    <string name="home_role_request_dialog_neutral">كېيىن</string>
+    <string name="home_role_request_dialog_negative">قايتا سورىما</string>
+    <string name="unknown">يوچۇن</string>
+    <string name="no_notification_access">ئۇقتۇرۇش ئىجازىتى يوق</string>
+    <string name="allow_notification_access">ئۇقتۇرۇش ئىجازىتىگە يول قويىدۇ</string>
+    <string name="dismiss">پەرۋا قىلما</string>
+    <string name="connected">باغلاندى</string>
+    <string name="mic_assistant">مىكروفون ئىشلىتىپ ئىزدە</string>
+    <string name="keyboard_assistant">ھەرپتاختا ئىشلىتىپ ئىزدە</string>
+</resources>
