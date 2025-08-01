@@ -10,6 +10,8 @@
     <string name="modify_favorites_short">Modifier les favoris</string>
     <string name="move">Déplacer</string>
     <string name="remove_favorite">Supprimer des favoris</string>
+    <string name="watch_next">Vidéo suivante</string>
+    <string name="channel_title">%1$s : %2$s</string>
     <string name="search">Rechercher</string>
     <string name="enabled">Activé</string>
     <string name="disabled">Désactivé</string>
