@@ -32,8 +32,8 @@
     <string name="home_role_request_dialog_neutral">Daha sonra</string>
     <string name="home_role_request_dialog_negative">Təkrar soruşma</string>
     <string name="unknown">Bilinmir</string>
-    <string name="no_notification_access">Bildiriş müraciət yoxdur</string>
-    <string name="allow_notification_access">Bildiriş müraciətinə icazə ver</string>
+    <string name="no_notification_access">Bildiriş erişimi yoxdur</string>
+    <string name="allow_notification_access">Bildiriş erişiminə icazə ver</string>
     <string name="dismiss">Rədd et</string>
     <string name="connected">Bağlantılıdır</string>
     <string name="mic_assistant">Mikrofon istifadə edərək axtar</string>
