@@ -19,6 +19,7 @@
     <string name="search">검색</string>
     <string name="modify_favorites">즐겨찾기에 추가한 앱 편집</string>
     <string name="system_modal">시스템 옵션</string>
+    <string name="sleep">절전 모드</string>
     <string name="no_notifications">알림 없음</string>
     <string name="network_status">네트워크\n%1$s</string>
     <string name="bluetooth_status">액세서리\n%1$s</string>
