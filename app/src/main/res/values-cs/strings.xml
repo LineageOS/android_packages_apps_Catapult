@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Nastavení</string>
+    <string name="favorites">Oblíbené</string>
+    <string name="all_apps">Všechny aplikace</string>
+    <string name="uninstall">Odinstalovat</string>
+    <string name="mark_as_favorite">Označit jako oblíbené</string>
+    <string name="modify_favorites_short">Upravit oblíbené</string>
+    <string name="move">Přesunout</string>
+    <string name="remove_favorite">Odstranit z oblíbených</string>
+    <string name="watch_next">Zhlédnout další</string>
+    <string name="modify_channels">Upravit kanály</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Pro seřazení kanálů dlouze stiskněte konkrétní kanál a přesuňte ho na požadovanou pozici.</string>
+    <string name="search">Vyhledat</string>
+    <string name="modify_favorites">Upravte své oblíbené aplikace</string>
+    <string name="system_modal">Možnosti systému</string>
+    <string name="sleep">Uspat</string>
+    <string name="no_notifications">Žádná oznámení</string>
+    <string name="network_status">Síť\n%1$s</string>
+    <string name="bluetooth_status">Příslušenství\n%1$s</string>
+    <string name="not_connected">Nepřipojeno</string>
+    <string name="enabled">Povoleno</string>
+    <string name="disabled">Zakázáno</string>
+    <string name="app_permissions_toast">Oprávnění neudělena uživatelem.</string>
+    <string name="home_role_request_dialog_title">Nastavit jako domovskou aplikaci</string>
+    <string name="home_role_request_dialog_message">Tato aplikace může fungovat jako výchozí domovská aplikace, chcete otevřít nastavení aplikace pro změnu domovské aplikace?</string>
+    <string name="home_role_request_dialog_neutral">Později</string>
+    <string name="home_role_request_dialog_negative">Znovu se neptat</string>
+    <string name="unknown">Neznámá</string>
+    <string name="no_notification_access">Žádný přístup k oznámením</string>
+    <string name="allow_notification_access">Povolit přístup k oznámením</string>
+    <string name="dismiss">Zamítnout</string>
+    <string name="connected">Připojeno</string>
+    <string name="mic_assistant">Hledat pomocí mikrofonu</string>
+    <string name="keyboard_assistant">Hledat pomocí klávesnice</string>
+</resources>
