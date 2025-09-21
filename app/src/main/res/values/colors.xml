@@ -5,4 +5,5 @@
 -->
 <resources>
     <color name="toggleButtonBackground">#0B2A2C</color>
+    <color name="watchNextCardFilter">#80000000</color>
 </resources>
