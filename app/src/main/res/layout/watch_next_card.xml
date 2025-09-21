@@ -20,6 +20,13 @@
         android:clipChildren="true"
         android:clipToOutline="true">
 
+
+        <ImageView
+            android:id="@+id/app_banner_background"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop" />
+
         <ImageView
             android:id="@+id/app_banner"
             android:layout_width="match_parent"
