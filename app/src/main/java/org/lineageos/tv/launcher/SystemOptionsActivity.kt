@@ -38,6 +38,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.google.android.material.button.MaterialButton
 import kotlinx.coroutines.launch
 import org.lineageos.tv.launcher.ext.NetworkState
+import org.lineageos.tv.launcher.ext.getIcon
 import org.lineageos.tv.launcher.ext.networkCallbackFlow
 import org.lineageos.tv.launcher.notification.NotificationAdapter
 import org.lineageos.tv.launcher.notification.NotificationUtils
@@ -45,6 +46,7 @@ import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.view.NotificationItemView
 import org.lineageos.tv.launcher.view.TwoLineButton
+import org.lineageos.tv.launcher.viewmodels.BatteryViewModel
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
 import java.util.Calendar
 
@@ -52,10 +54,12 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
     NotificationAdapter.OnItemActionListener {
     // View model
     private val notificationViewModel: NotificationViewModel by viewModels()
+    private val batteryModel: BatteryViewModel by viewModels()
 
     // Views
     private val allowNotificationAccessMaterialButton by lazy { findViewById<MaterialButton>(R.id.allowNotificationAccessMaterialButton)!! }
     private val bluetoothTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.bluetoothTwoLineButton)!! }
+    private val batteryPercentageTextView by lazy { findViewById<TextView>(R.id.batteryPercentageTextView)!! }
     private val dateTextView by lazy { findViewById<TextView>(R.id.dateTextView)!! }
     private val networkTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.networkTwoLineButton)!! }
     private val noNotificationAccessLinearLayout by lazy { findViewById<LinearLayout>(R.id.noNotificationAccessLinearLayout)!! }
@@ -191,6 +195,25 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
                             noNotificationsTextView.visibility = View.GONE
                             notificationsVerticalGridView.visibility = View.VISIBLE
                         }
+                    }
+                }
+            }
+        }
+
+        lifecycleScope.launch {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                batteryModel.batteryState.collect { batteryState ->
+                    if (batteryState == null) {
+                        batteryPercentageTextView.visibility = View.INVISIBLE
+                    } else {
+                        batteryPercentageTextView.text =
+                            getString(R.string.battery_percentage, batteryState.percentage)
+                        batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(
+                            batteryState.getIcon(),
+                            0,
+                            0,
+                            0
+                        )
                     }
                 }
             }
