@@ -9,6 +9,7 @@ import android.app.ActivityOptions
 import android.app.PendingIntent
 import android.bluetooth.BluetoothManager
 import android.content.Intent
+import android.content.IntentFilter
 import android.icu.text.DateFormat
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
@@ -16,6 +17,7 @@ import android.net.NetworkRequest
 import android.net.TransportInfo
 import android.net.wifi.WifiInfo
 import android.net.wifi.WifiManager
+import android.os.BatteryManager
 import android.os.Build
 import android.os.Bundle
 import android.os.PowerManager
@@ -43,6 +45,8 @@ import org.lineageos.tv.launcher.notification.NotificationAdapter
 import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
+import org.lineageos.tv.launcher.utils.batteryStatusFlow
+import org.lineageos.tv.launcher.utils.selectBatteryIcon
 import org.lineageos.tv.launcher.view.NotificationItemView
 import org.lineageos.tv.launcher.view.TwoLineButton
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
@@ -56,6 +60,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
     // Views
     private val allowNotificationAccessMaterialButton by lazy { findViewById<MaterialButton>(R.id.allowNotificationAccessMaterialButton)!! }
     private val bluetoothTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.bluetoothTwoLineButton)!! }
+    private val batteryPercentageTextView by lazy { findViewById<TextView>(R.id.batteryPercentageTextView)!! }
     private val dateTextView by lazy { findViewById<TextView>(R.id.dateTextView)!! }
     private val networkTwoLineButton by lazy { findViewById<TwoLineButton>(R.id.networkTwoLineButton)!! }
     private val noNotificationAccessLinearLayout by lazy { findViewById<LinearLayout>(R.id.noNotificationAccessLinearLayout)!! }
@@ -194,6 +199,28 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
                     }
                 }
             }
+        }
+
+        val batteryStatus: Intent? =
+            registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val hasBattery =
+            batteryStatus?.getBooleanExtra(BatteryManager.EXTRA_PRESENT, false) ?: false
+
+        if (hasBattery) {
+            lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    applicationContext.batteryStatusFlow().collect { info ->
+                        batteryPercentageTextView.text =
+                            getString(R.string.battery_percentage, info.percentage)
+                        batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(
+                            selectBatteryIcon(info.percentage, info.isCharging), 0, 0, 0
+                        )
+                    }
+                }
+            }
+        } else {
+            batteryPercentageTextView.visibility = View.INVISIBLE
+            batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
         }
     }
 

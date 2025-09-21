@@ -8,6 +8,8 @@ package org.lineageos.tv.launcher
 import android.app.role.RoleManager
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
 import android.os.Bundle
 import android.transition.Slide
 import android.transition.TransitionManager
@@ -47,6 +49,8 @@ import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
+import org.lineageos.tv.launcher.utils.batteryStatusFlow
+import org.lineageos.tv.launcher.utils.selectBatteryIcon
 import org.lineageos.tv.launcher.viewmodels.LauncherViewModel
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
 import java.util.Locale
@@ -59,6 +63,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // Views
     private val assistantButtonsContainer by lazy { findViewById<LinearLayout>(R.id.assistant_buttons)!! }
     private val assistantHintImageView by lazy { findViewById<ImageView>(R.id.assistantHintImageView)!! }
+    private val batteryPercentageTextView by lazy { findViewById<TextView>(R.id.batteryPercentageTextView)!! }
     private val keyboardAssistantButton by lazy { findViewById<ImageButton>(R.id.keyboard_assistant)!! }
     private val mainVerticalGridView by lazy { findViewById<VerticalGridView>(R.id.main_vertical_grid)!! }
     private val settingButton by lazy { findViewById<ImageButton>(R.id.settingsMaterialButton)!! }
@@ -150,6 +155,28 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     )
                 }
             }
+        }
+
+        val batteryStatus: Intent? =
+            registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val hasBattery =
+            batteryStatus?.getBooleanExtra(BatteryManager.EXTRA_PRESENT, false) ?: false
+
+        if (hasBattery) {
+            lifecycleScope.launch {
+                repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    applicationContext.batteryStatusFlow().collect { info ->
+                        batteryPercentageTextView.text =
+                            getString(R.string.battery_percentage, info.percentage)
+                        batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(
+                            selectBatteryIcon(info.percentage, info.isCharging), 0, 0, 0
+                        )
+                    }
+                }
+            }
+        } else {
+            batteryPercentageTextView.visibility = View.INVISIBLE
+            batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
         }
 
         askForHomeRoleIfNeeded()
