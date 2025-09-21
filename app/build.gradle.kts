@@ -7,9 +7,9 @@ import org.lineageos.generatebp.GenerateBpPluginExtension
 import org.lineageos.generatebp.models.Module
 
 plugins {
-    id("com.android.application")
-    id("kotlin-android")
-    id("org.lineageos.generatebp")
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.kotlin.android)
+    alias(libs.plugins.lineageos.generatebp)
 }
 
 android {
@@ -25,49 +25,47 @@ android {
     }
 
     buildTypes {
-        getByName("release") {
+        release {
             // Enables code shrinking, obfuscation, and optimization.
             isMinifyEnabled = true
 
             // Enables resource shrinking.
             isShrinkResources = true
 
-            // Includes the default ProGuard rules files.
-            setProguardFiles(
-                listOf(
-                    getDefaultProguardFile("proguard-android-optimize.txt"),
-                    "proguard-rules.pro"
-                )
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
             )
         }
-        getByName("debug") {
+
+        debug {
             // Append .dev to package name so we won't conflict with AOSP build.
             applicationIdSuffix = ".dev"
         }
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "17"
     }
 }
 
 dependencies {
     compileOnly(fileTree(mapOf("dir" to "../libs", "include" to listOf("*.jar"))))
 
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.activity:activity-ktx:1.7.2")
-    implementation("androidx.appcompat:appcompat:1.6.1")
-    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
-    implementation("androidx.leanback:leanback:1.2.0-alpha04")
-    implementation("androidx.preference:preference:1.2.1")
-    implementation("androidx.tvprovider:tvprovider:1.0.0")
-    implementation("com.google.android.material:material:1.9.0")
-    implementation("io.coil-kt:coil:2.6.0")
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.leanback)
+    implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation(libs.androidx.preference)
+    implementation(libs.androidx.tvprovider)
+    implementation(libs.coil)
+    implementation(libs.material)
 }
 
 configure<GenerateBpPluginExtension> {
