@@ -16,6 +16,23 @@
       "message": "Only tested with fake info, so maybe Nolen can check if it\u0027s fine",
       "revId": "ca100be9464ee9262c46f0a03b1280429df1b965",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9e483be1_767c1ea8",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-09-21T16:21:16Z",
+      "side": 1,
+      "message": "Move logic to viewmodel",
+      "revId": "ca100be9464ee9262c46f0a03b1280429df1b965",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
