@@ -35,7 +35,7 @@ java_library_static {
 
 java_import {
     name: "Catapult_com.squareup.okio_okio-jvm",
-    jars: ["com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.jar"],
+    jars: ["com/squareup/okio/okio-jvm/3.9.0/okio-jvm-3.9.0.jar"],
     sdk_version: "35",
     min_sdk_version: "31",
     apex_available: [
@@ -49,7 +49,7 @@ java_import {
 
 android_library_import {
     name: "Catapult_io.coil-kt_coil",
-    aars: ["io/coil-kt/coil/2.6.0/coil-2.6.0.aar"],
+    aars: ["io/coil-kt/coil/2.7.0/coil-2.7.0.aar"],
     sdk_version: "35",
     min_sdk_version: "31",
     apex_available: [
@@ -64,7 +64,7 @@ android_library_import {
 
 android_library_import {
     name: "Catapult_io.coil-kt_coil-base",
-    aars: ["io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.aar"],
+    aars: ["io/coil-kt/coil-base/2.7.0/coil-base-2.7.0.aar"],
     sdk_version: "35",
     min_sdk_version: "31",
     apex_available: [
@@ -83,5 +83,18 @@ android_library_import {
         "androidx.profileinstaller_profileinstaller",
         "kotlin-stdlib",
         "kotlinx-coroutines-android",
+    ],
+}
+
+java_import {
+    name: "Catapult_org.jspecify_jspecify",
+    jars: ["org/jspecify/jspecify/1.0.0/jspecify-1.0.0.jar"],
+    sdk_version: "35",
+    min_sdk_version: "31",
+    apex_available: [
+        "//apex_available:platform",
+        "//apex_available:anyapex",
+    ],
+    static_libs: [
     ],
 }
