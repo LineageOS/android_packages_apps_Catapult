@@ -30,6 +30,7 @@
     <string name="not_connected">Not connected</string>
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
+    <string name="battery_percentage" translatable="false">%d %%</string>
 
     <!-- Toast messages -->
     <string name="app_permissions_toast">Permissions not granted by the user.</string>
