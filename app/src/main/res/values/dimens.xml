@@ -6,8 +6,6 @@
 <resources>
     <dimen name="app_card_height">100dp</dimen>
     <dimen name="app_card_width">177dp</dimen>
-    <dimen name="watch_next_card_height">138dp</dimen>
-    <dimen name="watch_next_card_width">246dp</dimen>
     <dimen name="favorite_card_height">71dp</dimen>
     <dimen name="favorite_card_width">127dp</dimen>
     <dimen name="favorite_card_radius">4dp</dimen>
