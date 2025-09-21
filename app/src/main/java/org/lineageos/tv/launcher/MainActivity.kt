@@ -8,6 +8,8 @@ package org.lineageos.tv.launcher
 import android.app.role.RoleManager
 import android.content.DialogInterface
 import android.content.Intent
+import android.content.IntentFilter
+import android.os.BatteryManager
 import android.os.Bundle
 import android.transition.Slide
 import android.transition.TransitionManager
@@ -38,6 +40,7 @@ import org.lineageos.tv.launcher.adapter.MainVerticalAdapter
 import org.lineageos.tv.launcher.adapter.PreviewProgramsAdapter
 import org.lineageos.tv.launcher.adapter.WatchNextAdapter
 import org.lineageos.tv.launcher.ext.favoriteApps
+import org.lineageos.tv.launcher.ext.getIcon
 import org.lineageos.tv.launcher.ext.homeRoleRequestDialogDismissed
 import org.lineageos.tv.launcher.ext.roleCanBeRequested
 import org.lineageos.tv.launcher.model.AppInfo
@@ -47,6 +50,7 @@ import org.lineageos.tv.launcher.notification.NotificationUtils
 import org.lineageos.tv.launcher.notification.ServiceConnectionState
 import org.lineageos.tv.launcher.utils.AppManager
 import org.lineageos.tv.launcher.utils.PermissionsGatedCallback
+import org.lineageos.tv.launcher.viewmodels.BatteryViewModel
 import org.lineageos.tv.launcher.viewmodels.LauncherViewModel
 import org.lineageos.tv.launcher.viewmodels.NotificationViewModel
 import java.util.Locale
@@ -54,11 +58,13 @@ import java.util.Locale
 class MainActivity : AppCompatActivity(R.layout.activity_main) {
     // View models
     private val model: LauncherViewModel by viewModels()
+    private val batteryModel: BatteryViewModel by viewModels()
     private val notificationViewModel: NotificationViewModel by viewModels()
 
     // Views
     private val assistantButtonsContainer by lazy { findViewById<LinearLayout>(R.id.assistant_buttons)!! }
     private val assistantHintImageView by lazy { findViewById<ImageView>(R.id.assistantHintImageView)!! }
+    private val batteryPercentageTextView by lazy { findViewById<TextView>(R.id.batteryPercentageTextView)!! }
     private val keyboardAssistantButton by lazy { findViewById<ImageButton>(R.id.keyboard_assistant)!! }
     private val mainVerticalGridView by lazy { findViewById<VerticalGridView>(R.id.main_vertical_grid)!! }
     private val settingButton by lazy { findViewById<ImageButton>(R.id.settingsMaterialButton)!! }
@@ -150,6 +156,28 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                     )
                 }
             }
+        }
+
+        val batteryStatus: Intent? =
+            registerReceiver(null, IntentFilter(Intent.ACTION_BATTERY_CHANGED))
+        val hasBattery =
+            batteryStatus?.getBooleanExtra(BatteryManager.EXTRA_PRESENT, false) ?: false
+
+        if (hasBattery) {
+            lifecycleScope.launch {
+                lifecycle.repeatOnLifecycle(Lifecycle.State.STARTED) {
+                    batteryModel.batteryState.collect { info ->
+                        batteryPercentageTextView.text =
+                            getString(R.string.battery_percentage, info.percentage)
+                        batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(
+                            info.getIcon(info.percentage, info.isCharging), 0, 0, 0
+                        )
+                    }
+                }
+            }
+        } else {
+            batteryPercentageTextView.visibility = View.INVISIBLE
+            batteryPercentageTextView.setCompoundDrawablesWithIntrinsicBounds(0, 0, 0, 0)
         }
 
         askForHomeRoleIfNeeded()
