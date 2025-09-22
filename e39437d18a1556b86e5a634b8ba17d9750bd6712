@@ -3,6 +3,63 @@
     {
       "unresolved": true,
       "key": {
+        "uuid": "a117da7f_eacdda19",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-09-22T12:18:52Z",
+      "side": 1,
+      "message": "Registration w/o unregister, bad (you can just nuke this code, see below comment)",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "305d80f0_eb2697fd",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-09-22T12:18:52Z",
+      "side": 1,
+      "message": "I\u0027d suggest to always collect the flow, at worst you won\u0027t get any info",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fa4b89e6_c4b6ffe1",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 25732
+      },
+      "writtenOn": "2025-09-22T12:18:52Z",
+      "side": 1,
+      "message": "If batteryState is null, hide the view, else update its data, you can do this inside the flow",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 180,
+        "endChar": 89
+      },
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
         "uuid": "031e034f_94066ef0",
         "filename": "app/src/main/java/org/lineageos/tv/launcher/model/BatteryInfo.kt",
         "patchSetId": 3
