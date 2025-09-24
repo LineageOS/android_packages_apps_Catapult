@@ -8,7 +8,7 @@
 java_import {
     name: "Catapult_com.squareup.okhttp3_okhttp",
     jars: ["com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.jar"],
-    sdk_version: "35",
+    sdk_version: "36",
     min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
@@ -22,7 +22,7 @@ java_import {
 
 java_library_static {
     name: "Catapult_com.squareup.okio_okio",
-    sdk_version: "35",
+    sdk_version: "36",
     min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
@@ -36,7 +36,7 @@ java_library_static {
 java_import {
     name: "Catapult_com.squareup.okio_okio-jvm",
     jars: ["com/squareup/okio/okio-jvm/3.8.0/okio-jvm-3.8.0.jar"],
-    sdk_version: "35",
+    sdk_version: "36",
     min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
@@ -50,7 +50,7 @@ java_import {
 android_library_import {
     name: "Catapult_io.coil-kt_coil",
     aars: ["io/coil-kt/coil/2.6.0/coil-2.6.0.aar"],
-    sdk_version: "35",
+    sdk_version: "36",
     min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
@@ -65,7 +65,7 @@ android_library_import {
 android_library_import {
     name: "Catapult_io.coil-kt_coil-base",
     aars: ["io/coil-kt/coil-base/2.6.0/coil-base-2.6.0.aar"],
-    sdk_version: "35",
+    sdk_version: "36",
     min_sdk_version: "31",
     apex_available: [
         "//apex_available:platform",
