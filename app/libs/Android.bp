@@ -72,8 +72,6 @@ android_library_import {
         "//apex_available:anyapex",
     ],
     static_libs: [
-        "Catapult_com.squareup.okhttp3_okhttp",
-        "Catapult_com.squareup.okio_okio",
         "androidx.annotation_annotation",
         "androidx.appcompat_appcompat-resources",
         "androidx.collection_collection",
@@ -81,6 +79,8 @@ android_library_import {
         "androidx.exifinterface_exifinterface",
         "androidx.lifecycle_lifecycle-runtime",
         "androidx.profileinstaller_profileinstaller",
+        "Catapult_com.squareup.okhttp3_okhttp",
+        "Catapult_com.squareup.okio_okio",
         "kotlin-stdlib",
         "kotlinx-coroutines-android",
     ],
