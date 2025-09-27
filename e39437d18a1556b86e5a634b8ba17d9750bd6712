@@ -18,6 +18,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "f036647f_58d606bb",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 162,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "a117da7f_eacdda19",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "305d80f0_eb2697fd",
@@ -31,6 +49,24 @@
       "writtenOn": "2025-09-22T12:18:52Z",
       "side": 1,
       "message": "I\u0027d suggest to always collect the flow, at worst you won\u0027t get any info",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41834615_30d15147",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 166,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "305d80f0_eb2697fd",
       "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -58,6 +94,30 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "33327819_d4d1dbc7",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/MainActivity.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 180,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "fa4b89e6_c4b6ffe1",
+      "range": {
+        "startLine": 179,
+        "startChar": 0,
+        "endLine": 180,
+        "endChar": 89
+      },
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "4d214dda_0ada31ee",
@@ -71,6 +131,24 @@
       "writtenOn": "2025-09-22T12:20:50Z",
       "side": 1,
       "message": "`fun BatteryInfo.getIcon(): Int \u003d when {`",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1adae6d4_40b3a68c",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/BatteryInfo.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 10,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "4d214dda_0ada31ee",
       "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
@@ -109,6 +187,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "a6e944da_3283f4f5",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/Context.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 47,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7a8f026d_5807825f",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "df714fb4_1844c662",
@@ -126,6 +222,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "9c7d59c3_54d15c0c",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/Context.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 54,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "df714fb4_1844c662",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "031e034f_94066ef0",
@@ -139,6 +253,24 @@
       "writtenOn": "2025-09-22T12:15:59Z",
       "side": 1,
       "message": "Newline at the end of the file, also newline for each attribute (and use CTRL + ALT + L)",
+      "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "238e9494_be4a2a4e",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/model/BatteryInfo.kt",
+        "patchSetId": 3
+      },
+      "lineNbr": 8,
+      "author": {
+        "id": 21651
+      },
+      "writtenOn": "2025-09-27T12:55:23Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "031e034f_94066ef0",
       "revId": "e39437d18a1556b86e5a634b8ba17d9750bd6712",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
