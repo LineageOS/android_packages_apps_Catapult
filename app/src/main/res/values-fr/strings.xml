@@ -5,14 +5,19 @@
 -->
 <resources>
     <string name="settings">Paramètres</string>
+    <string name="favorites">Favoris</string>
+    <string name="all_apps">Toutes les applications</string>
     <string name="uninstall">Désinstaller</string>
     <string name="mark_as_favorite">Ajouter aux favoris</string>
     <string name="modify_favorites_short">Modifier les favoris</string>
     <string name="move">Déplacer</string>
     <string name="remove_favorite">Supprimer des favoris</string>
     <string name="watch_next">Vidéo suivante</string>
+    <string name="modify_channels">Modifier les canaux</string>
     <string name="channel_title">%1$s : %2$s</string>
+    <string name="order_channels_guide">Pour trier les canaux, appuyez longuement sur le canal de votre choix et déplacez-le à la position souhaitée.</string>
     <string name="search">Rechercher</string>
+    <string name="modify_favorites">Modifier vos applications favorites</string>
     <string name="system_modal">Options système</string>
     <string name="sleep">Veille</string>
     <string name="no_notifications">Aucune notification</string>
@@ -23,8 +28,14 @@
     <string name="disabled">Désactivé</string>
     <string name="app_permissions_toast">Autorisations non accordées par l\'utilisateur.</string>
     <string name="home_role_request_dialog_title">Définir comme lanceur</string>
+    <string name="home_role_request_dialog_message">Cette application peut servir d\'application de gestion de l\'écran d\'accueil par défaut, souhaitez-vous ouvrir les paramètres pour modifier l\'application du lanceur ?</string>
     <string name="home_role_request_dialog_neutral">Plus tard</string>
     <string name="home_role_request_dialog_negative">Ne plus demander</string>
     <string name="unknown">Inconnu</string>
+    <string name="no_notification_access">Pas d\'accès aux notifications</string>
+    <string name="allow_notification_access">Autoriser l\'accès aux notifications</string>
+    <string name="dismiss">Rejeter</string>
     <string name="connected">Connecté</string>
+    <string name="mic_assistant">Rechercher à l\'aide du microphone</string>
+    <string name="keyboard_assistant">Rechercher à l\'aide du clavier</string>
 </resources>
