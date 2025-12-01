@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">პარამეტრები</string>
+    <string name="favorites">რჩეულები</string>
+    <string name="all_apps">ყველა პროგრამა</string>
+    <string name="uninstall">ამოშლა</string>
+    <string name="mark_as_favorite">რჩეულად მონიშვნა</string>
+    <string name="modify_favorites_short">რჩეულის ჩასწორება</string>
+    <string name="move">გადატანა</string>
+    <string name="remove_favorite">რჩეულებიდან მოცილება</string>
+    <string name="watch_next">შემდეგის ყურება</string>
+    <string name="modify_channels">არხების ჩასწორება</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">არხების დასალაგებლად დიდხანს დააჭირეთ სასურველ არხს და გადაიტანეთ სათანადო ადგილას.</string>
+    <string name="search">ძიება</string>
+    <string name="modify_favorites">რჩეული პროგრამების ჩასწორება</string>
+    <string name="system_modal">სისტემის პარამეტრები</string>
+    <string name="sleep">უქმი რეჟიმი</string>
+    <string name="no_notifications">შეტყობინებები არაა</string>
+    <string name="network_status">ქსელი\n%1$s</string>
+    <string name="bluetooth_status">დასაერთებლები\n%1$s</string>
+    <string name="not_connected">არაა შეერთებული</string>
+    <string name="enabled">ჩართული</string>
+    <string name="disabled">გამორთული</string>
+    <string name="app_permissions_toast">ნებადართული არაა მომხმარებლისგან.</string>
+    <string name="home_role_request_dialog_title">გამშვებად დაყენება</string>
+    <string name="home_role_request_dialog_message">ეს პროგრამა შეიძლება დაყენდეს ნაგულისხმევ საწყის პროგრამად, გსურთ პარამეტრების გახსნა გამშვები პროგრამის შესაცვლელად?</string>
+    <string name="home_role_request_dialog_neutral">მოგვიანებით</string>
+    <string name="home_role_request_dialog_negative">მომავალში შეკითხვის გარეშე</string>
+    <string name="unknown">უცნობი</string>
+    <string name="no_notification_access">შეტყობინებებთან წვდომა არაა</string>
+    <string name="allow_notification_access">შეტყობინებებთან წვდომის ნებართვა</string>
+    <string name="dismiss">აცილება</string>
+    <string name="connected">შეერთებულია</string>
+    <string name="mic_assistant">ძიება მიკროფონით</string>
+    <string name="keyboard_assistant">ძიება კლავიატურით</string>
+</resources>

@@ -27,7 +27,7 @@
     <string name="enabled">Ativado</string>
     <string name="disabled">Desativado</string>
     <string name="app_permissions_toast">Permissões não concedidas pelo usuário.</string>
-    <string name="home_role_request_dialog_title">Definir como launcher</string>
+    <string name="home_role_request_dialog_title">Configurar como launcher</string>
     <string name="home_role_request_dialog_message">Este app pode atuar como o app de início padrão, você gostaria de abrir as configurações para alterar o app de launcher?</string>
     <string name="home_role_request_dialog_neutral">Mais tarde</string>
     <string name="home_role_request_dialog_negative">Não perguntar novamente</string>
