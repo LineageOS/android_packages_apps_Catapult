@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Cunfiguratziones</string>
+    <string name="favorites">Preferidos</string>
+    <string name="all_apps">Totu is aplicatziones</string>
+    <string name="uninstall">Disinstalla</string>
+    <string name="mark_as_favorite">Sinnala comente preferidu</string>
+    <string name="modify_favorites_short">Modifica is preferidos</string>
+    <string name="move">Tràmuda</string>
+    <string name="remove_favorite">Boga·nche dae preferidos</string>
+    <string name="watch_next">Càstia cussu imbeniente</string>
+    <string name="modify_channels">Modifica is canales</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">Pro assentare is canales, toca e mantene su canale e tràmuda·ddu a sa positzione chi boles.</string>
+    <string name="search">Chirca</string>
+    <string name="modify_favorites">Modifica is aplicatziones preferidas</string>
+    <string name="system_modal">Optziones de sistema</string>
+    <string name="sleep">Suspende</string>
+    <string name="no_notifications">Nissuna notìfica</string>
+    <string name="network_status">Rete\n%1$s</string>
+    <string name="bluetooth_status">Atzessòrios\n%1$s</string>
+    <string name="not_connected">Non connètidu</string>
+    <string name="enabled">Ativadu</string>
+    <string name="disabled">Disativadu</string>
+    <string name="app_permissions_toast">S\'utente no at donadu permissos.</string>
+    <string name="home_role_request_dialog_title">Cunfigura comente aviadore</string>
+    <string name="home_role_request_dialog_message">Custa aplicatzione podet agire comente aplicatzione printzipale predefinida, boles abèrrere s\'aplicatzione de cunfiguratzione pro modificare s\'aplicatzione de s\'aviadore?</string>
+    <string name="home_role_request_dialog_neutral">A pustis</string>
+    <string name="home_role_request_dialog_negative">Non torres a preguntare</string>
+    <string name="unknown">Disconnotu</string>
+    <string name="no_notification_access">Chene atzessu a is notìficas</string>
+    <string name="allow_notification_access">Permite s\'atzessu a is notìficas</string>
+    <string name="dismiss">Iscarta</string>
+    <string name="connected">Connètidu</string>
+    <string name="mic_assistant">Chirca impreende su micròfonu</string>
+    <string name="keyboard_assistant">Chirca impreende su tecladu</string>
+</resources>
