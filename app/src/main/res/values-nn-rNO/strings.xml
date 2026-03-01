@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Innstillingar</string>
+    <string name="favorites">Favorittar</string>
+    <string name="all_apps">Alle appar</string>
+    <string name="uninstall">Avinstaller</string>
+    <string name="mark_as_favorite">Merk som favoritt</string>
+    <string name="modify_favorites_short">Endra favorittar</string>
+    <string name="move">Flytt</string>
+    <string name="remove_favorite">Fjern favoritt</string>
+    <string name="watch_next">Sjå neste</string>
+    <string name="modify_channels">Endra kanalar</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="order_channels_guide">For å endra rekkjefylgja på kanalane, hald inne på ein kanal og flytt han til ynskja plass.</string>
+    <string name="search">Søk</string>
+    <string name="modify_favorites">Endra favoritt-appane dine</string>
+    <string name="system_modal">Systemval</string>
+    <string name="sleep">Kvilemodus</string>
+    <string name="no_notifications">Ingen varsel</string>
+    <string name="network_status">Nettverk\n%1$s</string>
+    <string name="bluetooth_status">Utstyr\n%1$s</string>
+    <string name="not_connected">Ikkje tilkopla</string>
+    <string name="enabled">På</string>
+    <string name="disabled">Av</string>
+    <string name="app_permissions_toast">Løyve vart ikkje gjeve av brukaren.</string>
+    <string name="home_role_request_dialog_title">Vel som startskjerm</string>
+    <string name="home_role_request_dialog_message">Denne appen kan fungera som standard startskjerm. Vil du opna innstillingane for å endra dette?</string>
+    <string name="home_role_request_dialog_neutral">Seinare</string>
+    <string name="home_role_request_dialog_negative">Ikkje spør att</string>
+    <string name="unknown">Ukjend</string>
+    <string name="no_notification_access">Ingen tilgang til varsel</string>
+    <string name="allow_notification_access">Gje tilgang til varsel</string>
+    <string name="dismiss">Avvis</string>
+    <string name="connected">Tilkopla</string>
+    <string name="mic_assistant">Søk med mikrofonen</string>
+    <string name="keyboard_assistant">Søk med tastaturet</string>
+</resources>
