@@ -31,7 +31,7 @@
     <string name="home_role_request_dialog_message">இச்செயலி இயல்புநிலை முகப்பு பயன்பாடாகச் செயற்பட முடியும், தொடங்கிச் செயலியை மாற்ற அமைப்புகள் செயலியைத் திறக்க விரும்புகிறீரா?</string>
     <string name="home_role_request_dialog_neutral">பிறகு</string>
     <string name="home_role_request_dialog_negative">மீண்டும் கேட்காதே</string>
-    <string name="unknown">அறியப்படா</string>
+    <string name="unknown">அறியா</string>
     <string name="no_notification_access">அறிவிப்பு அணுகல் இல்லை</string>
     <string name="allow_notification_access">அறிவிப்பு அணுகலை அனுமதிக்க</string>
     <string name="dismiss">விலக்குக</string>

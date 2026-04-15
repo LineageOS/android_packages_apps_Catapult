@@ -4,5 +4,10 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources>
+    <string name="all_apps">Pob ap</string>
     <string name="no_notifications">Dim hysbysiadau</string>
+    <string name="disabled">Wedi\'i analluogi</string>
+    <string name="home_role_request_dialog_negative">Peidio â gofyn eto</string>
+    <string name="allow_notification_access">Caniatáu mynediad at hysbysiadau</string>
+    <string name="dismiss">Diystyru</string>
 </resources>
