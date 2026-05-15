@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: 2024-2025 The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">Pengaturan</string>
+    <string name="favorites">Favorit</string>
+    <string name="all_apps">Semua apl</string>
+    <string name="uninstall">Hapus instalasi</string>
+    <string name="mark_as_favorite">Tandai sebagai favorit</string>
+    <string name="modify_favorites_short">Ubah favorit</string>
+    <string name="move">Pindah</string>
+    <string name="remove_favorite">Hapus favorit</string>
+    <string name="watch_next">Tonton berikutnya</string>
+    <string name="modify_channels">Ubah saluran</string>
+    <string name="channel_title">%1$s: %2$s</string>
+    <string name="system_modal">Opsi sistem</string>
+    <string name="sleep">Tidur</string>
+    <string name="no_notifications">Tidak ada notifikasi</string>
+    <string name="bluetooth_status">Aksesoris\n%1$s</string>
+    <string name="not_connected">Tidak terhubung</string>
+    <string name="enabled">Diaktifkan</string>
+    <string name="disabled">Dinonaktifkan</string>
+    <string name="app_permissions_toast">Izin tidak diberikan oleh pengguna.</string>
+    <string name="home_role_request_dialog_negative">Jangan tanya lagi</string>
+    <string name="no_notification_access">Tidak ada akses notifikasi</string>
+    <string name="allow_notification_access">Izinkan akses notifikasi</string>
+    <string name="dismiss">Abaikan</string>
+    <string name="connected">Terhubung</string>
+</resources>
