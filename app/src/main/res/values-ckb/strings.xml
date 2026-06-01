@@ -6,7 +6,7 @@
 <resources>
     <string name="settings">ڕێکخستنەکان</string>
     <string name="favorites">دڵخوازەکان</string>
-    <string name="all_apps">هەموو ئەپەکان</string>
+    <string name="all_apps">هەموو بەرنامەکان</string>
     <string name="uninstall">سڕینەوە</string>
     <string name="mark_as_favorite">نیشانەکردن وەک دڵخواز</string>
     <string name="modify_favorites_short">دەستکاریکردنی دڵخوازەکان</string>
@@ -17,7 +17,7 @@
     <string name="channel_title">%1$s: %2$s</string>
     <string name="order_channels_guide">بۆ ڕیزکردنی کەناڵەکان، دەستت لەسەر کەناڵە ویستراوەکە دابگرە و بیجوڵێنە بۆ شوێنی مەبەست.</string>
     <string name="search">گەڕان</string>
-    <string name="modify_favorites">دەستکاریکردنی ئەپە دڵخوازەکانت</string>
+    <string name="modify_favorites">دەستکاریکردنی بەرنامە دڵخوازەکانت</string>
     <string name="system_modal">هەڵبژاردەکانی سیستم</string>
     <string name="sleep">خەواندن</string>
     <string name="no_notifications">هیچ ئاگادارییەک نییە</string>
@@ -28,7 +28,7 @@
     <string name="disabled">ناچالاکە</string>
     <string name="app_permissions_toast">مۆڵەتەکان لەلایەن بەکارهێنەرەوە نەدراون.</string>
     <string name="home_role_request_dialog_title">دانان وەک ڕووکاری سەرەکی</string>
-    <string name="home_role_request_dialog_message">ئەم ئەپە دەتوانێت وەک بەرنامەی سەرەکیی مۆبایلەکە کار بکات، ئایا دەتەوێت ڕێکخستنەکان بکەیتەوە بۆ گۆڕینی ئەپی ڕووکاری سەرەکی (Launcher)؟</string>
+    <string name="home_role_request_dialog_message">ئەم بەرنامە دەتوانێت وەک بەرنامەی سەرەکیی مۆبایلەکە کار بکات، ئایا دەتەوێت ڕێکخستنەکان بکەیتەوە بۆ گۆڕینی بەرنامەی ڕووکاری سەرەکی (Launcher)؟</string>
     <string name="home_role_request_dialog_neutral">دواتر</string>
     <string name="home_role_request_dialog_negative">جارێکی تر مەپرسەوە</string>
     <string name="unknown">نادیار</string>
