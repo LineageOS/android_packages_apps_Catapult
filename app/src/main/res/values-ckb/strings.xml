@@ -19,14 +19,14 @@
     <string name="search">گەڕان</string>
     <string name="modify_favorites">دەستکاریکردنی بەرنامە دڵخوازەکانت</string>
     <string name="system_modal">هەڵبژاردەکانی سیستم</string>
-    <string name="sleep">خەواندن</string>
+    <string name="sleep">دواخستن</string>
     <string name="no_notifications">هیچ ئاگادارییەک نییە</string>
     <string name="network_status">تۆڕ\n%1$s</string>
     <string name="bluetooth_status">پاشکۆکان\n%1$s</string>
     <string name="not_connected">پەیوەست نییە</string>
     <string name="enabled">چالاکە</string>
     <string name="disabled">ناچالاکە</string>
-    <string name="app_permissions_toast">مۆڵەتەکان لەلایەن بەکارهێنەرەوە نەدراون.</string>
+    <string name="app_permissions_toast">ڕێپێدانەکان لەلایەن بەکارهێنەرەوە نەدراون.</string>
     <string name="home_role_request_dialog_title">دانان وەک ڕووکاری سەرەکی</string>
     <string name="home_role_request_dialog_message">ئەم بەرنامە دەتوانێت وەک بەرنامەی سەرەکیی مۆبایلەکە کار بکات، ئایا دەتەوێت ڕێکخستنەکان بکەیتەوە بۆ گۆڕینی بەرنامەی ڕووکاری سەرەکی (Launcher)؟</string>
     <string name="home_role_request_dialog_neutral">دواتر</string>
