@@ -65,7 +65,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
     private val settingsButton by lazy { findViewById<MaterialButton>(R.id.settingsMaterialButton)!! }
     private val sleepMaterialButton by lazy { findViewById<MaterialButton>(R.id.sleepMaterialButton)!! }
 
-    private val notificationAdapter: NotificationAdapter by lazy { NotificationAdapter(this, this) }
+    private val notificationAdapter: NotificationAdapter by lazy { NotificationAdapter(this) }
 
     private val connectivityManager by lazy { getSystemService(ConnectivityManager::class.java)!! }
 
@@ -91,7 +91,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
         dateTextView.text = DateFormat.getPatternInstance(DateFormat.YEAR_ABBR_MONTH_WEEKDAY_DAY)
             .format(currentDate)
 
-        // Wifi & Bluetooth
+        // Wi-Fi & Bluetooth
         setNetworkButton()
         setBluetoothButton()
 
@@ -124,7 +124,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             powerMaterialButton.visibility = View.GONE
         }
 
-        // WIFI callbacks
+        // Wi-Fi callbacks
         val request = NetworkRequest.Builder()
             .addTransportType(NetworkCapabilities.TRANSPORT_WIFI)
             .build()
@@ -245,7 +245,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             networkString = resources.getString(R.string.connected)
             networkIcon = R.drawable.ic_ethernet
         } else if (capabilities.hasTransport(NetworkCapabilities.TRANSPORT_WIFI)) {
-            // WIFI connection
+            // Wi-Fi connection
             if (transportInfo is WifiInfo) {
                 val wifiManager = getSystemService(WifiManager::class.java)!!
                 val wifiStrength = wifiManager.calculateSignalLevel(transportInfo.rssi)
@@ -289,9 +289,7 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
             if (notification.contentIntent != null) {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.UPSIDE_DOWN_CAKE) {
                     val activityOptions = ActivityOptions.makeBasic()
-                    activityOptions.setPendingIntentBackgroundActivityStartMode(
-                        ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED
-                    )
+                    activityOptions.pendingIntentBackgroundActivityStartMode = ActivityOptions.MODE_BACKGROUND_ACTIVITY_START_ALLOWED
                     notification.contentIntent?.send(activityOptions.toBundle())
                 } else {
                     notification.contentIntent?.send()

@@ -27,6 +27,7 @@
             android:background="@drawable/card_border_only"
             android:backgroundTint="@android:color/black"
             android:clipToOutline="true"
+            android:importantForAccessibility="no"
             android:visibility="gone" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator

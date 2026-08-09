@@ -28,7 +28,8 @@
             android:background="@drawable/favorite_card_border_only"
             android:backgroundTint="?attr/colorOnSecondaryContainer"
             android:clipToOutline="true"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:importantForAccessibility="no" />
 
         <LinearLayout
             android:id="@+id/app_with_icon"
@@ -41,7 +42,8 @@
             <ImageView
                 android:id="@+id/app_icon"
                 android:layout_width="32dp"
-                android:layout_height="32dp" />
+                android:layout_height="32dp"
+                android:importantForAccessibility="no" />
 
         </LinearLayout>
 
@@ -52,7 +54,8 @@
             android:background="@drawable/ic_move_overlay"
             android:backgroundTint="?attr/colorOnSecondaryContainer"
             android:clipToOutline="true"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:importantForAccessibility="no" />
 
     </FrameLayout>
 

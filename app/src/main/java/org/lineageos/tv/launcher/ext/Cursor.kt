@@ -12,7 +12,7 @@ fun <T> Cursor?.mapEachRow(
     mapping: (Cursor, Array<Int>) -> T,
 ) = this?.use { cursor ->
     if (!cursor.moveToFirst()) {
-        return@use emptyList<T>()
+        return@use emptyList()
     }
 
     val indexCache = projection?.map { column ->

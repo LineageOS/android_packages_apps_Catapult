@@ -48,7 +48,7 @@ class TvNotificationListener : NotificationListenerService() {
     }
 
     override fun onListenerConnected() {
-        activeNotifications.map {
+        activeNotifications.forEach {
             if (shouldShowNotification(it.notification)) {
                 activeTvNotifications[it.key] = it
             }

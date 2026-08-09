@@ -8,12 +8,10 @@ package org.lineageos.tv.launcher.view
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
-import android.view.View
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.Launchable
@@ -28,7 +26,6 @@ abstract class AppCardCommon @JvmOverloads constructor(
 
     // Views
     private val bannerView by lazy { findViewById<ImageView>(R.id.app_banner)!! }
-    private val cardContainer by lazy { findViewById<LinearLayout>(R.id.card_container)!! }
     private val iconContainer by lazy { findViewById<LinearLayout>(R.id.app_with_icon)!! }
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
     protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
@@ -54,8 +51,8 @@ abstract class AppCardCommon @JvmOverloads constructor(
         super.setCardInfo(appInfo)
 
         // Reset
-        bannerView.visibility = View.GONE
-        iconContainer.visibility = View.VISIBLE
+        bannerView.visibility = GONE
+        iconContainer.visibility = VISIBLE
 
         nameView.text = appInfo.label
         iconView.setImageDrawable(appInfo.icon)
@@ -66,8 +63,8 @@ abstract class AppCardCommon @JvmOverloads constructor(
             if (appInfo.banner != null) {
                 // App with a banner
                 bannerView.setImageDrawable(appInfo.banner)
-                bannerView.visibility = View.VISIBLE
-                iconContainer.visibility = View.GONE
+                bannerView.visibility = VISIBLE
+                iconContainer.visibility = GONE
             }
         }
     }
