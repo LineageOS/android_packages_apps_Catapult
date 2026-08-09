@@ -30,6 +30,8 @@ class WatchNextCard @JvmOverloads constructor(
     init {
         inflate(context, R.layout.watch_next_card, this)
 
+        applyRoundedOutline(resources.getDimension(R.dimen.card_radius))
+
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
 

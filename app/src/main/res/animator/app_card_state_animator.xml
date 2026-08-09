@@ -35,6 +35,12 @@
                 android:propertyName="scaleY"
                 android:valueTo="1.1"
                 android:valueType="floatType" />
+            <objectAnimator
+                android:duration="@android:integer/config_shortAnimTime"
+                android:interpolator="@anim/control_state"
+                android:propertyName="translationZ"
+                android:valueTo="@dimen/card_focus_elevation"
+                android:valueType="floatType" />
         </set>
     </item>
     <item>
@@ -50,6 +56,12 @@
                 android:interpolator="@anim/control_state"
                 android:propertyName="scaleY"
                 android:valueTo="1.0"
+                android:valueType="floatType" />
+            <objectAnimator
+                android:duration="100"
+                android:interpolator="@anim/control_state"
+                android:propertyName="translationZ"
+                android:valueTo="0"
                 android:valueType="floatType" />
         </set>
     </item>
