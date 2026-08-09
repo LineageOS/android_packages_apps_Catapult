@@ -6,7 +6,6 @@
 package org.lineageos.tv.launcher.notification
 
 import android.app.Notification
-import android.content.Context
 import android.service.notification.StatusBarNotification
 import android.view.KeyEvent
 import android.view.ViewGroup
@@ -16,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView
 import org.lineageos.tv.launcher.view.NotificationItemView
 
 class NotificationAdapter(
-    private val context: Context,
     private val onItemActionListener: OnItemActionListener
 ) : ListAdapter<StatusBarNotification, NotificationAdapter.TvNotificationViewHolder>(DiffCallback) {
 

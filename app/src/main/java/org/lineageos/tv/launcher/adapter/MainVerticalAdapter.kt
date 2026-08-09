@@ -16,7 +16,7 @@ import org.lineageos.tv.launcher.view.MainRowItemView
 
 class MainVerticalAdapter :
     ListAdapter<Pair<Long, MainRowItem>, MainVerticalAdapter.ViewHolder>(diffCallback) {
-    inner class ViewHolder(
+    class ViewHolder(
         private val mainRowItemView: MainRowItemView,
     ) : RecyclerView.ViewHolder(mainRowItemView) {
         fun bind(item: Pair<Long, MainRowItem>, position: Int) {
@@ -24,12 +24,18 @@ class MainVerticalAdapter :
             mainRowItemView.updateLayoutParams {
                 width = ViewGroup.LayoutParams.MATCH_PARENT
                 height = mainRowItemView.resources.getDimension(
-                    if (item.second.adapter is AllAppsAdapter) {
-                        R.dimen.main_all_apps_row_height
-                    } else if (item.second.adapter is TvAdapter<*, *>) {
-                        R.dimen.main_app_row_height
-                    } else {
-                        R.dimen.main_row_height
+                    when (item.second.adapter) {
+                        is AllAppsAdapter -> {
+                            R.dimen.main_all_apps_row_height
+                        }
+
+                        is TvAdapter<*, *> -> {
+                            R.dimen.main_app_row_height
+                        }
+
+                        else -> {
+                            R.dimen.main_row_height
+                        }
                     }
                 ).toInt()
             }

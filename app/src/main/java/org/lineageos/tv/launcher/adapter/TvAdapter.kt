@@ -6,7 +6,6 @@
 package org.lineageos.tv.launcher.adapter
 
 import android.view.KeyEvent
-import android.widget.Toast
 import androidx.annotation.CallSuper
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter

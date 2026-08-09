@@ -28,6 +28,7 @@
             android:background="@drawable/card_border_only"
             android:backgroundTint="?attr/colorOnSecondaryContainer"
             android:clipToOutline="true"
+            android:importantForAccessibility="no"
             android:visibility="gone" />
 
         <LinearLayout
@@ -41,7 +42,8 @@
             <ImageView
                 android:id="@+id/app_icon"
                 android:layout_width="36dp"
-                android:layout_height="36dp" />
+                android:layout_height="36dp"
+                android:importantForAccessibility="no" />
 
         </LinearLayout>
     </FrameLayout>

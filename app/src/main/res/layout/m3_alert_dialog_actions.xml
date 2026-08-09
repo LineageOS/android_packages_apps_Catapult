@@ -4,6 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/buttonPanel"
     style="?attr/buttonBarStyle"
     android:layout_width="match_parent"
@@ -20,7 +21,8 @@
         android:paddingLeft="?attr/dialogPreferredPadding"
         android:paddingRight="?attr/dialogPreferredPadding"
         android:paddingTop="@dimen/m3_alert_dialog_action_top_padding"
-        android:paddingBottom="@dimen/m3_alert_dialog_action_bottom_padding">
+        android:paddingBottom="@dimen/m3_alert_dialog_action_bottom_padding"
+        tools:ignore="PrivateResource">
 
         <com.google.android.material.button.MaterialButton
             android:id="@android:id/button3"

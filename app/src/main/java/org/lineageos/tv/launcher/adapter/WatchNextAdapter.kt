@@ -37,7 +37,7 @@ class WatchNextAdapter : ListAdapter<WatchNextProgram, WatchNextAdapter.ViewHold
         holder.bind(getItem(position))
     }
 
-    inner class ViewHolder(private val card: WatchNextCard) : RecyclerView.ViewHolder(card) {
+    class ViewHolder(private val card: WatchNextCard) : RecyclerView.ViewHolder(card) {
         init {
             card.setOnClickListener {
                 val context = card.context
