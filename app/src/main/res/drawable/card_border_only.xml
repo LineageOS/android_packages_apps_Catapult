@@ -4,6 +4,6 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
-    <corners android:radius="10dp" />
+    <corners android:radius="@dimen/card_radius" />
     <solid android:color="@android:color/transparent" />
 </shape>
