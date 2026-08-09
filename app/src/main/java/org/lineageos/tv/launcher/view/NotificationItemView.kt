@@ -15,7 +15,6 @@ import android.graphics.drawable.RippleDrawable
 import android.service.notification.StatusBarNotification
 import android.util.AttributeSet
 import android.view.LayoutInflater
-import android.view.View
 import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -45,6 +44,8 @@ class NotificationItemView @JvmOverloads constructor(
     private val title: TextView by lazy { findViewById(R.id.notification_title)!! }
     private val details: TextView by lazy { findViewById(R.id.notification_details)!! }
 
+    private val animDuration: Long by lazy { resources.getInteger(R.integer.notification_swipe_anim_duration).toLong() }
+
     init {
         LayoutInflater.from(context).inflate(R.layout.notification_item_view, this)
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
@@ -59,9 +60,11 @@ class NotificationItemView @JvmOverloads constructor(
             swipeStatus = SwipeStatus.NONE
         } else {
             // Do swipe
-            dismissEndButton.visibility = View.VISIBLE
-            animateOpenDismiss(-dismissEndButton.width.toFloat())
             swipeStatus = SwipeStatus.LEFT
+            dismissEndButton.visibility = VISIBLE
+            dismissEndButton.post {
+                animateOpenDismiss(-dismissEndButton.width.toFloat())
+            }
         }
     }
 
@@ -72,9 +75,11 @@ class NotificationItemView @JvmOverloads constructor(
             swipeStatus = SwipeStatus.NONE
         } else {
             // Do swipe
-            dismissStartButton.visibility = View.VISIBLE
-            animateOpenDismiss(dismissStartButton.width.toFloat())
             swipeStatus = SwipeStatus.RIGHT
+            dismissStartButton.visibility = VISIBLE
+            dismissStartButton.post {
+                animateOpenDismiss(dismissStartButton.width.toFloat())
+            }
         }
     }
 
@@ -97,13 +102,13 @@ class NotificationItemView @JvmOverloads constructor(
             contentContainer.translationX,
             0f
         ).apply {
-            this.duration = ANIM_DURATION
+            this.duration = animDuration
         }
 
         val cornerRadiusAnimator =
             ValueAnimator.ofFloat(0f, resources.getDimension(R.dimen.notification_corner_radius))
                 .apply {
-                    this.duration = duration
+                    this.duration = animDuration
                     addUpdateListener { animator ->
                         backgroundShape?.cornerRadius = (animator.animatedValue as Float)
                     }
@@ -127,13 +132,13 @@ class NotificationItemView @JvmOverloads constructor(
             contentContainer.translationX,
             contentContainer.translationX + translationAmount
         ).apply {
-            this.duration = ANIM_DURATION
+            this.duration = animDuration
         }
 
         val cornerRadiusAnimator =
             ValueAnimator.ofFloat(resources.getDimension(R.dimen.notification_corner_radius), 0f)
                 .apply {
-                    this.duration = duration
+                    this.duration = animDuration
                     addUpdateListener { animator ->
                         backgroundShape?.cornerRadius = (animator.animatedValue as Float)
                     }
@@ -154,9 +159,5 @@ class NotificationItemView @JvmOverloads constructor(
         details.text =
             notification.extras.getString(Notification.EXTRA_TEXT)
         icon.setImageDrawable(notification.smallIcon.loadDrawable(context))
-    }
-
-    companion object {
-        private const val ANIM_DURATION: Long = 200
     }
 }
