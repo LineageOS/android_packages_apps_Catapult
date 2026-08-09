@@ -44,6 +44,12 @@ abstract class AppCardCommon @JvmOverloads constructor(
             } else {
                 nameView.isSelected = false
             }
+
+            translationZ = if (hasFocus) {
+                resources.getDimension(R.dimen.card_focus_elevation)
+            } else {
+                0f
+            }
         }
     }
 

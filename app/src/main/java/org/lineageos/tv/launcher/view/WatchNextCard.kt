@@ -30,19 +30,27 @@ class WatchNextCard @JvmOverloads constructor(
     init {
         inflate(context, R.layout.watch_next_card, this)
 
+        applyRoundedOutline(resources.getDimension(R.dimen.card_radius))
+
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
 
-        setupNameMarquee()
+        setupFocusEffects()
     }
 
-    private fun setupNameMarquee() {
+    private fun setupFocusEffects() {
         setOnFocusChangeListener { _, hasFocus ->
             title.isInvisible = !hasFocus
             if (hasFocus) {
                 title.postDelayed({ title.isSelected = true }, 2000)
             } else {
                 title.isSelected = false
+            }
+
+            translationZ = if (hasFocus) {
+                resources.getDimension(R.dimen.card_focus_elevation)
+            } else {
+                0f
             }
         }
     }

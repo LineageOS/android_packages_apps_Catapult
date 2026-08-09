@@ -25,6 +25,8 @@ class FavoriteCard @JvmOverloads constructor(
     init {
         inflate(context, R.layout.favorites_app_card, this)
 
+        applyRoundedOutline(resources.getDimension(R.dimen.favorite_card_radius))
+
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
     }
