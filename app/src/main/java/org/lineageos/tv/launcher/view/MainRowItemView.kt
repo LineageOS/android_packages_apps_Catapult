@@ -32,5 +32,7 @@ class MainRowItemView @JvmOverloads constructor(
             ViewGroup.LayoutParams.MATCH_PARENT,
             ViewGroup.LayoutParams.MATCH_PARENT
         )
+        clipChildren = false
+        clipToPadding = false
     }
 }

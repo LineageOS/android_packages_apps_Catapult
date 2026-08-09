@@ -18,6 +18,7 @@
         android:id="@+id/main_vertical_grid"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:clipChildren="false"
         android:clipToPadding="false"
         android:paddingLeft="48dp"
         android:paddingTop="24dp"
