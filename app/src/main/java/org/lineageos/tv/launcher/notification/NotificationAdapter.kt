@@ -52,7 +52,7 @@ class NotificationAdapter(
             oldItem: StatusBarNotification,
             newItem: StatusBarNotification
         ): Boolean {
-            return oldItem.id == newItem.id
+            return oldItem.key == newItem.key
         }
 
         override fun areContentsTheSame(
