@@ -4,9 +4,9 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="@dimen/watch_next_card_width"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginEnd="12dp"
     android:clickable="true"
     android:clipChildren="false"
@@ -27,6 +27,7 @@
             android:background="@drawable/card_border_only"
             android:backgroundTint="@android:color/black"
             android:clipToOutline="true"
+            android:importantForAccessibility="no"
             android:visibility="gone" />
 
         <com.google.android.material.progressindicator.LinearProgressIndicator
@@ -34,9 +35,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
-            android:paddingBottom="20dp"
             android:layout_marginStart="15dp"
             android:layout_marginEnd="15dp"
+            android:paddingBottom="20dp"
             android:visibility="invisible"
             app:trackCornerRadius="4dp" />
 

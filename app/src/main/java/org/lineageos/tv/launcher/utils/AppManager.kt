@@ -9,7 +9,7 @@ import android.content.Context
 import android.content.Intent
 import android.content.pm.ApplicationInfo
 import android.content.pm.ApplicationInfo.FLAG_SYSTEM
-import android.net.Uri
+import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
@@ -55,7 +55,7 @@ object AppManager {
     }
 
     fun uninstallApp(context: Context, packageName: String) {
-        val packageUri = Uri.parse("package:$packageName")
+        val packageUri = "package:$packageName".toUri()
         val uninstallIntent = Intent(Intent.ACTION_DELETE, packageUri)
         context.startActivity(uninstallIntent, null)
     }

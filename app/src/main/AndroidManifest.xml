@@ -5,8 +5,8 @@
 -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="MissingLeanbackLauncher"
-    package="org.lineageos.tv.launcher">
+    package="org.lineageos.tv.launcher"
+    tools:ignore="MissingLeanbackLauncher">
 
     <uses-feature
         android:name="android.hardware.bluetooth"
@@ -32,9 +32,15 @@
     <uses-permission android:name="android.permission.BLUETOOTH" />
 
     <!-- System permissions -->
-    <uses-permission android:name="android.permission.DEVICE_POWER" />
-    <uses-permission android:name="android.permission.INTERNAL_SYSTEM_WINDOW" />
-    <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" />
+    <uses-permission
+        android:name="android.permission.DEVICE_POWER"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.INTERNAL_SYSTEM_WINDOW"
+        tools:ignore="ProtectedPermissions" />
+    <uses-permission
+        android:name="android.permission.WRITE_SECURE_SETTINGS"
+        tools:ignore="ProtectedPermissions" />
 
     <queries>
         <intent>
@@ -78,9 +84,9 @@
 
         <activity
             android:name=".SystemOptionsActivity"
-            android:theme="@style/Theme.Catapult.SideActivity"
             android:exported="true"
-            android:launchMode="singleInstance">
+            android:launchMode="singleInstance"
+            android:theme="@style/Theme.Catapult.SideActivity">
             <intent-filter>
                 <action android:name="org.lineageos.tv.launcher.SYSTEM_OPTIONS" />
                 <category android:name="android.intent.category.DEFAULT" />

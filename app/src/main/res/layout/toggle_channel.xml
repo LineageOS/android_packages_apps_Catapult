@@ -6,10 +6,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="50dp"
+    android:background="@color/toggle_channel_background_color"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingHorizontal="12dp"
-    android:background="@color/toggle_channel_background_color">
+    android:paddingHorizontal="12dp">
 
     <TextView
         android:id="@+id/title"

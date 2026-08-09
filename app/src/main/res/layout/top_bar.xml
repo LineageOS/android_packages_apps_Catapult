@@ -21,6 +21,7 @@
         android:id="@+id/assistantHintImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/search"
         android:focusable="true"
         android:src="@drawable/ic_search" />
 
@@ -29,21 +30,21 @@
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:background="@drawable/search_background"
-        android:padding="0dp"
         android:clipToOutline="true"
+        android:padding="0dp"
         android:visibility="gone">
 
         <ImageButton
             android:id="@+id/voice_assistant"
+            style="@style/TopBarSearchButton"
             android:contentDescription="@string/mic_assistant"
-            android:src="@drawable/ic_mic"
-            style="@style/TopBarSearchButton" />
+            android:src="@drawable/ic_mic" />
 
         <ImageButton
             android:id="@+id/keyboard_assistant"
+            style="@style/TopBarSearchButton"
             android:contentDescription="@string/keyboard_assistant"
-            android:src="@drawable/ic_keyboard"
-            style="@style/TopBarSearchButton" />
+            android:src="@drawable/ic_keyboard" />
 
     </LinearLayout>
 
@@ -61,19 +62,19 @@
 
         <TextView
             android:id="@+id/notificationCountTextView"
+            style="@style/TopBarImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:textAppearance="?attr/textAppearanceTitleMedium"
-            style="@style/TopBarImageButton"
             android:drawablePadding="5dp"
+            android:textAppearance="?attr/textAppearanceTitleMedium"
             app:drawableLeftCompat="@drawable/ic_bell" />
 
         <ImageButton
             android:id="@+id/settingsMaterialButton"
+            style="@style/TopBarImageButton"
             android:contentDescription="@string/settings"
-            android:src="@drawable/ic_settings"
-            style="@style/TopBarImageButton" />
+            android:src="@drawable/ic_settings" />
 
     </LinearLayout>
 
