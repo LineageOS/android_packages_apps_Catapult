@@ -9,7 +9,6 @@ import android.text.Spannable
 import android.text.SpannableString
 import android.text.style.ForegroundColorSpan
 import android.util.AttributeSet
-import android.view.View.OnFocusChangeListener
 import androidx.core.content.ContextCompat
 import com.google.android.material.button.MaterialButton
 import org.lineageos.tv.launcher.R

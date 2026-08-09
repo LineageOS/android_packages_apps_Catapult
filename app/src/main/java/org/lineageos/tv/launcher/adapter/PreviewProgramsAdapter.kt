@@ -6,7 +6,6 @@
 package org.lineageos.tv.launcher.adapter
 
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -29,7 +28,7 @@ class PreviewProgramsAdapter :
         holder.bind(getItem(position))
     }
 
-    inner class ViewHolder(
+    class ViewHolder(
         private val watchNextCard: WatchNextCard
     ) : RecyclerView.ViewHolder(watchNextCard) {
         init {

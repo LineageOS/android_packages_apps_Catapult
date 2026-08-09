@@ -4,6 +4,7 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/buttonPanel"
     style="?attr/buttonBarStyle"
     android:layout_width="match_parent"
@@ -18,34 +19,35 @@
         android:layoutDirection="locale"
         android:orientation="horizontal"
         android:paddingLeft="?attr/dialogPreferredPadding"
-        android:paddingRight="?attr/dialogPreferredPadding"
         android:paddingTop="@dimen/m3_alert_dialog_action_top_padding"
-        android:paddingBottom="@dimen/m3_alert_dialog_action_bottom_padding">
+        android:paddingRight="?attr/dialogPreferredPadding"
+        android:paddingBottom="@dimen/m3_alert_dialog_action_bottom_padding"
+        tools:ignore="PrivateResource">
 
         <com.google.android.material.button.MaterialButton
             android:id="@android:id/button3"
             style="?attr/buttonBarNeutralButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <android.widget.Space
             android:id="@+id/spacer"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_weight="1"
-            android:visibility="?attr/materialAlertDialogButtonSpacerVisibility"/>
+            android:visibility="?attr/materialAlertDialogButtonSpacerVisibility" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@android:id/button2"
             style="?attr/buttonBarNegativeButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@android:id/button1"
             style="?attr/buttonBarPositiveButtonStyle"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content" />
 
     </androidx.appcompat.widget.ButtonBarLayout>
 

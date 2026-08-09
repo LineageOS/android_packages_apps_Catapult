@@ -29,8 +29,8 @@ class MainRowItemView @JvmOverloads constructor(
     init {
         inflate(context, R.layout.vertical_grid_row, this)
         layoutParams = ViewGroup.LayoutParams(
-            ViewGroup.LayoutParams.MATCH_PARENT,
-            ViewGroup.LayoutParams.MATCH_PARENT
+            LayoutParams.MATCH_PARENT,
+            LayoutParams.MATCH_PARENT
         )
     }
 }

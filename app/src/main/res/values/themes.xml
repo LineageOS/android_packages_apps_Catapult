@@ -3,8 +3,9 @@
      SPDX-FileCopyrightText: The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources>
-    <style name="Theme.Material3.DayNight.NoActionBar.Leanback">
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.Material3.DayNight.NoActionBar.Leanback" tools:ignore="PrivateResource">
         <!--
              Keep in sync with whatever Theme.AppCompat.LeanbackBase
              adds on top of Theme.AppCompat.NoActionBar

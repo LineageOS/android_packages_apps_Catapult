@@ -46,22 +46,22 @@ class LauncherViewModel(application: Application) : AndroidViewModel(application
         .combine(LauncherRepository.hiddenChannels(context)) { previewChannels, hiddenChannels ->
             previewChannels.filter { !hiddenChannels.contains(it.id) }
         }
-        .flatMapLatest {
+        .flatMapLatest { channels ->
             channelFlow {
                 val previewPrograms = Collections.synchronizedMap(
                     mutableMapOf<Long, List<PreviewProgram>?>()
                 )
 
                 // Emit a value before launching preview program flows
-                send(it.map { it to previewPrograms[it.id] })
+                send(channels.map { it to previewPrograms[it.id] })
 
-                it.filter { channel ->
+                channels.filter { channel ->
                     channel.previewChannel != null
                 }.forEach { channel ->
                     launch {
                         getPreviewPrograms(channel.id).collect { emittedElement ->
                             previewPrograms[channel.id] = emittedElement
-                            send(it.map { it to previewPrograms[it.id] })
+                            send(channels.map { it to previewPrograms[it.id] })
                         }
                     }
                 }

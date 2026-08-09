@@ -185,7 +185,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         permissionsGatedCallback.runAfterPermissionsCheck()
 
-        onBackPressedDispatcher.addCallback(object: OnBackPressedCallback(true) {
+        onBackPressedDispatcher.addCallback(object : OnBackPressedCallback(true) {
             override fun handleOnBackPressed() {
             }
         })
@@ -198,6 +198,7 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
                         ServiceConnectionState.Disconnected -> {
                             notificationCountTextView.text = ""
                         }
+
                         is ServiceConnectionState.Notifications -> {
                             if (state.notifications.isNotEmpty()) {
                                 notificationCountTextView.text = String.format(
@@ -220,10 +221,6 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
         if (NotificationUtils.notificationPermissionGranted(this)) {
             notificationViewModel.bindService(this)
         }
-    }
-
-    override fun onResume() {
-        super.onResume()
     }
 
     override fun onDestroy() {
