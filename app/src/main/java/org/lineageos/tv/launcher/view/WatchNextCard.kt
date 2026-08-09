@@ -54,6 +54,7 @@ class WatchNextCard @JvmOverloads constructor(
         bannerView.isVisible = true
         launchIntent = info.intent
         title.text = info.displayTitle(context)
+        progressView.isInvisible = true
 
         if (info.lastPlaybackPositionMillis != -1 && info.durationMillis != -1) {
             val percentWatched =
