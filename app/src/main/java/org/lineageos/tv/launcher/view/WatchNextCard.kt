@@ -16,6 +16,7 @@ import androidx.tvprovider.media.tv.BasePreviewProgram
 import coil.load
 import com.google.android.material.progressindicator.LinearProgressIndicator
 import org.lineageos.tv.launcher.R
+import org.lineageos.tv.launcher.ext.displayTitle
 import org.lineageos.tv.launcher.ext.getAttributeResourceId
 
 class WatchNextCard @JvmOverloads constructor(
@@ -52,7 +53,7 @@ class WatchNextCard @JvmOverloads constructor(
         label = info.title
         bannerView.isVisible = true
         launchIntent = info.intent
-        title.text = info.title
+        title.text = info.displayTitle(context)
 
         if (info.lastPlaybackPositionMillis != -1 && info.durationMillis != -1) {
             val percentWatched =
