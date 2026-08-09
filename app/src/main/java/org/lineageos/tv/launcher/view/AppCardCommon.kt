@@ -33,16 +33,22 @@ abstract class AppCardCommon @JvmOverloads constructor(
     private var uninstallable: Boolean = true
 
     init {
-        setupNameMarquee()
+        setupFocusEffects()
     }
 
-    private fun setupNameMarquee() {
+    private fun setupFocusEffects() {
         setOnFocusChangeListener { _, hasFocus ->
             nameView.isInvisible = !hasFocus
             if (hasFocus) {
                 nameView.postDelayed({ nameView.isSelected = true }, 2000)
             } else {
                 nameView.isSelected = false
+            }
+
+            translationZ = if (hasFocus) {
+                resources.getDimension(R.dimen.card_focus_elevation)
+            } else {
+                0f
             }
         }
     }
