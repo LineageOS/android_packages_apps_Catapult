@@ -7,19 +7,22 @@
     android:id="@+id/card_container"
     android:layout_width="@dimen/app_card_width"
     android:layout_height="wrap_content"
-    android:layout_marginEnd="12dp"
+    android:layout_marginHorizontal="6dp"
     android:background="@drawable/card_border_only"
     android:clickable="true"
     android:clipChildren="false"
     android:clipToPadding="false"
+    android:duplicateParentState="true"
     android:longClickable="true"
     android:orientation="vertical">
 
     <FrameLayout
+        android:id="@+id/app_graphic_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/app_card_height"
         android:clipChildren="true"
-        android:clipToOutline="true">
+        android:clipToOutline="true"
+        android:duplicateParentState="true">
 
         <ImageView
             android:id="@+id/app_banner"

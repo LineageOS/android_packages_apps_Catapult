@@ -5,9 +5,11 @@
 
 package org.lineageos.tv.launcher.view
 
+import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
@@ -25,6 +27,7 @@ abstract class AppCardCommon @JvmOverloads constructor(
     abstract val menuResId: Int
 
     // Views
+    protected val appGraphicContainer by lazy { findViewById<FrameLayout>(R.id.app_graphic_container)!! }
     private val bannerView by lazy { findViewById<ImageView>(R.id.app_banner)!! }
     private val iconContainer by lazy { findViewById<LinearLayout>(R.id.app_with_icon)!! }
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }

@@ -8,7 +8,6 @@ package org.lineageos.tv.launcher.view
 import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
-import androidx.core.view.isInvisible
 import org.lineageos.tv.launcher.R
 
 class AppCard @JvmOverloads constructor(
@@ -19,16 +18,9 @@ class AppCard @JvmOverloads constructor(
     init {
         inflate(context, R.layout.app_card, this)
 
+        setupFocusShadow(resources.getDimension(R.dimen.card_radius))
+
         stateListAnimator =
             AnimatorInflater.loadStateListAnimator(context, R.animator.app_card_state_animator)
-
-        setOnFocusChangeListener { _, hasFocus ->
-            nameView.isInvisible = !hasFocus
-            if (hasFocus) {
-                nameView.postDelayed({ nameView.isSelected = true }, 2000)
-            } else {
-                nameView.isSelected = false
-            }
-        }
     }
 }
