@@ -44,8 +44,8 @@
 
             <ImageView
                 android:id="@+id/app_icon"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
+                android:layout_width="@dimen/app_icon_size"
+                android:layout_height="@dimen/app_icon_size"
                 android:importantForAccessibility="no" />
 
         </LinearLayout>

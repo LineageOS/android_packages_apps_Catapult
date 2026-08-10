@@ -14,6 +14,8 @@ class AppCard @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCardCommon(context, attrs, defStyleAttr) {
     override val menuResId = R.menu.app_long_press
+    override val iconSizeRes = R.dimen.app_icon_size
+    override val shapedIconSizeRes = R.dimen.app_icon_size_shaped
 
     init {
         inflate(context, R.layout.app_card, this)

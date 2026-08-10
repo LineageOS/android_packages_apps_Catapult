@@ -9,6 +9,7 @@ import android.content.SharedPreferences
 import androidx.core.content.edit
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.callbackFlow
+import org.lineageos.tv.launcher.theme.ShapesProvider
 
 fun <T> SharedPreferences.valueFlow(
     key: String,
@@ -77,3 +78,12 @@ var SharedPreferences.homeRoleRequestDialogDismissed: Boolean
     set(value) = edit {
         putBoolean(HOME_ROLE_REQUEST_DIALOG_DISMISSED, value)
     }
+
+const val ICON_SHAPE_KEY = "icon_shape_model"
+
+/**
+ * Active icon shape selection. @see [ShapesProvider].
+ */
+var SharedPreferences.iconShape: String
+    get() = "four_sided_cookie"//getString(ICON_SHAPE_KEY, null) ?: ShapesProvider.CARD_KEY
+    set(value) = edit { putString(ICON_SHAPE_KEY, value) }

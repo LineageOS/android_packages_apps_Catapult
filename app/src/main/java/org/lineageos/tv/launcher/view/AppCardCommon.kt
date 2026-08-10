@@ -5,7 +5,6 @@
 
 package org.lineageos.tv.launcher.view
 
-import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
 import android.view.Gravity
@@ -14,10 +13,16 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.PopupMenu
 import android.widget.TextView
+import androidx.annotation.DimenRes
 import androidx.core.view.isInvisible
+import androidx.core.view.updateLayoutParams
+import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.R
+import org.lineageos.tv.launcher.ext.iconShape
+import org.lineageos.tv.launcher.model.ActivityLauncher
 import org.lineageos.tv.launcher.model.Launchable
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.theme.ShapesProvider
 import org.lineageos.tv.launcher.utils.AppManager
 import kotlin.reflect.safeCast
 
@@ -26,14 +31,30 @@ abstract class AppCardCommon @JvmOverloads constructor(
 ) : Card(context, attrs, defStyleAttr) {
     abstract val menuResId: Int
 
+    @get:DimenRes
+    abstract val iconSizeRes: Int
+
+    @get:DimenRes
+    abstract val shapedIconSizeRes: Int
+
     // Views
     protected val appGraphicContainer by lazy { findViewById<FrameLayout>(R.id.app_graphic_container)!! }
+    private val cardContainer by lazy { findViewById<LinearLayout>(R.id.card_container)!! }
     private val bannerView by lazy { findViewById<ImageView>(R.id.app_banner)!! }
     private val iconContainer by lazy { findViewById<LinearLayout>(R.id.app_with_icon)!! }
     private val iconView by lazy { findViewById<ImageView>(R.id.app_icon)!! }
     protected val nameView by lazy { findViewById<TextView>(R.id.app_name)!! }
 
     private var uninstallable: Boolean = true
+
+    private val iconSize by lazy { resources.getDimensionPixelSize(iconSizeRes) }
+    private val shapedIconSize by lazy { resources.getDimensionPixelSize(shapedIconSizeRes) }
+    private val shapedCardPadding by lazy {
+        resources.getDimensionPixelSize(R.dimen.shaped_icon_card_padding)
+    }
+    private val cardWidth by lazy { cardContainer.layoutParams.width }
+    private val iconContainerBackground by lazy { iconContainer.background }
+    private val focusShadowAnimator by lazy { appGraphicContainer.stateListAnimator }
 
     init {
         setupNameMarquee()
@@ -53,22 +74,50 @@ abstract class AppCardCommon @JvmOverloads constructor(
     override fun setCardInfo(appInfo: Launchable) {
         super.setCardInfo(appInfo)
 
+        val shapeModel = ShapesProvider.forKey(
+            PreferenceManager.getDefaultSharedPreferences(context).iconShape
+        )
+        val shaped = shapeModel.shape != null && appInfo !is ActivityLauncher
+        val banner = LeanbackAppInfo::class.safeCast(appInfo)?.banner
+
         // Reset
         bannerView.visibility = GONE
         iconContainer.visibility = VISIBLE
+        iconContainer.background = iconContainerBackground
+        appGraphicContainer.stateListAnimator = focusShadowAnimator
 
         nameView.text = appInfo.label
-        iconView.setImageDrawable(appInfo.icon)
+
+        val size = if (shaped) shapedIconSize else iconSize
+        iconView.updateLayoutParams {
+            width = size
+            height = size
+        }
+        if (shaped) {
+            iconView.setImageDrawable(appInfo.shapedIcon(resources, shapeModel, size))
+        } else {
+            iconView.setImageDrawable(appInfo.icon)
+        }
+
+        // Reduce width if there is only a shaped icon
+        val width = if (shaped) size + shapedCardPadding * 2 else cardWidth
+        cardContainer.updateLayoutParams<LayoutParams> { this.width = width }
+        nameView.updateLayoutParams<LayoutParams> { this.width = width }
 
         if (appInfo is LeanbackAppInfo) {
             uninstallable = appInfo.isUninstallable()
+        }
 
-            if (appInfo.banner != null) {
-                // App with a banner
-                bannerView.setImageDrawable(appInfo.banner)
-                bannerView.visibility = VISIBLE
-                iconContainer.visibility = GONE
-            }
+        if (shaped) {
+            // No card, only icon
+            iconContainer.background = null
+            appGraphicContainer.stateListAnimator = null
+            appGraphicContainer.translationZ = 0f
+        } else if (banner != null) {
+            // Card
+            bannerView.setImageDrawable(banner)
+            bannerView.visibility = VISIBLE
+            iconContainer.visibility = GONE
         }
     }
 

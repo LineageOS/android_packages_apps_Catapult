@@ -54,4 +54,19 @@
     <string name="program_episode">E%1$s</string>
     <string name="move_left">Move left</string>
     <string name="move_right">Move right</string>
+
+    <!-- Icon shape options -->
+    <string name="card_shape_title">Card</string>
+    <string name="circle_shape_title">Circle</string>
+    <string name="square_shape_title">Square</string>
+    <string name="four_sided_cookie_shape_title">4-sided cookie</string>
+    <string name="seven_sided_cookie_shape_title">7-sided cookie</string>
+    <string name="arch_shape_title">Arch</string>
+    <string name="pebble_shape_title">Pebble</string>
+    <string name="vessel_shape_title">Vessel</string>
+    <string name="pure_square_shape_title">Pure square</string>
+    <string name="squircle_shape_title">Squircle</string>
+    <string name="tapered_rect_shape_title">Tapered rect</string>
+    <string name="teardrop_shape_title">Teardrop</string>
+    <string name="rounded_rect_shape_title">Rounded rect</string>
 </resources>
