@@ -8,6 +8,8 @@ package org.lineageos.tv.launcher.view
 import android.animation.AnimatorInflater
 import android.content.Context
 import android.util.AttributeSet
+import android.view.View
+import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import androidx.core.view.isVisible
 import org.lineageos.tv.launcher.R
@@ -18,7 +20,8 @@ class FavoriteCard @JvmOverloads constructor(
     override val menuResId = R.menu.favorite_app_long_press
 
     // Views
-    private val moveOverlayView by lazy { findViewById<ImageView>(R.id.app_move_handle)!! }
+    val moveLeftImageButton by lazy { findViewById<ImageView>(R.id.app_move_left)!! }
+    val moveRightImageButton by lazy { findViewById<ImageView>(R.id.app_move_right)!! }
 
     var moving: Boolean = false
 
@@ -32,12 +35,45 @@ class FavoriteCard @JvmOverloads constructor(
     }
 
     fun setMoving() {
-        moveOverlayView.isVisible = true
+        animateHandleIn(moveLeftImageButton)
+        animateHandleIn(moveRightImageButton)
+        translationZ = resources.getDimension(R.dimen.card_focus_elevation)
         moving = true
     }
 
     fun setMoveDone() {
-        moveOverlayView.isVisible = false
+        animateHandleOut(moveLeftImageButton)
+        animateHandleOut(moveRightImageButton)
+        translationZ = 0f
         moving = false
+    }
+
+    private fun animateHandleIn(view: View) {
+        view.animate().cancel()
+        view.apply {
+            alpha = 0f
+            scaleX = 0.7f
+            scaleY = 0.7f
+            isVisible = true
+            animate()
+                .alpha(1f)
+                .scaleX(1f)
+                .scaleY(1f)
+                .setDuration(150)
+                .setInterpolator(AnimationUtils.loadInterpolator(context, R.anim.control_state))
+                .start()
+        }
+    }
+
+    private fun animateHandleOut(view: View) {
+        view.animate().cancel()
+        view.animate()
+            .alpha(0f)
+            .scaleX(0.7f)
+            .scaleY(0.7f)
+            .setDuration(100)
+            .setInterpolator(AnimationUtils.loadInterpolator(context, R.anim.control_state))
+            .withEndAction { view.isVisible = false }
+            .start()
     }
 }

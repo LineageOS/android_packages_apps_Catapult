@@ -4,11 +4,11 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/card_container"
     android:layout_width="@dimen/favorite_card_width"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="6dp"
-    android:background="@drawable/favorite_card_border_only"
     android:clickable="true"
     android:clipChildren="false"
     android:clipToPadding="false"
@@ -17,47 +17,70 @@
     android:orientation="vertical">
 
     <FrameLayout
-        android:id="@+id/app_graphic_container"
         android:layout_width="match_parent"
         android:layout_height="@dimen/favorite_card_height"
-        android:clipChildren="true"
-        android:clipToOutline="true"
-        android:duplicateParentState="true">
+        android:clipChildren="false"
+        android:clipToPadding="false">
 
-        <ImageView
-            android:id="@+id/app_banner"
+        <FrameLayout
+            android:id="@+id/app_graphic_container"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/favorite_card_border_only"
-            android:backgroundTint="?attr/colorOnSecondaryContainer"
+            android:clipChildren="true"
             android:clipToOutline="true"
-            android:importantForAccessibility="no"
-            android:visibility="gone" />
-
-        <LinearLayout
-            android:id="@+id/app_with_icon"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/favorites_app_card_background"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:duplicateParentState="true">
 
             <ImageView
-                android:id="@+id/app_icon"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
-                android:importantForAccessibility="no" />
+                android:id="@+id/app_banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/favorite_card_border_only"
+                android:backgroundTint="?attr/colorOnSecondaryContainer"
+                android:clipToOutline="true"
+                android:importantForAccessibility="no"
+                android:visibility="gone" />
 
-        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/app_with_icon"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/favorites_app_card_background"
+                android:gravity="center"
+                android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/app_move_handle"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@drawable/ic_move_overlay"
-            android:backgroundTint="?attr/colorOnSecondaryContainer"
-            android:clipToOutline="true"
-            android:importantForAccessibility="no"
+                <ImageView
+                    android:id="@+id/app_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:importantForAccessibility="no" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <ImageButton
+            android:id="@+id/app_move_left"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="-14dp"
+            android:background="@drawable/move_chevron_background"
+            android:contentDescription="@string/move_left"
+            android:src="@drawable/ic_chevron_backward"
+            android:visibility="gone"
+            app:tint="?attr/colorOnPrimaryContainer" />
+
+        <ImageButton
+            android:id="@+id/app_move_right"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="-14dp"
+            android:background="@drawable/move_chevron_background"
+            android:contentDescription="@string/move_right"
+            android:src="@drawable/ic_chevron_forward"
+            app:tint="?attr/colorOnPrimaryContainer"
             android:visibility="gone" />
 
     </FrameLayout>
