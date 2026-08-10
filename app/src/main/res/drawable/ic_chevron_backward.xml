@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
      SPDX-FileCopyrightText: Material Design Authors / Google LLC
      SPDX-License-Identifier: Apache-2.0
@@ -6,11 +5,9 @@
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
     android:width="24dp"
     android:height="24dp"
-    android:autoMirrored="true"
-    android:tint="?attr/colorControlNormal"
     android:viewportWidth="960"
     android:viewportHeight="960">
     <path
-        android:fillColor="@android:color/white"
-        android:pathData="M321,880L250,809L579,480L250,151L321,80L721,480L321,880Z" />
+        android:fillColor="#e3e3e3"
+        android:pathData="M560,720 L320,480l240,-240 56,56 -184,184 184,184 -56,56Z" />
 </vector>

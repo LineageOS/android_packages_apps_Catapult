@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_remove_favorite"
+        android:icon="@drawable/ic_favorite"
+        android:iconTint="@android:color/white"
+        android:title="@string/remove_favorite" />
+
+    <item
+        android:id="@+id/menu_move"
+        android:icon="@drawable/ic_drag_indicator"
+        android:iconTint="@android:color/white"
+        android:title="@string/move" />
+
+    <item
+        android:id="@+id/menu_uninstall"
+        android:icon="@drawable/ic_delete"
+        android:iconTint="@android:color/white"
+        android:title="@string/uninstall" />
+</menu>

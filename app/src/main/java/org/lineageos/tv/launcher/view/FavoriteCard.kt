@@ -18,7 +18,8 @@ class FavoriteCard @JvmOverloads constructor(
     override val menuResId = R.menu.favorite_app_long_press
 
     // Views
-    private val moveOverlayView by lazy { findViewById<ImageView>(R.id.app_move_handle)!! }
+    val moveLeftImageButton by lazy { findViewById<ImageView>(R.id.app_move_left)!! }
+    val moveRightImageButton by lazy { findViewById<ImageView>(R.id.app_move_right)!! }
 
     var moving: Boolean = false
 
@@ -32,12 +33,16 @@ class FavoriteCard @JvmOverloads constructor(
     }
 
     fun setMoving() {
-        moveOverlayView.isVisible = true
+        moveLeftImageButton.isVisible = true
+        moveRightImageButton.isVisible = true
+        translationZ = resources.getDimension(R.dimen.card_focus_elevation)
         moving = true
     }
 
     fun setMoveDone() {
-        moveOverlayView.isVisible = false
+        moveLeftImageButton.isVisible = false
+        moveRightImageButton.isVisible = false
+        translationZ = 0f
         moving = false
     }
 }
