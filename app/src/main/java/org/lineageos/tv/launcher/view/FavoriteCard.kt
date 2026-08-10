@@ -18,6 +18,8 @@ class FavoriteCard @JvmOverloads constructor(
     context: Context, attrs: AttributeSet? = null, defStyleAttr: Int = 0
 ) : AppCardCommon(context, attrs, defStyleAttr) {
     override val menuResId = R.menu.favorite_app_long_press
+    override val iconSizeRes = R.dimen.favorite_icon_size
+    override val shapedIconSizeRes = R.dimen.favorite_icon_size_shaped
 
     // Views
     val moveLeftImageButton by lazy { findViewById<ImageView>(R.id.app_move_left)!! }
