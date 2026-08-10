@@ -61,11 +61,13 @@ object AppManager {
     }
 
     fun uninstallable(app: ApplicationInfo, context: Context): Boolean {
-        return !isSystemApp(context) && !app.isSignedWithPlatformKey && !SettingsLibUtils.isEssentialPackage(
-            context.resources,
-            context.packageManager,
-            app.packageName
-        )
+        return (app.flags and FLAG_SYSTEM) == 0 &&
+                !app.isSignedWithPlatformKey &&
+                !SettingsLibUtils.isEssentialPackage(
+                    context.resources,
+                    context.packageManager,
+                    app.packageName
+                )
     }
 
     fun isSystemApp(context: Context): Boolean {
