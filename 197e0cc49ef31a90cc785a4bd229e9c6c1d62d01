@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "0c7d290c_78267dd1",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/Context.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2026-08-25T16:58:42Z",
+      "side": 1,
+      "message": "Looks wrong, since ACTION_BATTERY_CHANGED is sticky pass null instead of receiver",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 51
+      },
+      "revId": "197e0cc49ef31a90cc785a4bd229e9c6c1d62d01",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
