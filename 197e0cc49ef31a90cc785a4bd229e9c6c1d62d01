@@ -87,6 +87,30 @@
       },
       "revId": "197e0cc49ef31a90cc785a4bd229e9c6c1d62d01",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "c610820e_eeb6f4ea",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/Context.kt",
+        "patchSetId": 6
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 14048
+      },
+      "writtenOn": "2026-08-25T21:29:10Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3375e19f_0da2161b",
+      "range": {
+        "startLine": 56,
+        "startChar": 0,
+        "endLine": 57,
+        "endChar": 51
+      },
+      "revId": "197e0cc49ef31a90cc785a4bd229e9c6c1d62d01",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
