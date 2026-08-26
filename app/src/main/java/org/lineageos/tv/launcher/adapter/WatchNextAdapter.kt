@@ -48,12 +48,12 @@ class WatchNextAdapter : ListAdapter<WatchNextProgram, WatchNextAdapter.ViewHold
             override fun areItemsTheSame(
                 oldItem: WatchNextProgram,
                 newItem: WatchNextProgram
-            ) = oldItem.id == oldItem.id
+            ) = oldItem.id == newItem.id
 
             override fun areContentsTheSame(
                 oldItem: WatchNextProgram,
                 newItem: WatchNextProgram
-            ) = oldItem.hasAnyUpdatedValues(newItem)
+            ) = oldItem == newItem
         }
     }
 }

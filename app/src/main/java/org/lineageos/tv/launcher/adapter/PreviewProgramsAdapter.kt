@@ -56,7 +56,7 @@ class PreviewProgramsAdapter :
             override fun areContentsTheSame(
                 oldItem: PreviewProgram,
                 newItem: PreviewProgram
-            ) = oldItem.hasAnyUpdatedValues(newItem)
+            ) = oldItem == newItem
         }
     }
 }
