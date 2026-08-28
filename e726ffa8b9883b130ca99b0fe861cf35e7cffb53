@@ -33,6 +33,24 @@
       "message": "Missing return",
       "revId": "e726ffa8b9883b130ca99b0fe861cf35e7cffb53",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8f8299d4_09bbebd8",
+        "filename": "app/src/main/java/org/lineageos/tv/launcher/ext/Context.kt",
+        "patchSetId": 7
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 16185
+      },
+      "writtenOn": "2026-08-28T03:30:41Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1cbc8b02_90453fdc",
+      "revId": "e726ffa8b9883b130ca99b0fe861cf35e7cffb53",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
