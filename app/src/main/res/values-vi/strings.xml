@@ -38,4 +38,9 @@
     <string name="connected">Đã kết nối</string>
     <string name="mic_assistant">Tìm kiếm bằng micrô</string>
     <string name="keyboard_assistant">Tìm kiếm bằng bàn phím</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">Mùa %1$s</string>
+    <string name="program_episode">Tập %1$s</string>
+    <string name="move_left">Di chuyển qua trái</string>
+    <string name="move_right">Di chuyển qua phải</string>
 </resources>

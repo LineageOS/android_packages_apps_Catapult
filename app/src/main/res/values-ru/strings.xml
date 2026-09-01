@@ -38,4 +38,7 @@
     <string name="connected">Подключено</string>
     <string name="mic_assistant">Поиск с помощью микрофона</string>
     <string name="keyboard_assistant">Поиск с помощью клавиатуры</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
 </resources>

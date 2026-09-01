@@ -38,4 +38,9 @@
     <string name="connected">متصل</string>
     <string name="mic_assistant">جستجو با میکروفون</string>
     <string name="keyboard_assistant">جستجو با صفحه کلید</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">ف%1$s</string>
+    <string name="program_episode">ق%1$s</string>
+    <string name="move_left">انتقال به چپ</string>
+    <string name="move_right">انتقال به راست</string>
 </resources>

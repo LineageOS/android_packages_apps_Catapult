@@ -38,4 +38,9 @@
     <string name="connected">Connectat</string>
     <string name="mic_assistant">Cerca utilitzant el micròfon</string>
     <string name="keyboard_assistant">Cerca utilitzant el teclat</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">Mou a l\'esquerra</string>
+    <string name="move_right">Mou a la dreta</string>
 </resources>

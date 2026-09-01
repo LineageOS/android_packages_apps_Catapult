@@ -38,4 +38,9 @@
     <string name="connected">Povezano</string>
     <string name="mic_assistant">Išči z uporabo mikrofona</string>
     <string name="keyboard_assistant">Išči z uporabo tipkovnice</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">Premakni levo</string>
+    <string name="move_right">Premakni desno</string>
 </resources>

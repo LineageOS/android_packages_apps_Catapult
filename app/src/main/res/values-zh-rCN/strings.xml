@@ -38,4 +38,9 @@
     <string name="connected">已连接</string>
     <string name="mic_assistant">使用麦克风搜索</string>
     <string name="keyboard_assistant">使用键盘搜索</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">左移</string>
+    <string name="move_right">右移</string>
 </resources>

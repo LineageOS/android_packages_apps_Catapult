@@ -38,4 +38,9 @@
     <string name="connected">接続済み</string>
     <string name="mic_assistant">マイクを使って検索</string>
     <string name="keyboard_assistant">キーボードで検索</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">左に移動</string>
+    <string name="move_right">右に移動</string>
 </resources>

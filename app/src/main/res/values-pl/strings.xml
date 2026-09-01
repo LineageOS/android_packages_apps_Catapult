@@ -38,4 +38,9 @@
     <string name="connected">Połączono</string>
     <string name="mic_assistant">Szukaj używając mikrofonu</string>
     <string name="keyboard_assistant">Szukaj za pomocą klawiatury</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">Przesuń w lewo</string>
+    <string name="move_right">Przesuń w prawo</string>
 </resources>
