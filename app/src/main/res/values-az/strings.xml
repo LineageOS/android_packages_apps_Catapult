@@ -26,7 +26,7 @@
     <string name="not_connected">Bağlantılı deyil</string>
     <string name="enabled">Fəaldır</string>
     <string name="disabled">Sıradan çıxarılıb</string>
-    <string name="app_permissions_toast">İstifadəçi tərəfindən verilməyən icazələr.</string>
+    <string name="app_permissions_toast">İstifadəçi izinləri vermədi.</string>
     <string name="home_role_request_dialog_title">Başladıcı kimi təyin et</string>
     <string name="home_role_request_dialog_message">Bu tətbiq, ilkin əsas tətbiq olaraq istifadə edilə bilər, başladıcı tətbiqini dəyişdirmək üçün ayarları açmaq istəyirsiniz?</string>
     <string name="home_role_request_dialog_neutral">Daha sonra</string>
