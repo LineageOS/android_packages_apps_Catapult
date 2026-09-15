@@ -41,4 +41,6 @@
     <string name="program_title_with_episode_info">%1$s · %2$s</string>
     <string name="program_season">S%1$s</string>
     <string name="program_episode">E%1$s</string>
+    <string name="move_left">Влево</string>
+    <string name="move_right">Вправо</string>
 </resources>
