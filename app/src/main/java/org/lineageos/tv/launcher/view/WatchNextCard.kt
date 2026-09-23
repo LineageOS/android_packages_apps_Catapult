@@ -53,7 +53,7 @@ class WatchNextCard @JvmOverloads constructor(
     @Suppress("RestrictedApi")
     fun setInfo(info: BasePreviewProgram) {
         title.isInvisible = true
-        label = info.title
+        label = info.title ?: ""
         bannerView.isVisible = true
         launchIntent = info.intent
         title.text = info.displayTitle(context)
