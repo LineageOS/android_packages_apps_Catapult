@@ -38,4 +38,9 @@
     <string name="connected">Csatlakozva</string>
     <string name="mic_assistant">Keresés (a mikrofonnal)</string>
     <string name="keyboard_assistant">Keresés (a billentyűzettel)</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">%1$s.évad</string>
+    <string name="program_episode">%1$s.rész</string>
+    <string name="move_left">Mozgás balra</string>
+    <string name="move_right">Mozgás jobbra</string>
 </resources>
