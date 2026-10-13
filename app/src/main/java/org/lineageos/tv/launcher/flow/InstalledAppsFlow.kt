@@ -12,9 +12,13 @@ import kotlinx.coroutines.flow.mapNotNull
 import org.lineageos.tv.launcher.ext.broadcastFlow
 import org.lineageos.tv.launcher.model.AppInfo
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import java.text.Collator
 
 class InstalledAppsFlow(private val context: Context) {
     private val packageManager = context.packageManager
+    private val collator = Collator.getInstance().apply {
+        strength = Collator.PRIMARY
+    }
     private val leanbackLauncherIntent = Intent(Intent.ACTION_MAIN).apply {
         addCategory(Intent.CATEGORY_LEANBACK_LAUNCHER)
     }
@@ -56,7 +60,7 @@ class InstalledAppsFlow(private val context: Context) {
                 packageManager,
                 0
             )?.name
-        }
+        }.sortedWith(compareBy(collator) { it.label })
     }
 
     companion object {
