@@ -37,6 +37,7 @@ class TvNotificationListener : NotificationListenerService() {
     override fun onNotificationRemoved(sbn: StatusBarNotification) {
         super.onNotificationRemoved(sbn)
         activeTvNotifications.remove(sbn.key)
+        NotificationUtils.seenNotificationKeys.value -= sbn.key
         listeners.forEach { it.onNotificationsChanged() }
     }
 

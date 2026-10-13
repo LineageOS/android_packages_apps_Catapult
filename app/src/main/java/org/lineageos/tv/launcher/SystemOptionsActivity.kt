@@ -177,6 +177,9 @@ class SystemOptionsActivity : ModalActivity(R.layout.activity_system_options),
                         }
 
                         is ServiceConnectionState.Notifications -> {
+                            NotificationUtils.seenNotificationKeys.value =
+                                state.notifications.keys.toSet()
+
                             if (state.notifications.isEmpty() || state.currentRanking == null) {
                                 noNotificationsTextView.visibility = View.VISIBLE
                                 notificationsVerticalGridView.visibility = View.GONE

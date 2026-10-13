@@ -215,25 +215,29 @@ class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
-                notificationViewModel.state.collect { state ->
-                    when (state) {
-                        ServiceConnectionState.Connected -> {}
-                        ServiceConnectionState.Disconnected -> {
-                            notificationCountTextView.text = ""
-                        }
-
-                        is ServiceConnectionState.Notifications -> {
-                            if (state.notifications.isNotEmpty()) {
-                                notificationCountTextView.text = String.format(
-                                    Locale.getDefault(),
-                                    "%d",
-                                    state.notifications.count()
-                                )
-                            } else {
-                                notificationCountTextView.text = ""
-                            }
-                        }
+                combine(
+                    notificationViewModel.state,
+                    NotificationUtils.seenNotificationKeys,
+                    ::Pair
+                ).collect { (state, seenKeys) ->
+                    val keys = when (state) {
+                        ServiceConnectionState.Connected -> return@collect
+                        ServiceConnectionState.Disconnected -> setOf()
+                        is ServiceConnectionState.Notifications -> state.notifications.keys.toSet()
                     }
+
+                    notificationCountTextView.text = if (keys.isNotEmpty()) {
+                        String.format(Locale.getDefault(), "%d", keys.size)
+                    } else {
+                        ""
+                    }
+                    notificationCountTextView.setCompoundDrawablesWithIntrinsicBounds(
+                        when {
+                            keys.isEmpty() -> R.drawable.ic_bell
+                            seenKeys.containsAll(keys) -> R.drawable.ic_bell_active
+                            else -> R.drawable.ic_bell_unread
+                        }, 0, 0, 0
+                    )
                 }
             }
         }

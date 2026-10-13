@@ -8,8 +8,11 @@ package org.lineageos.tv.launcher.notification
 import android.app.Notification
 import android.content.Context
 import androidx.core.app.NotificationManagerCompat
+import kotlinx.coroutines.flow.MutableStateFlow
 
 object NotificationUtils {
+    val seenNotificationKeys = MutableStateFlow(setOf<String>())
+
     fun shouldAutoCancel(notification: Notification): Boolean {
         val flags: Int = notification.flags
         if ((flags and Notification.FLAG_AUTO_CANCEL) != Notification.FLAG_AUTO_CANCEL) {
