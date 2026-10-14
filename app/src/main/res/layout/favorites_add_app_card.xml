@@ -6,7 +6,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="350dp"
     android:layout_height="50dp"
-    android:clickable="true"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:gravity="center_vertical"
