@@ -9,11 +9,9 @@
     android:layout_width="@dimen/favorite_card_width"
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="6dp"
-    android:clickable="true"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:duplicateParentState="true"
-    android:longClickable="true"
     android:orientation="vertical">
 
     <FrameLayout

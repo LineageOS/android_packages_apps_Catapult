@@ -31,6 +31,9 @@ abstract class TvAdapter<L : Launchable, C : Card> : ListAdapter<L, TvAdapter<L,
                 setOnLongClickListener {
                     handleLongClick(this)
                 }
+                setOnContextClickListener {
+                    handleLongClick(this)
+                }
                 setOnKeyListener { _, keyCode, event ->
                     handleKey(this, keyCode, event, bindingAdapterPosition)
                 }
