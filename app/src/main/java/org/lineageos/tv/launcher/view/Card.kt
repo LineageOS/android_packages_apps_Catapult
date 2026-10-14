@@ -15,6 +15,7 @@ import android.view.ViewOutlineProvider
 import android.widget.FrameLayout
 import android.widget.LinearLayout
 import org.lineageos.tv.launcher.R
+import org.lineageos.tv.launcher.ext.focusOnHover
 import org.lineageos.tv.launcher.model.Launchable
 
 abstract class Card @JvmOverloads constructor(
@@ -30,6 +31,7 @@ abstract class Card @JvmOverloads constructor(
 
     init {
         clipChildren = false
+        focusOnHover()
     }
 
     open fun setCardInfo(appInfo: Launchable) {

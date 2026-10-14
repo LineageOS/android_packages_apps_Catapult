@@ -9,11 +9,9 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="6dp"
     android:background="@drawable/card_border_only"
-    android:clickable="true"
     android:clipChildren="false"
     android:clipToPadding="false"
     android:duplicateParentState="true"
-    android:longClickable="true"
     android:orientation="vertical">
 
     <FrameLayout

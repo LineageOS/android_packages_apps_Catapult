@@ -20,6 +20,7 @@
         android:layout_height="match_parent"
         android:clipChildren="false"
         android:clipToPadding="false"
+        android:focusedByDefault="true"
         android:paddingLeft="48dp"
         android:paddingTop="24dp"
         android:paddingRight="48dp"

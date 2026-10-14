@@ -21,15 +21,32 @@ import java.util.Collections
 class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
     var onFavoritesChangedCallback: (favorites: List<String>) -> Unit = {}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        FavoriteCard(parent.context).apply {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val card = FavoriteCard(parent.context).apply {
             layoutParams = ViewGroup.LayoutParams(
                 ViewGroup.LayoutParams.WRAP_CONTENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT
             )
             descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
         }
-    )
+
+        return ViewHolder(card).also { holder ->
+            // Let the move handles be clicked with a mouse
+            mapOf(
+                card.moveLeftImageButton to KeyEvent.KEYCODE_DPAD_LEFT,
+                card.moveRightImageButton to KeyEvent.KEYCODE_DPAD_RIGHT,
+            ).forEach { (button, keyCode) ->
+                button.setOnClickListener {
+                    handleKey(
+                        card,
+                        keyCode,
+                        KeyEvent(KeyEvent.ACTION_DOWN, keyCode),
+                        holder.bindingAdapterPosition
+                    )
+                }
+            }
+        }
+    }
 
     override fun handleKey(
         card: FavoriteCard,
