@@ -38,4 +38,9 @@
     <string name="connected">Συνδεδεμένο</string>
     <string name="mic_assistant">Αναζήτηση με μικρόφωνο</string>
     <string name="keyboard_assistant">Αναζήτηση με πληκτρολόγιο</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">Σ%1$s</string>
+    <string name="program_episode">Ε%1$s</string>
+    <string name="move_left">Μετακίνηση αριστερά</string>
+    <string name="move_right">Μετακίνηση δεξιά</string>
 </resources>
