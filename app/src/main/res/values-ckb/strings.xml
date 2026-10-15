@@ -38,4 +38,9 @@
     <string name="connected">پەیوەستە</string>
     <string name="mic_assistant">گەڕان بە بەکارهێنانی مایکرۆفۆن</string>
     <string name="keyboard_assistant">گەڕان بە بەکارهێنانی تەختەکلیل</string>
+    <string name="program_title_with_episode_info">%1$s · %2$s</string>
+    <string name="program_season">S%1$s</string>
+    <string name="program_episode">E%1$s</string>
+    <string name="move_left">جووڵان بۆ لای چەپ</string>
+    <string name="move_right">جووڵان بۆ لای ڕاست</string>
 </resources>
