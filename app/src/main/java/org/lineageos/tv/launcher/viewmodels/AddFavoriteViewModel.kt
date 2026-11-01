@@ -12,14 +12,27 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.flowOn
+import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.stateIn
 import org.lineageos.tv.launcher.ext.context
+import org.lineageos.tv.launcher.model.Widget
 import org.lineageos.tv.launcher.repository.LauncherRepository
 
 class AddFavoriteViewModel(application: Application) : AndroidViewModel(application) {
     val appsToFavorites = LauncherRepository.installedApps(context)
         .combine(LauncherRepository.favoriteApps(context)) { installedApps, favoriteApps ->
             installedApps.map { it to favoriteApps.contains(it.packageName) }
+        }
+        .flowOn(Dispatchers.IO)
+        .stateIn(
+            viewModelScope,
+            started = SharingStarted.WhileSubscribed(),
+            initialValue = listOf(),
+        )
+
+    val widgetsToFavorites = LauncherRepository.favoriteApps(context)
+        .map { favoriteApps ->
+            Widget.all(context).map { it to favoriteApps.contains(it.packageName) }
         }
         .flowOn(Dispatchers.IO)
         .stateIn(

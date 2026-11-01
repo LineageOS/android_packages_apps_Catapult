@@ -10,11 +10,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import org.lineageos.tv.launcher.ext.pixelsEqualTo
-import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.model.Launchable
 import org.lineageos.tv.launcher.view.AddFavoriteItemView
 
 class ModifyFavoritesAdapter :
-    ListAdapter<Pair<LeanbackAppInfo, Boolean>, ModifyFavoritesAdapter.ViewHolder>(diffCallback) {
+    ListAdapter<Pair<Launchable, Boolean>, ModifyFavoritesAdapter.ViewHolder>(diffCallback) {
     var onFavoriteChanged: (packageName: String, favorite: Boolean) -> Unit = { _, _ -> }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
@@ -45,7 +45,7 @@ class ModifyFavoritesAdapter :
             }
         }
 
-        fun bind(item: Pair<LeanbackAppInfo, Boolean>) {
+        fun bind(item: Pair<Launchable, Boolean>) {
             card.setCardInfo(item.first)
             card.setActionToggle(item.second)
         }
@@ -53,15 +53,15 @@ class ModifyFavoritesAdapter :
 
     companion object {
         private val diffCallback =
-            object : DiffUtil.ItemCallback<Pair<LeanbackAppInfo, Boolean>>() {
+            object : DiffUtil.ItemCallback<Pair<Launchable, Boolean>>() {
                 override fun areItemsTheSame(
-                    oldItem: Pair<LeanbackAppInfo, Boolean>,
-                    newItem: Pair<LeanbackAppInfo, Boolean>
+                    oldItem: Pair<Launchable, Boolean>,
+                    newItem: Pair<Launchable, Boolean>
                 ) = oldItem.first.packageName == newItem.first.packageName
 
                 override fun areContentsTheSame(
-                    oldItem: Pair<LeanbackAppInfo, Boolean>,
-                    newItem: Pair<LeanbackAppInfo, Boolean>
+                    oldItem: Pair<Launchable, Boolean>,
+                    newItem: Pair<Launchable, Boolean>
                 ) = compareValuesBy(
                     oldItem, newItem,
                     { it.first.label },
