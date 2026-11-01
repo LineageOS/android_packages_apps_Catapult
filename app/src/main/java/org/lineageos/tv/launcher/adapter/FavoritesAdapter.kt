@@ -15,28 +15,40 @@ import org.lineageos.tv.launcher.ModifyChannelsActivity
 import org.lineageos.tv.launcher.R
 import org.lineageos.tv.launcher.model.ActivityLauncher
 import org.lineageos.tv.launcher.model.Launchable
+import org.lineageos.tv.launcher.model.Widget
+import org.lineageos.tv.launcher.view.Card
 import org.lineageos.tv.launcher.view.FavoriteCard
+import org.lineageos.tv.launcher.view.WidgetCard
 import java.util.Collections
 
-class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
+class FavoritesAdapter : TvAdapter<Launchable, Card>() {
     var onFavoritesChangedCallback: (favorites: List<String>) -> Unit = {}
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) = ViewHolder(
-        FavoriteCard(parent.context).apply {
-            layoutParams = ViewGroup.LayoutParams(
-                ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT
-            )
-            descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
+        val card = when (viewType) {
+            VIEW_TYPE_FAVORITE_CARD -> FavoriteCard(parent.context)
+            else -> Widget.TYPES[viewType].createCard(parent.context)
         }
-    )
+
+        return ViewHolder(
+            card.apply {
+                layoutParams = ViewGroup.LayoutParams(
+                    ViewGroup.LayoutParams.WRAP_CONTENT,
+                    ViewGroup.LayoutParams.WRAP_CONTENT
+                )
+                descendantFocusability = ViewGroup.FOCUS_BLOCK_DESCENDANTS
+            }
+        )
+    }
 
     override fun handleKey(
-        card: FavoriteCard,
+        card: Card,
         keyCode: Int,
         event: KeyEvent?,
         bindingAdapterPosition: Int,
     ): Boolean {
+        if (card !is FavoriteCard) return false
+
         // Leave center key for onClick handler
         if (keyCode == KeyEvent.KEYCODE_DPAD_CENTER) {
             return false
@@ -103,7 +115,9 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return false
     }
 
-    override fun handleLongClick(card: FavoriteCard): Boolean {
+    override fun handleLongClick(card: Card): Boolean {
+        if (card !is FavoriteCard) return false
+
         if (card.moving || !card.hasMenu) {
             return true
         }
@@ -112,8 +126,17 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         return true
     }
 
-    override fun handleClick(card: FavoriteCard) {
+    override fun handleClick(card: Card) {
+        if (card !is FavoriteCard) {
+            return
+        }
+
         if (!card.moving) {
+            if (card is WidgetCard) {
+                card.handleClick()
+                return
+            }
+
             super.handleClick(card)
             return
         }
@@ -131,7 +154,15 @@ class FavoritesAdapter : TvAdapter<Launchable, FavoriteCard>() {
         onFavoritesChangedCallback(newFavoritesSet)
     }
 
+    override fun getItemViewType(position: Int): Int {
+        val item = currentList[position]
+
+        return if (item is Widget) Widget.TYPES.indexOf(item.type) else VIEW_TYPE_FAVORITE_CARD
+    }
+
     companion object {
+        // Widgets use their index in Widget.TYPES as the view type
+        private const val VIEW_TYPE_FAVORITE_CARD = -1
         const val STATIC_ITEMS = 2
 
         fun createAddFavoriteEntry(context: Context): Launchable {

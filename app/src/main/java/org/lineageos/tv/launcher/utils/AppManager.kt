@@ -13,6 +13,7 @@ import androidx.core.net.toUri
 import androidx.preference.PreferenceManager
 import org.lineageos.tv.launcher.ext.favoriteApps
 import org.lineageos.tv.launcher.model.LeanbackAppInfo
+import org.lineageos.tv.launcher.model.Widget
 
 import com.android.settingslib.Utils as SettingsLibUtils
 
@@ -24,7 +25,7 @@ object AppManager {
         // Remove apps from favorite if they got uninstalled
         installedApps.map { it.packageName }.let { installedPackageNames ->
             favoriteApps.filter { favoriteApp ->
-                !installedPackageNames.contains(favoriteApp)
+                !installedPackageNames.contains(favoriteApp) && !favoriteApp.startsWith(Widget.WIDGET_PREFIX)
             }
         }.forEach { uninstalledFavoriteApp ->
             favoriteApps.remove(uninstalledFavoriteApp)
