@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     SPDX-FileCopyrightText: The LineageOS Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+    <string name="settings">設定</string>
+    <string name="network_status">網絡\n%1$s</string>
+    <string name="app_permissions_toast">使用者未授予權限。</string>
+    <string name="home_role_request_dialog_message">此應用程式可以設為預設主畫面應用程式。要開啟設定以更改預設啟動器嗎？</string>
+    <string name="unknown">未知</string>
+</resources>
